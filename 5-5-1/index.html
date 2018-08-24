@@ -41,7 +41,7 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/assets/css/default.css?v=20180606070417">
+        <link rel="stylesheet" href="/assets/css/default.css?v=20180824094749">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     </head>
 <body>
@@ -204,20 +204,145 @@
   
   <div class="row">
     <div class="col-xs-12">
-      <h2></h2>
+      <h2>Percentage of seats held by women in national parliament</h2>
     </div>
   </div>
   
-  <div class="row" id="indicatorData" data-indicatorid='indicator_5-5-1' data-id="5-5-1" data-country=""
-  data-charttitle="" data-measurementunit="" data-datasource="" data-geographicalarea="" data-footnote="" data-showdata="false" data-graphtype="line" data-geocoderegex="" data-showmap="">
+  <div class="row" id="indicatorData" data-indicatorid='indicator_5-5-1' data-id="5-5-1" data-country="Rwanda"
+  data-charttitle="Percentage of seats held by women in national parliament" data-measurementunit="Percentage (%)" data-datasource="National Institute of Statistics Rwanda (NISR)" data-geographicalarea="Rwanda" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="false">
     
-    <div class="col-md-12">
+    <div class="col-md-3">
+      <div id="toolbar">
+        <span id="series-help">
+          <h4>Sub-categories</h4>
+          <p>Choose categories from the dropdowns below to see different breakdowns of the data. Some will not be available until a higher level is chosen.</p>
+        </span>
+        <p>Click on the legend to remove individual lines from the chart.</p>
+        <div id="fields">
+          <p class="async-loading" data-img="/assets/img/loading-small.gif"></p>
+        </div>
+      </div>
+      <div id="units"></div>
+    </div>
+    <div class="col-md-9">
     
       
+      
+       
+ 
+
+<div id="headlineTable">
+  
+  <div id="datatables">
+    
+    <a href="https://sustainabledevelopment-rwanda.github.io/sdg-data-prod/headline/5-5-1.csv" class="btn btn-primary btn-download" download="indicator_5-5-1.csv" tabindex="0" role="button">Download Headline CSV</a>
+    
+    <a href="https://sustainabledevelopment-rwanda.github.io/sdg-data-prod/data/5-5-1.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_5-5-1.csv' tabindex='0' role='button'>Download Source CSV</a>
+    
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption></caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2008</td>    
+          
+          
+          
+          <td class="table-value">56</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>    
+          
+          
+          
+          <td class="table-value">64</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+  <div id="datatableFooter">
+    
+    
+    
+    
+  </div>
+  
+</div>
       
 
       <section>
         
+        
+        <p class="async-loading" data-img="/assets/img/loading-small.gif"></p>
+        <div class="async-loaded" style="display:none">
+          <ul class="nav nav-tabs data-view" role="tablist">
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab">Chart</a>
+            </li>
+            <li role="presentation" class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab">Table</a>
+            </li>
+            <li role="presentation" class="nav-item map" style="display:none">
+              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab">Map</a>
+            </li>
+          </ul>
+          
+          <!-- Tab panes -->
+          <div class="tab-content data-view">
+            <div role="tabpanel" class="tab-pane active" id="chartview">
+              
+    
+    
+
+    <div id="dataset-size-warning" style="display:none">
+      <i class="fa fa-bolt"></i> There are too many datasets to show on the chart. Not all will be shown until you remove some selections.
+    </div>
+
+    
+    <div class="plot-container">
+        
+<canvas></canvas>
+    </div>
+    <div id="plotLegend"></div>
+
+    <div id="chartSelectionDownload"></div>    
+    
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tableview">
+              <div id="selectionsTable"></div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="mapview" class="map">
+              <div id="map">
+                <img src="/assets/img/loading.gif" alt="Loading map" />
+              </div>
+            </div>
+          </div>
+        </div> 
         
                
         <!-- Nav tabs -->
@@ -278,7 +403,7 @@
         <th scope="row">Indicator available </th>
         <td>
           
-            
+            Percentage of seats held by women in national parliament
           
         </td>
         </tr>
@@ -304,7 +429,7 @@
         <th scope="row">Geographical coverage </th>
         <td>
           
-            
+            Rwanda
           
         </td>
         </tr>
@@ -317,7 +442,7 @@
         <th scope="row">Unit of measurement </th>
         <td>
           
-            
+            Percentage (%)
           
         </td>
         </tr>
@@ -330,7 +455,9 @@
         <th scope="row">Definitions </th>
         <td>
           
-            
+            The proportion of seats held by women in national parliaments is the number of seats held by women members in single or lower chambers of national parliaments, expressed as a percentage of all occupied seats.
+Seats refer to the number of parliamentary mandates, also known as the number of members of parliament. Seats are usually won by members in general parliamentary elections. Seats may also be filled by nomination, appointment, indirect election, rotation of members and by-election.
+‘The State of Rwanda commits itself that women are granted at least 30 % of posts in decision making organs' (Constitution, Article 9 [4]). The 80 members of the Chamber of Deputies are elected as follows: 53 members elected by direct universal suffrage through a secret ballot using closed list proportional representation, of which at least 30% must be seats reserved for women; 24 women (2 elected from each province and from the city of Kigali by an electoral college with a women-only ballot); 2 members elected by the National Youth Council; and 1 member elected by the Federation of the Associations of the Disabled (Constitution, Article 76).
           
         </td>
         </tr>
@@ -343,7 +470,7 @@
         <th scope="row">Calculations </th>
         <td>
           
-            
+            The indicator is calculated as the total number of seats occupied by women divided by the total number of seats occupied in parliament and multiplied by 100 
           
         </td>
         </tr>
@@ -356,7 +483,7 @@
         <th scope="row">Other information </th>
         <td>
           
-            
+            Unlike the 30% of reserved seats for women , in the event of death and resignation the replacement of women parliamentarian coming from the political parties is not automatically by a woman instead by the next candidate in the party's list.   The role of women parliamentarians needs to be considered alongside the role of other government actors such as the executive; and in relation to the national gender machinery and women's groups in civil society. 
           
         </td>
         </tr>
@@ -375,8 +502,8 @@
             
 
             
-              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/e347a62dfa6674c8e642b2b0b1b96448e26fb150" target="_blank">
-                2018-06-05: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/d6d36b5d61cc240a9e98b19a1ad5f8486ffb85c9" target="_blank">
+                2018-06-06: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
             
@@ -402,8 +529,8 @@
             
 
             
-              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/e347a62dfa6674c8e642b2b0b1b96448e26fb150" target="_blank">
-                2018-06-05: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/a3e663f2bfece6a4b1d3f3e62daa9f5b7bf7ee57" target="_blank">
+                2018-06-06: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
             
@@ -909,6 +1036,350 @@
 
 
 
+  <div class="row no-gutters">
+  
+   
+    
+    <div class="col-md-6">
+      
+      <table class="table table-hover">
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            National Institute of Statistics Rwanda (NISR)
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            Discontinuous
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            2008
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            Rwanda
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="http://www.devinfo.statistics.gov.rw/di7web/libraries/aspx/home.aspx" target="_blank">
+                DevInfo Rwanda <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+      
+      
+  
+    
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
+          
+            Data for calculating this indicator are coming from administrative records of national parliaments and National Electoral Commission (NEC)
+          
+        </td>
+        </tr>
+        
+      
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+</table>
+
+    </div>
+    
+  </div>
+
 
           </div>
           
@@ -964,7 +1435,7 @@ ga('send', 'pageview');
 <script src="/assets/js/plugins/jquery.sdgMap.js"></script>
 <script type="text/javascript"> window.loop11_key = "0104054b3b56d396b42e668dfe096cee161454a8"; </script>
 <script src="//cdn.loop11.com/my/loop11.js" type="text/javascript" async="async"></script>
-<script src='/assets/js/sdg.js?v=20180606070417'></script>
+<script src='/assets/js/sdg.js?v=20180824094749'></script>
 <script src="/assets/js/lib/classList.js"></script>
 <script src="/assets/js/lib/modernizr-custom.js"></script>
 <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script>

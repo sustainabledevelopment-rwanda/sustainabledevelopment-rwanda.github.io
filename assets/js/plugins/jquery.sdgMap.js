@@ -3,7 +3,7 @@
   // Create the defaults once
   var pluginName = 'sdgMap',
     defaults = {
-      serviceUrl: 'https://geoportal1-ons.opendata.arcgis.com/datasets/686603e943f948acaa13fb5d2b0f1275_4.geojson',
+      serviceUrl: 'https://opendata.arcgis.com/datasets/b79afd0ddf334e91a5d041f2ba5dceae_0.geojson',
       width: 590,
       height: 590
     };
@@ -53,7 +53,7 @@
 
         // if(that.options.geoCodeRegEx) {
         //   mapData.features = _.filter(mapData.features, function(f) {
-        //     return f.properties.lad16cd.match(that.options.geoCodeRegEx);
+        //     return f.properties.Dist_ID.match(that.options.geoCodeRegEx);
         //   });
         // }
 
@@ -184,13 +184,13 @@
 
       // Get area name
       function getName(d){
-        return d && d.properties ? d.properties.lad16nm : null;
+        return d && d.properties ? d.properties.District : null;
       }
 
       // Get 
       function getValue(d) {
         var geoDataItem = _.findWhere(this.options.geoData, { 
-          GeoCode: d.properties.lad16cd,
+          GeoCode: d.properties.Dist_ID,
           Year: +this.currentYear
         });
 
@@ -199,7 +199,7 @@
 
       function getYearValues(d) {
         return _.where(this.options.geoData, { 
-          GeoCode: d.properties.lad16cd
+          GeoCode: d.properties.Dist_ID
         });
       }
 
@@ -325,11 +325,11 @@
 
         tooltip.removeClass("hidden")
           .attr("style", "left:"+(mouse[0] + 10)+"px;top:"+(mouse[1] + 10)+"px")
-          .html(getYearByYearMarkup.call(this, d));// +  ' ' + getValue.call(that, d) + ' (' + d.properties.lad16cd + ')' );
+          .html(getYearByYearMarkup.call(this, d));// +  ' ' + getValue.call(that, d) + ' (' + d.properties.Dist_ID + ')' );
       }
     },
     isInScope: function(d) {
-      return d === null ? true : d.properties.lad16cd.match(this.options.geoCodeRegEx);
+      return d === null ? true : d.properties.Dist_ID.match(this.options.geoCodeRegEx);
     }  
   };
 
