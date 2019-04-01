@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rwandan Indicators For The Sustainable Development Goals</title>
-    <description>Data Platform Prototype</description>
+    <title></title>
+    <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 01 Apr 2019 19:03:48 +0000</pubDate>
-    <lastBuildDate>Mon, 01 Apr 2019 19:03:48 +0000</lastBuildDate>
-    <generator>Jekyll v3.5.1</generator>
+    <pubDate>Mon, 01 Apr 2019 19:48:08 +0000</pubDate>
+    <lastBuildDate>Mon, 01 Apr 2019 19:48:08 +0000</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>How we built the site</title>
@@ -15,8 +15,8 @@
 
 </description>
         <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
-        <link>/news/2017/05/01/how-we-built-the-site.html</link>
-        <guid isPermaLink="true">/news/2017/05/01/how-we-built-the-site.html</guid>
+        <link>/how%20to/2017/05/01/how-we-built-the-site.html</link>
+        <guid isPermaLink="true">/how%20to/2017/05/01/how-we-built-the-site.html</guid>
         
         
         <category>How to</category>
@@ -30,8 +30,8 @@
 &lt;p&gt;Proident organic subway tile affogato ipsum forage chartreuse woke sriracha humblebrag. Ugh kombucha voluptate est literally, chia 90’s elit 8-bit. Art party dolore tattooed pork belly ennui. Messenger bag twee irony, aute tempor fanny pack kogi. You probably haven’t heard of them gentrify lorem hella craft beer mixtape disrupt slow-carb viral tempor hashtag. Stumptown occaecat polaroid activated charcoal kickstarter, 90’s fingerstache duis freegan sed laboris 8-bit. Lumbersexual ut air plant dolore in. Raw denim in squid, mixtape tumblr try-hard put a bird on it authentic cupidatat. Bespoke irony hammock, trust fund deep v fanny pack plaid magna succulents.&lt;/p&gt;
 </description>
         <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
-        <link>/news/2017/04/01/focus-on-a-goal.html</link>
-        <guid isPermaLink="true">/news/2017/04/01/focus-on-a-goal.html</guid>
+        <link>/data/2017/04/01/focus-on-a-goal.html</link>
+        <guid isPermaLink="true">/data/2017/04/01/focus-on-a-goal.html</guid>
         
         
         <category>Data</category>
@@ -47,8 +47,8 @@
 &lt;p&gt;Cold-pressed id drinking vinegar, dolore iceland messenger bag locavore seitan lo-fi craft beer. Fanny pack quinoa ullamco mlkshk, activated charcoal air plant aute viral man braid. Eu chicharrones tempor blog thundercats XOXO aliqua. Duis DIY aliqua glossier cloud bread hot chicken swag jean shorts kinfolk. Eu qui chartreuse synth cliche. Cliche eu kickstarter hot chicken semiotics 8-bit etsy, ad man bun lo-fi pariatur prism retro eiusmod lomo. Enim photo booth art party pabst brunch squid crucifix id. Et nostrud stumptown reprehenderit ennui offal. Master cleanse poutine chartreuse meditation synth. Nostrud vexillologist enim cold-pressed et. Tumblr kale chips organic unicorn, chia labore migas.&lt;/p&gt;
 </description>
         <pubDate>Wed, 01 Mar 2017 00:00:00 +0000</pubDate>
-        <link>/news/2017/03/01/data-and-more-data.html</link>
-        <guid isPermaLink="true">/news/2017/03/01/data-and-more-data.html</guid>
+        <link>/data/wrangling/2017/03/01/data-and-more-data.html</link>
+        <guid isPermaLink="true">/data/wrangling/2017/03/01/data-and-more-data.html</guid>
         
         
         <category>Data</category>
@@ -83,8 +83,8 @@
 &lt;p&gt;Curabitur sed vestibulum mi. Duis ut eros elit. Donec sit amet viverra mauris. Sed elementum sem quis massa commodo tincidunt. Praesent commodo commodo eros, ac tempus justo ornare ac. Vivamus rhoncus lobortis ligula, id tempor elit fermentum sit amet. Vestibulum elementum imperdiet elementum. Praesent vitae metus pellentesque, ultrices neque pharetra, sagittis sapien. Aenean a enim sed ante vehicula iaculis. Pellentesque eu ante vitae turpis fermentum fringilla. Suspendisse tincidunt pulvinar urna, a venenatis velit lacinia id. Etiam bibendum laoreet vulputate. Donec et malesuada orci. Vestibulum scelerisque magna et lacus commodo, non dictum lorem vehicula. Curabitur ac blandit elit, quis consequat urna. Vivamus sit amet vulputate metus.&lt;/p&gt;
 </description>
         <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-        <link>/news/2017/01/01/how-to-write-a-blog.html</link>
-        <guid isPermaLink="true">/news/2017/01/01/how-to-write-a-blog.html</guid>
+        <link>/how%20to/2017/01/01/how-to-write-a-blog.html</link>
+        <guid isPermaLink="true">/how%20to/2017/01/01/how-to-write-a-blog.html</guid>
         
         
         <category>How to</category>
