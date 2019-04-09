@@ -94,7 +94,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/assets/css/default.css?v=20190409175603">
+        <link rel="stylesheet" href="/assets/css/default.css?v=20190409184119">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -245,32 +245,170 @@ var translations = {
 
   <div class="row">
     <div class="col-xs-12">
-      <h2></h2>
+      <h2>Unemployment rate (%)</h2>
     </div>
   </div>
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_8-5-2' data-id="8-5-2" data-country=""
-  data-charttitle="" data-measurementunit="" data-datasource="" data-geographicalarea="" data-footnote="" data-showdata="false" data-graphtype="line" data-geocoderegex="" data-showmap="true">
+  <div class="row" id="indicatorData" data-indicatorid='indicator_8-5-2' data-id="8-5-2" data-country="Rwanda"
+  data-charttitle="Unemployment rate (%)" data-measurementunit="Percentage of economically active people that were unemployed" data-datasource="National Institute of Statistics of Rwanda (NISR)" data-geographicalarea="Rwanda" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="false">
     
-    <div class="col-md-12">
+    <div class="col-md-3">
+      <div id="toolbar">
+        <span id="series-help">
+          <h4>Sub-categories</h4>
+          <p>Choose categories from the dropdowns below to see different breakdowns of the data. Some will not be available until a higher level is chosen.</p>
+        </span>
+        <p>Click on the legend to remove individual lines from the chart.</p>
+        <div id="fields">
+          <p class="async-loading" data-img="/assets/img/loading-small.gif"></p>
+        </div>
+      </div>
+      <div id="units"></div>
+    </div>
+    <div class="col-md-9">
     
+
+      
+      
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    <a href="https://sustainabledevelopment-rwanda.github.io/sdg-data-prod/headline/8-5-2.csv" class="btn btn-primary btn-download" download="indicator_8-5-2.csv" tabindex="0" role="button">Download Headline CSV</a>
+
+    <a href="https://sustainabledevelopment-rwanda.github.io/sdg-data-prod/data/8-5-2.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_8-5-2.csv' tabindex='0' role='button'>Download Source CSV</a>
+
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption></caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td class="table-value">3.4</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td class="table-value">2.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td class="table-value">2.2</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div id="datatableFooter">
+    
+    
+    
+    
+  </div>
+
+</div>
 
       
 
       <section>
 
         
+        <p class="async-loading" data-img="/assets/img/loading-small.gif"></p>
+        <div class="async-loaded" style="display:none">
+          <ul class="nav nav-tabs data-view" role="tablist">
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab">Chart</a>
+            </li>
+            <li role="presentation" class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab">Table</a>
+            </li>
+            <li role="presentation" class="nav-item map" style="display:none">
+              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab">Map</a>
+            </li></ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content data-view">
+            <div role="tabpanel" class="tab-pane active" id="chartview">
+              
+    
+    
+
+    <div id="dataset-size-warning" style="display:none">
+      <i class="fa fa-bolt"></i> There are too many datasets to show on the chart. Not all will be shown until you remove some selections.
+    </div>
+
+    
+    <div class="plot-container">
+        
+<canvas></canvas>
+    </div>
+    <div id="plotLegend"></div>
+
+    <div id="chartSelectionDownload"></div>
+
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tableview">
+              <div id="selectionsTable"></div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="mapview" class="map">
+              <div id="map">
+                <img src="/assets/img/loading.gif" alt="Loading map" />
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="nav-item active">
-            <a class="nav-link" data-toggle="tab" href="#metadata" onClick='ga("send", "event", "Tab change", "Change metadata view", "Change to National Metadata tab")' aria-controls="metadata" role="tab">National Metadata</a>
+            <a class="nav-link" data-toggle="tab" href="#metadata" aria-controls="metadata" role="tab">National Metadata</a>
           </li>
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#globalmetadata" onClick='ga("send", "event", "Tab change", "Change metadata view", "Change to Global Metadata tab")' aria-controls="globalmetadata" role="tab">Global Metadata</a>
+            <a class="nav-link" data-toggle="tab" href="#globalmetadata" aria-controls="globalmetadata" role="tab">Global Metadata</a>
           </li>
           <li role="presentation" class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#sources" onClick='ga("send", "event", "Tab change", "Change metadata view", "Change to Sources tab")' aria-controls="sources" role="tab">Sources</a>
+            <a class="nav-link" data-toggle="tab" href="#sources" aria-controls="sources" role="tab">Sources</a>
           </li>
           
         </ul>
@@ -331,7 +469,7 @@ var translations = {
         <th scope="row">Geographical coverage </th>
         <td>
           
-            
+            Rwanda
           
         </td>
         </tr>
@@ -343,7 +481,7 @@ var translations = {
         <th scope="row">Unit of measurement </th>
         <td>
           
-            
+            Percentage of economically active people that were unemployed
           
         </td>
         </tr>
@@ -355,7 +493,7 @@ var translations = {
         <th scope="row">Definitions </th>
         <td>
           
-            
+            Persons in unemployment are defined as all those of working age (usually persons aged 15 and above) who were not in employment, carried out activities to seek employment during a specified recent period and were currently available to take up employment given a job opportunity. Persons in employment are defined as all those of working age (usually persons aged 15 and above) who, during a short reference period, were engaged in any activity to produce goods or provide services for pay or profit. The labour force corresponds to the sum of persons in employment and in unemployment.
           
         </td>
         </tr>
@@ -367,7 +505,7 @@ var translations = {
         <th scope="row">Calculations </th>
         <td>
           
-            
+            (Unemployed persons / Persons in labour force) * 100
           
         </td>
         </tr>
@@ -379,7 +517,7 @@ var translations = {
         <th scope="row">Other information </th>
         <td>
           
-            
+            The figures for unemployment and economically active individuals are measured for the ages 16 and above
           
         </td>
         </tr>
@@ -397,7 +535,7 @@ var translations = {
             
 
             
-              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/cba316ec816bc0c5c5a0a1970b533eab4e3ac2d1" target="_blank">
+              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/e0eb6f76542713c58afbed9f3c6067cfc8129b58" target="_blank">
                 2019-04-09: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
@@ -422,7 +560,7 @@ var translations = {
             
 
             
-              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/00926de9543da45ddc795cc4e1cca4173b814d8e" target="_blank">
+              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/3b028d02966f58b8bce1d0215b36307ea8442650" target="_blank">
                 2019-04-09: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
@@ -750,7 +888,755 @@ var translations = {
     
     <div class="col-md-6">
       
+        <h4>Source 1</h4>
+      
       <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            National Institute of Statistics of Rwanda (NISR)
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            Discontinuous
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            2014
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            Rwanda
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="http://www.statistics.gov.rw/datasource/integrated-household-living-conditions-survey-4-eicv-4" target="_blank">
+                Integrated Household Living Conditions Survey <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+   
+    
+    <div class="col-md-6">
+      
+        <h4>Source 2</h4>
+      
+      <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            National Institute of Statistics of Rwanda (NISR)
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            Discontinuous
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            2012
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            Rwanda
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="http://www.statistics.gov.rw/survey-period/fourth-population-and-housing-census-2012" target="_blank">
+                Population and Housing Census <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+   
+    
+    <div class="col-md-6">
+      
+        <h4>Source 3</h4>
+      
+      <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            NISR
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</table>
+
+    </div>
+    
+   
+    
+    <div class="col-md-6">
+      
+        <h4>Source 4</h4>
+      
+      <table class="table table-hover">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -938,6 +1824,17 @@ var translations = {
   
   
   
+</table>
+
+    </div>
+    
+   
+    
+    <div class="col-md-6">
+      
+        <h4>Source 5</h4>
+      
+      <table class="table table-hover">
   
   
   
@@ -961,6 +1858,193 @@ var translations = {
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+  
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
+          
+            
+          
+        </td>
+        </tr>
+        
+      
   
   
   
@@ -988,38 +2072,6 @@ var translations = {
     </div>
   </div>
 </div>
-
-<style type="text/css">
-
-  #chartControls[show="1"]{display: block;}
-  #chartControls[show="0"]{display: none;}
-</style>
-
-<script>
-
-var SHOW_CONTROLS_ATTRIBUTE = "show-controls";
-var CHART_CONTROLS_ELEMENT_ID = "chartControls";
-
-addControlsVisibilityActionsToTabs();
-
-function addControlsVisibilityActionsToTabs(){
-	var tabs = document.querySelectorAll("[" + SHOW_CONTROLS_ATTRIBUTE + "]");
-	tabs.forEach(function(eachTab){
-		addControlsVisibilityClickEventToTab(eachTab);
-	});
-}
-
-function addControlsVisibilityClickEventToTab(tab){
-	tab.addEventListener("click", function(){
-		setControlsVisibility(tab.getAttribute(SHOW_CONTROLS_ATTRIBUTE));
-	});
-}
-
-function setControlsVisibility(visibility){
-  	document.querySelector("#" + CHART_CONTROLS_ELEMENT_ID).setAttribute("show", visibility);
-}
-
-</script>
 
 <footer role="contentinfo">
   <div class="container">
@@ -1064,7 +2116,7 @@ function setControlsVisibility(visibility){
 <script>
   var remoteDataBaseUrl = 'https://sustainabledevelopment-rwanda.github.io/sdg-data-prod';
 </script>
-<script src='/assets/js/sdg.js?v=20190409175603'></script>
+<script src='/assets/js/sdg.js?v=20190409184119'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
@@ -1124,4 +2176,5 @@ $(function() {
 
 </body>
 </html>
+
 
