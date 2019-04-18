@@ -161,7 +161,7 @@
           "description": "",
           "keywords": "",
           "href": "/2-a-2",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "2-1-2",
           "title": "Prevalence of moderate or severe food insecurity in the population, based on the Food Insecurity Experience Scale (FIES)",
@@ -258,7 +258,7 @@
           "description": "",
           "keywords": "",
           "href": "/3-b-2",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "3-7-1",
           "title": "Proportion of women of reproductive age (aged 15–49 years) who have their need for family planning satisfied with modern methods",
@@ -411,7 +411,7 @@
           "description": "",
           "keywords": "",
           "href": "/4-b-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "4-a-1",
           "title": "Proportion of schools with access to (a) electricity; (b) the Internet for pedagogical purposes; (c) computers for pedagogical purposes; (d) adapted infrastructure and materials for students with disabilities; (e) basic drinking water; (f) single-sex basic sanitation facilities; and (g) basic handwashing facilities (as per the WASH indicator definitions)",
@@ -578,7 +578,7 @@
           "description": "",
           "keywords": "",
           "href": "/5-3-2",
-          "status": "notstarted"
+          "status": "notapplicable"
         }]
     }
   },{
@@ -654,7 +654,7 @@
           "description": "",
           "keywords": "",
           "href": "/6-a-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "6-1-1",
           "title": "Proportion of population using safely managed drinking water services",
@@ -681,7 +681,7 @@
           "description": "",
           "keywords": "",
           "href": "/7-a-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "7-b-1",
           "title": "Investments in energy efficiency as a proportion of GDP and the amount of foreign direct investment in financial transfer for infrastructure and technology to sustainable development services",
@@ -778,7 +778,7 @@
           "description": "",
           "keywords": "",
           "href": "/8-4-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "8-9-2",
           "title": "Proportion of jobs in sustainable tourism industries out of total tourism jobs",
@@ -813,7 +813,7 @@
           "description": "",
           "keywords": "",
           "href": "/8-a-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "8-8-2",
           "title": "Level of national compliance with labour rights (freedom of association and collective bargaining) based on International Labour Organization (ILO) textual sources and national legislation, by sex and migrant status",
@@ -889,7 +889,7 @@
           "description": "",
           "keywords": "",
           "href": "/9-a-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "9-b-1",
           "title": "Proportion of medium and high-tech industry value added in total value added",
@@ -993,14 +993,14 @@
           "description": "",
           "keywords": "",
           "href": "/10-b-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "10-6-1",
           "title": "Proportion of members and voting rights of developing countries in international organizations",
           "description": "",
           "keywords": "",
           "href": "/10-6-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "10-4-1",
           "title": "Labour share of GDP, comprising wages and social protection transfers",
@@ -1062,7 +1062,7 @@
           "description": "",
           "keywords": "",
           "href": "/11-c-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "11-7-1",
           "title": "Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities",
@@ -1138,7 +1138,7 @@
           "description": "",
           "keywords": "",
           "href": "/12-a-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "12-6-1",
           "title": "Number of companies publishing sustainability reports",
@@ -1152,7 +1152,7 @@
           "description": "",
           "keywords": "",
           "href": "/12-3-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "12-7-1",
           "title": "Number of countries implementing sustainable public procurement policies and action plans",
@@ -1187,7 +1187,7 @@
           "description": "",
           "keywords": "",
           "href": "/12-c-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "12-1-1",
           "title": "Number of countries with sustainable consumption and production (SCP) national action plans or SCP mainstreamed as a priority or a target into national policies",
@@ -1249,14 +1249,14 @@
           "description": "",
           "keywords": "",
           "href": "/13-b-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "13-a-1",
           "title": "Mobilized amount of United States dollars per year between 2020 and 2025 accountable towards the $100 billion commitment",
           "description": "",
           "keywords": "",
           "href": "/13-a-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "13-1-1",
           "title": "Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population",
@@ -1297,14 +1297,14 @@
           "description": "",
           "keywords": "",
           "href": "/14-2-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "14-1-1",
           "title": "Index of coastal eutrophication and floating plastic debris density",
           "description": "",
           "keywords": "",
           "href": "/14-1-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "14-6-1",
           "title": "Progress by countries in the degree of implementation of international instruments aiming to combat illegal, unreported and unregulated fishing",
@@ -1318,7 +1318,7 @@
           "description": "",
           "keywords": "",
           "href": "/14-c-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "14-b-1",
           "title": "Progress by countries in the degree of application of a legal/regulatory/policy/institutional framework which recognizes and protects access rights for small-scale fisheries",
@@ -1332,7 +1332,7 @@
           "description": "",
           "keywords": "",
           "href": "/14-5-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "14-7-1",
           "title": "Sustainable fisheries as a proportion of GDP in small island developing States, least developed countries and all countries",
@@ -1346,14 +1346,14 @@
           "description": "",
           "keywords": "",
           "href": "/14-a-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "14-3-1",
           "title": "Average marine acidity (pH) measured at agreed suite of representative sampling stations",
           "description": "",
           "keywords": "",
           "href": "/14-3-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         }]
     }
   },{
@@ -1394,7 +1394,7 @@
           "description": "",
           "keywords": "",
           "href": "/15-4-2",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "15-2-1",
           "title": "Progress towards sustainable forest management",
@@ -1415,14 +1415,14 @@
           "description": "",
           "keywords": "",
           "href": "/15-5-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "15-a-1",
           "title": "Official development assistance and public expenditure on conservation and sustainable use of biodiversity and ecosystems",
           "description": "",
           "keywords": "",
           "href": "/15-a-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "15-1-2",
           "title": "Proportion of important sites for terrestrial and freshwater biodiversity that are covered by protected areas, by ecosystem type",
@@ -1658,7 +1658,7 @@
           "description": "",
           "keywords": "",
           "href": "/17-2-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "17-1-2",
           "title": "Proportion of domestic budget funded by domestic taxes",
@@ -1672,7 +1672,7 @@
           "description": "",
           "keywords": "",
           "href": "/17-7-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "17-19-1",
           "title": "Dollar value of all resources made available to strengthen statistical capacity in developing countries",
@@ -1749,7 +1749,7 @@
           "description": "",
           "keywords": "",
           "href": "/17-15-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "17-18-2",
           "title": "Number of countries that have national statistical legislation that complies with the Fundamental Principles of Official Statistics",
@@ -1770,14 +1770,14 @@
           "description": "",
           "keywords": "",
           "href": "/17-5-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "17-10-1",
           "title": "Worldwide weighted tariff-average",
           "description": "",
           "keywords": "",
           "href": "/17-10-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "17-18-1",
           "title": "Proportion of sustainable development indicators produced at the national level with full disaggregation when relevant to the target, in accordance with the Fundamental Principles of Official Statistics",
@@ -1791,14 +1791,14 @@
           "description": "",
           "keywords": "",
           "href": "/17-9-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "17-12-1",
           "title": "Average tariffs faced by developing countries, least developed countries and small island developing States",
           "description": "",
           "keywords": "",
           "href": "/17-12-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         },{
           "id": "17-16-1",
           "title": "Number of countries reporting progress in multi-stakeholder development effectiveness monitoring frameworks that support the achievement of the sustainable development goals",
