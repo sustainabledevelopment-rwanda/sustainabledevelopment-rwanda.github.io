@@ -2221,7 +2221,7 @@ $(function() {
 }
 
 function sendPageviewToGoogleAnalytics(){
-    ga('create', '', 'auto');
+    ga('create', 'UA-148902754-1', 'auto');
     // anonymize user IPs (chops off the last IP triplet)
     ga('set', 'anonymizeIp', true);
     // forces SSL even if the page were somehow loaded over http://

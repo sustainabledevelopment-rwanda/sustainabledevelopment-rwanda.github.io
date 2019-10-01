@@ -94,7 +94,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css">
-        <link rel="stylesheet" href="/assets/css/default.css?v=20190930203011">
+        <link rel="stylesheet" href="/assets/css/default.css?v=20191001101845">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -236,7 +236,7 @@ var translations = {
   <div class="row" id="page-content-row">
     <div class="col-xs-12">
       <div id="page-content">
-  
+  <p>This is a proxy indicator.</p>
 
 </div>
 
@@ -245,20 +245,134 @@ var translations = {
 
   <div class="row">
     <div class="col-xs-12">
-      <h2></h2>
+      <h2>Number of human trafficking cases reported</h2>
     </div>
   </div>
 
-  <div class="row" id="indicatorData" data-indicatorid='indicator_16-2-2' data-id="16-2-2" data-country=""
-  data-charttitle="" data-measurementunit="" data-datasource="" data-geographicalarea="" data-footnote="" data-showdata="false" data-graphtype="line" data-geocoderegex="" data-showmap="true">
+  <div class="row" id="indicatorData" data-indicatorid='indicator_16-2-2' data-id="16-2-2" data-country="Rwanda"
+  data-charttitle="Number of human trafficking cases reported" data-measurementunit="Number" data-datasource="MINIJUST" data-geographicalarea="Rwanda" data-footnote="" data-showdata="true" data-graphtype="line" data-geocoderegex="" data-showmap="false">
     
-    <div class="col-md-12">
+    <div class="col-md-3">
+      <div id="toolbar">
+        <span id="series-help">
+          <h4>Sub-categories</h4>
+          <p>Choose categories from the dropdowns below to see different breakdowns of the data. Some will not be available until a higher level is chosen.</p>
+        </span>
+        <p>Click on the legend to remove individual lines from the chart.</p>
+        <div id="fields">
+          <p class="async-loading" data-img="/assets/img/loading-small.gif"></p>
+        </div>
+      </div>
+      <div id="units"></div>
+    </div>
+    <div class="col-md-9">
     
+
+      
+      
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    <a href="https://sustainabledevelopment-rwanda.github.io/sdg-data-prod/headline/16-2-2.csv" class="btn btn-primary btn-download" download="indicator_16-2-2.csv" tabindex="0" role="button">Download Headline CSV</a>
+
+    <a href="https://sustainabledevelopment-rwanda.github.io/sdg-data-prod/data/16-2-2.csv" class="btn btn-primary btn-download" style='float:left;margin-right:1em' download='indicator_16-2-2.csv' tabindex='0' role='button'>Download Source CSV</a>
+
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption></caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2016/17</td>
+          
+          
+          
+          <td class="table-value">42</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div id="datatableFooter">
+    
+    
+    
+    
+  </div>
+
+</div>
 
       
 
       <section>
 
+        
+        <p class="async-loading" data-img="/assets/img/loading-small.gif"></p>
+        <div class="async-loaded" style="display:none">
+          <ul class="nav nav-tabs data-view" role="tablist">
+            <li role="presentation" class="nav-item active">
+              <a class="nav-link" data-toggle="tab" href="#chartview" aria-controls="chartview" role="tab">Chart</a>
+            </li>
+            <li role="presentation" class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#tableview" aria-controls="tableview" role="tab">Table</a>
+            </li>
+            <li role="presentation" class="nav-item map" style="display:none">
+              <a class="nav-link" data-toggle="tab" href="#mapview" aria-controls="mapview" role="tab">Map</a>
+            </li></ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content data-view">
+            <div role="tabpanel" class="tab-pane active" id="chartview">
+              
+    
+    
+
+    <div id="dataset-size-warning" style="display:none">
+      <i class="fa fa-bolt"></i> There are too many datasets to show on the chart. Not all will be shown until you remove some selections.
+    </div>
+
+    
+    <div class="plot-container">
+        
+<canvas></canvas>
+    </div>
+    <div id="plotLegend"></div>
+
+    <div id="chartSelectionDownload"></div>
+
+
+
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tableview">
+              <div id="selectionsTable"></div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="mapview" class="map">
+              <div id="map">
+                <img src="/assets/img/loading.gif" alt="Loading map" />
+              </div>
+            </div>
+            
+          </div>
+        </div>
         
 
         <!-- Nav tabs -->
@@ -331,7 +445,7 @@ var translations = {
         <th scope="row">Geographical coverage </th>
         <td>
           
-            
+            Rwanda
           
         </td>
         </tr>
@@ -343,7 +457,7 @@ var translations = {
         <th scope="row">Unit of measurement </th>
         <td>
           
-            
+            Number
           
         </td>
         </tr>
@@ -397,8 +511,8 @@ var translations = {
             
 
             
-              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/07e53b325457b70832bebc00825decd95c078c1b" target="_blank">
-                2019-04-18: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/19eae8f3230060a5759e4345e9b0319fa43a1dd5" target="_blank">
+                2019-09-18: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -422,8 +536,8 @@ var translations = {
             
 
             
-              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/38eca501025c19456f1c4186f587cc530eb2fac7" target="_blank">
-                2019-04-23: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/sustainabledevelopment-rwanda/sdg-data/commit/1d24ffe277ec674f6599138316ef3f35a86a334c" target="_blank">
+                2019-09-18: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -538,7 +652,7 @@ var translations = {
         <th scope="row">Indicator name </th>
         <td>
           
-            Number of victims of human trafficking per 100,000 population, by sex, age and form of exploitation
+            Number of victims of human trafficking per 100,000 population, by sex, age and form of exploitation 
           
         </td>
         </tr>
@@ -562,7 +676,7 @@ var translations = {
         <th scope="row">Target name </th>
         <td>
           
-            End abuse, exploitation, trafficking and all forms of violence against and torture of children
+            End abuse, exploitation, trafficking and all forms of violence against and torture of children 
           
         </td>
         </tr>
@@ -586,7 +700,7 @@ var translations = {
         <th scope="row">Global indicator description </th>
         <td>
           
-            
+            The indicator is defined as the ratio between the total number of victims of trafficking in persons detected or living in a country and the population resident in the country, expressed per 100,000 populations. According to Article 3, paragraph (a) of the UN Trafficking in Persons Protocol, trafficking in persons is defined as “the recruitment, transportation, transfer, harbouring or receipt of persons, by means of the threat or use of force or other forms of coercion, of abduction, of fraud, of deception, of the abuse of power or of a position of vulnerability or of the giving or receiving of payments or benefits to achieve the consent of a person having control over another person, for the purpose of exploitation. Exploitation shall include, at a minimum, the exploitation of the prostitution of others or other forms of sexual exploitation, forced labour or services, slavery or practices similar to slavery, servitude or the removal of organs”. Article 3, (b) states “the consent of a victim of trafficking in persons to the intended exploitation set forth in subparagraph (a) of this article shall be irrelevant where any of the means set forth in subparagraph (a) have been used”; Article 3, (c) states “the recruitment, transportation, transfer, harbouring or receipt of a child for the purpose of exploitation shall be considered trafficking in persons even if this does not involve any of the means set forth in subparagraph (a)"
           
         </td>
         </tr>
@@ -598,7 +712,7 @@ var translations = {
         <th scope="row">UN designated tier </th>
         <td>
           
-            2
+            Tier II
           
         </td>
         </tr>
@@ -610,7 +724,7 @@ var translations = {
         <th scope="row">UN custodian agency </th>
         <td>
           
-            UNODC
+            United Nations Office on Drugs and Crime (UNODC)
           
         </td>
         </tr>
@@ -629,7 +743,7 @@ var translations = {
 
             
               <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-16-02-02.pdf" target="_blank">
-                United Nations Sustainable Development Goals Metadata (pdf 1361kB) <span class="visuallyhidden">opens in a new window</span>
+                United Nations Sustainable Development Goals Metadata (pdf 894kB) <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -790,7 +904,7 @@ var translations = {
         <th scope="row">Organisation </th>
         <td>
           
-            
+            MINIJUST
           
         </td>
         </tr>
@@ -802,7 +916,7 @@ var translations = {
         <th scope="row">Periodicity </th>
         <td>
           
-            
+            Annual
           
         </td>
         </tr>
@@ -814,7 +928,7 @@ var translations = {
         <th scope="row">Earliest available data </th>
         <td>
           
-            
+            2016/17
           
         </td>
         </tr>
@@ -826,7 +940,7 @@ var translations = {
         <th scope="row">Geographical coverage </th>
         <td>
           
-            
+            Rwanda
           
         </td>
         </tr>
@@ -843,6 +957,10 @@ var translations = {
             
             
 
+            
+              <a href="http://www.minijust.gov.rw/fileadmin/Documents/JRLOS_Documents/NO_2842_______07.12.2017_______PS__AND_SECRETARY_TO_THE_TREASURY___MINICOFIN-2.pdf" target="_blank">
+                http://www.minijust.gov.rw/fileadmin/Documents/JRLOS_Documents/NO_2842_______07.12.2017_______PS__AND_SECRETARY_TO_THE_TREASURY___MINICOFIN-2.pdf <span class="visuallyhidden">opens in a new window</span>
+              </a>
             
 
           
@@ -1032,7 +1150,7 @@ var translations = {
 <script>
   var remoteDataBaseUrl = 'https://sustainabledevelopment-rwanda.github.io/sdg-data-prod';
 </script>
-<script src='/assets/js/sdg.js?v=20190930203011'></script>
+<script src='/assets/js/sdg.js?v=20191001101845'></script>
 <script>
 $(function() {
     if($('#indicatorData').length) {
@@ -1088,6 +1206,10 @@ $(function() {
 </script>
 
 
+
+<script>
+  initialiseGoogleAnalytics();
+</script>
 
 
 </body>
