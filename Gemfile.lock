@@ -44,7 +44,7 @@ GEM
     jekyll-open-sdg-plugins (0.0.14)
       deep_merge (~> 1.2)
       jekyll (~> 3.0)
-    jekyll-redirect-from (0.15.0)
+    jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
     jekyll-remote-theme (0.4.1)
       addressable (~> 2.0)
