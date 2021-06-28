@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -12,14 +11,18 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://sustainabledevelopment-rwanda.github.io/sdg-data-prod',
+  remoteDataBaseUrl: 'https://sustainabledevelopment-rwanda.github.io/sdg-data-prod/en',
 
-  // A hook which can be replaced to modify the configuration for Chart.js.
-  // To see where this is used, see indicatorView.js createPlot() and updatePlot().
-  // To see an example of replacing it, see binary.html.
-  chartConfigAlter: function(config) {
-    // Alterations go here.
-    return config;
+  chartConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Chart.js.
+  chartConfigAlter: function(callback) {
+    this.chartConfigAlterations.push(callback);
+  },
+
+  tableConfigAlterations: [],
+  // A hook which can be used to modify the configuration for Datatables.
+  tableConfigAlter: function(callback) {
+    this.tableConfigAlterations.push(callback);
   },
 
   // A hook which can be replaced to alter whether/how the values that are
@@ -28,6 +31,14 @@ var opensdg = {
     // Alterations go here.
     return value;
   },
+
+  // A hook which can be used to alter the data before it is displayed on charts/tables.
+  dataDisplayAlterations: [],
+  dataDisplayAlter: function(callback) {
+    this.dataDisplayAlterations.push(callback);
+  },
+
+  language: 'en',
 };
 
 // For backwards compatibility, some of these might need to be global.
@@ -90,15 +101,11 @@ var translations = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Title and meta description
         ================================================== -->
-        
 
         
+    <title>Indicators For The Sustainable Development Goals</title>
 
-        <title>
-          
-            Rwanda Indicators For The Sustainable Development Goals
-          
-        </title>
+
 
         <meta name="description" content="">
         <meta property="og:description" content="">
@@ -124,7 +131,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/default.css?v=20210615015716">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210628180415">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -138,555 +145,745 @@ var translations = {
 <body class="language-en layout-reportingstatus">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Alpha","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","enable_high_contrast":"Enable high contrast","high_contrast":"High contrast","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
+
+<script>translations['header'] = {"alpha":"Alpha","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","enable_high_contrast":"Enable high contrast","high_contrast":"High contrast","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
   <div class="container">
-  <div class="alert alert-danger" role="alert">
+  <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha</strong>
+    
     This is a development website. We welcome your <a href="mailto:info@statistics.gov.rw">feedback</a>.
   </div>
 </div>
 
 </div>
 
-<header role="banner">
+<header role="banner" class="header-menu-left-aligned">
   <div class="container">
 
-    <a class="navbar-brand" href="/" id="home">
-      <img src="/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
-    </a>
-
-  <div class='hidden visible-xs float-right'>
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="/" id="home">
+    <img src="/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
+</a>
+      <div class="mobile-widgets">
     <ul id='accessibility-nav' class='contrast-switcher'></ul></div>
+    </div>
 
-    <nav class="navbar navbar-default" id="main-nav">
-
-      <ul class="top-level">
-        <li id="menuToggle"
-            aria-label="Menu toggle. Click to expand or collapse the menu."
-            aria-haspopup="true"
-            aria-expanded="false">
-          <span data-target="menu" tabindex="0"
-          role="navigation">Menu</span>
-        </li>
-        <li><span data-target="search">Search</span></li>
-      </ul>
-
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-            <a href="/">Goals</a>
-          </li><li class="nav-link active">
-            <a href="/reporting-status/">Reporting Status</a>
-          </li><li class="nav-link ">
-            <a href="/about/">About</a>
-          </li><li class="nav-link ">
-            <a href="/publications/">Publications</a>
-          </li><li class="nav-link ">
-            <a href="/guidance/">Guidance</a>
-          </li><li class="nav-link ">
-            <a href="/faq/">FAQ</a>
-          </li></ul>
-
+    <div class="search-and-desktop-widgets">
       <div id="search" class="menu-target">
-  <input id="indicator_search" title="Indicator search" placeholder="Indicator search" data-url="/indicators.json" data-pageurl="/search/?q=" />
-  <label for="indicator_search">
-    <button id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false" aria-label=Indicator search></i></button><span>Search:</span>
-  </label>
+  <form action="/search">
+    <label class="sr-only" for="indicator_search">Search</label>
+    <input type="text" name="q" id="indicator_search" title="Search" /><!--
+    --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
 </div>
 
+      <div class="navbar navbar-default widgets-without-menu">
+        <ul class="nav navbar-nav contrast-switcher"></ul>
+      </div>
+    </div>
 
-    </nav>
+    <div class="navbar navbar-default menu-without-widgets" id="main-nav">
+      <ul class="top-level">
+    <li id="menuToggle"
+        aria-label="Menu toggle. Click to expand or collapse the menu."
+        aria-haspopup="true">
+        <button data-target="menu-mobile" aria-expanded="false">Menu</button>
+        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
+    <a href="/">Goals</a>
+</li><li class="nav-link active">
+    <a href="/reporting-status/">Reporting Status</a>
+</li><li class="nav-link ">
+    <a href="/about/">About</a>
+</li><li class="nav-link ">
+    <a href="/publications/">Publications</a>
+</li><li class="nav-link ">
+    <a href="/guidance/">Guidance</a>
+</li><li class="nav-link ">
+    <a href="/faq/">FAQ</a>
+</li>
+</ul>
+
+    </li>
+    <li id="searchToggle"
+        aria-label="Search toggle. Click to expand or collapse the search bar."
+        aria-haspopup="true">
+        <button data-target="search-mobile" aria-expanded="false">Search</button>
+        <div id="search-mobile" class="menu-target">
+  <form action="/search">
+    <label class="sr-only" for="indicator_search-mobile">Search</label>
+    <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
+    --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
+  </form>
+</div>
+
+    </li>
+</ul>
+      <ul class="nav navbar-nav menu-target " id="menu"><li class="nav-link ">
+    <a href="/">Goals</a>
+</li><li class="nav-link active">
+    <a href="/reporting-status/">Reporting Status</a>
+</li><li class="nav-link ">
+    <a href="/about/">About</a>
+</li><li class="nav-link ">
+    <a href="/publications/">Publications</a>
+</li><li class="nav-link ">
+    <a href="/guidance/">Guidance</a>
+</li><li class="nav-link ">
+    <a href="/faq/">FAQ</a>
+</li>
+</ul>
+
+    </div>
+
   </div>
 
 </header>
+<div id="top" tabindex=-1></div>
 
 
-<div id="main-content" class="container reportingstatus">
 
-  <h1>Reporting Status</h1><div class="goal goal-overall">
-      <div class="details">
+
+
+
+
+
+
+
+
+<div id="main-content" class="container reportingstatus" role="main">
+
+  <h1>
+  
+    Reporting status
+  
+</h1>
+
+
+
+
+  
+
+  
+  <div class="goal goal-overall">
+    <div class="details">
         <h2 class="status-goal">
-            Overall Reporting Status <span class="total"><span>244</span> indicators</span>
+            Overall reporting status
         </h2>
+        <span class="total"><span>244</span> indicators</span>
         <div class="summary">
-          <div class="statuses"><div>
-              <span class="status complete">75</span><strong>Reported online</strong><span class="value">30.7%</span>
+            <div class="statuses"><div>
+                <span class="status complete"><span class="status-inner">113</span></span><strong>Reported online</strong><span class="value">46%</span>
             </div><div>
-              <span class="status notstarted">136</span><strong>Exploring data sources</strong><span class="value">55.7%</span>
+                <span class="status notstarted"><span class="status-inner">98</span></span><strong>Exploring data sources</strong><span class="value">40%</span>
             </div><div>
-              <span class="status notapplicable">33</span><strong>Not applicable</strong><span class="value">13.5%</span>
+                <span class="status notapplicable"><span class="status-inner">33</span></span><strong>Not applicable</strong><span class="value">14%</span>
             </div><br style="clear:both;">
-          </div>
+            </div>
         </div>
-        <div class="goal-stats"><span class="complete" style="width:30.7%" title="Reported online: 30.7%"></span><span class="notstarted" style="width:55.7%" title="Exploring data sources: 55.7%"></span><span class="notapplicable" style="width:13.5%" title="Not applicable: 13.5%"></span></div>
-
-      </div>
-    <!--</li>-->
+        <div class="goal-stats">
+            
+            
+            <span class="complete" style="width:46.31147540983606%" title="Reported online: 46%"></span>
+            
+            
+            <span class="notstarted" style="width:40.16393442622951%" title="Exploring data sources: 40%"></span>
+            
+            
+            <span class="notapplicable" style="width:13.524590163934427%" title="Not applicable: 14%"></span></div>
+    </div>
     <br style="clear:both;">
-  </div>
+</div>
+  <h2>Status by goal</h2><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/1">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/1.png" alt="No poverty - Goal 1" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/1">No poverty</a>
+        </h3>
+        <span class="total">14 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">10</span></span><strong>Reported online</strong><span class="value">71%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">4</span></span><strong>Exploring data sources</strong><span class="value">29%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:71.42857142857143%" title="Reported online: 71%"></span>
+                
+                
+                <span class="notstarted" style="width:28.57142857142857%" title="Exploring data sources: 29%"></span>
+                
+                
+                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/2">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/2.png" alt="Zero hunger - Goal 2" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/2">Zero hunger</a>
+        </h3>
+        <span class="total">13 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">31%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">8</span></span><strong>Exploring data sources</strong><span class="value">62%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">8%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:30.76923076923077%" title="Reported online: 31%"></span>
+                
+                
+                <span class="notstarted" style="width:61.53846153846154%" title="Exploring data sources: 62%"></span>
+                
+                
+                <span class="notapplicable" style="width:7.692307692307693%" title="Not applicable: 8%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/3">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/3.png" alt="Good health and well-being - Goal 3" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/3">Good health and well-being</a>
+        </h3>
+        <span class="total">27 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">15</span></span><strong>Reported online</strong><span class="value">56%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">11</span></span><strong>Exploring data sources</strong><span class="value">41%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">4%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:55.55555555555556%" title="Reported online: 56%"></span>
+                
+                
+                <span class="notstarted" style="width:40.74074074074074%" title="Exploring data sources: 41%"></span>
+                
+                
+                <span class="notapplicable" style="width:3.7037037037037037%" title="Not applicable: 4%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/4">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/4.png" alt="Quality education - Goal 4" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/4">Quality education</a>
+        </h3>
+        <span class="total">11 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">9</span></span><strong>Reported online</strong><span class="value">82%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Exploring data sources</strong><span class="value">9%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">9%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:81.81818181818181%" title="Reported online: 82%"></span>
+                
+                
+                <span class="notstarted" style="width:9.090909090909092%" title="Exploring data sources: 9%"></span>
+                
+                
+                <span class="notapplicable" style="width:9.090909090909092%" title="Not applicable: 9%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/5">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/5.png" alt="Gender equality - Goal 5" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/5">Gender equality</a>
+        </h3>
+        <span class="total">14 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">12</span></span><strong>Reported online</strong><span class="value">86%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Exploring data sources</strong><span class="value">7%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">7%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:85.71428571428571%" title="Reported online: 86%"></span>
+                
+                
+                <span class="notstarted" style="width:7.142857142857142%" title="Exploring data sources: 7%"></span>
+                
+                
+                <span class="notapplicable" style="width:7.142857142857142%" title="Not applicable: 7%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/6">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/6.png" alt="Clean water and sanitation - Goal 6" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/6">Clean water and sanitation</a>
+        </h3>
+        <span class="total">11 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">36%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">55%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">9%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:36.36363636363637%" title="Reported online: 36%"></span>
+                
+                
+                <span class="notstarted" style="width:54.54545454545454%" title="Exploring data sources: 55%"></span>
+                
+                
+                <span class="notapplicable" style="width:9.090909090909092%" title="Not applicable: 9%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/7">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/7.png" alt="Affordable and clean energy - Goal 7" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/7">Affordable and clean energy</a>
+        </h3>
+        <span class="total">6 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">3</span></span><strong>Reported online</strong><span class="value">50%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Exploring data sources</strong><span class="value">33%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">17%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:50.0%" title="Reported online: 50%"></span>
+                
+                
+                <span class="notstarted" style="width:33.33333333333333%" title="Exploring data sources: 33%"></span>
+                
+                
+                <span class="notapplicable" style="width:16.666666666666664%" title="Not applicable: 17%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/8">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/8.png" alt="Decent jobs and economic growth - Goal 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/8">Decent jobs and economic growth</a>
+        </h3>
+        <span class="total">17 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">11</span></span><strong>Reported online</strong><span class="value">65%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">4</span></span><strong>Exploring data sources</strong><span class="value">24%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">2</span></span><strong>Not applicable</strong><span class="value">12%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:64.70588235294117%" title="Reported online: 65%"></span>
+                
+                
+                <span class="notstarted" style="width:23.52941176470588%" title="Exploring data sources: 24%"></span>
+                
+                
+                <span class="notapplicable" style="width:11.76470588235294%" title="Not applicable: 12%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/9">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/9.png" alt="Industry, innovation and infrastructure - Goal 9" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/9">Industry, innovation and infrastructure</a>
+        </h3>
+        <span class="total">12 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">5</span></span><strong>Reported online</strong><span class="value">42%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">50%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">8%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:41.66666666666667%" title="Reported online: 42%"></span>
+                
+                
+                <span class="notstarted" style="width:50.0%" title="Exploring data sources: 50%"></span>
+                
+                
+                <span class="notapplicable" style="width:8.333333333333332%" title="Not applicable: 8%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/10">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/10.png" alt="Reduced inequalities - Goal 10" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/10">Reduced inequalities</a>
+        </h3>
+        <span class="total">11 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">3</span></span><strong>Reported online</strong><span class="value">27%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">55%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">2</span></span><strong>Not applicable</strong><span class="value">18%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:27.27272727272727%" title="Reported online: 27%"></span>
+                
+                
+                <span class="notstarted" style="width:54.54545454545454%" title="Exploring data sources: 55%"></span>
+                
+                
+                <span class="notapplicable" style="width:18.181818181818183%" title="Not applicable: 18%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/11">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/11.png" alt="Sustainable cities &amp; communities - Goal 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/11">Sustainable cities & communities</a>
+        </h3>
+        <span class="total">15 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">5</span></span><strong>Reported online</strong><span class="value">33%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">9</span></span><strong>Exploring data sources</strong><span class="value">60%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">7%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:33.33333333333333%" title="Reported online: 33%"></span>
+                
+                
+                <span class="notstarted" style="width:60.0%" title="Exploring data sources: 60%"></span>
+                
+                
+                <span class="notapplicable" style="width:6.666666666666667%" title="Not applicable: 7%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/12">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/12.png" alt="Responsible consumption and production - Goal 12" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/12">Responsible consumption and production</a>
+        </h3>
+        <span class="total">13 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">2</span></span><strong>Reported online</strong><span class="value">15%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">8</span></span><strong>Exploring data sources</strong><span class="value">62%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">3</span></span><strong>Not applicable</strong><span class="value">23%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:15.384615384615385%" title="Reported online: 15%"></span>
+                
+                
+                <span class="notstarted" style="width:61.53846153846154%" title="Exploring data sources: 62%"></span>
+                
+                
+                <span class="notapplicable" style="width:23.076923076923077%" title="Not applicable: 23%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/13">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/13.png" alt="Climate action - Goal 13" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/13">Climate action</a>
+        </h3>
+        <span class="total">8 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">50%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Exploring data sources</strong><span class="value">25%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">2</span></span><strong>Not applicable</strong><span class="value">25%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:50.0%" title="Reported online: 50%"></span>
+                
+                
+                <span class="notstarted" style="width:25.0%" title="Exploring data sources: 25%"></span>
+                
+                
+                <span class="notapplicable" style="width:25.0%" title="Not applicable: 25%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/14">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/14.png" alt="Life below water - Goal 14" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/14">Life below water</a>
+        </h3>
+        <span class="total">10 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">0</span></span><strong>Reported online</strong><span class="value">0%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">4</span></span><strong>Exploring data sources</strong><span class="value">40%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">6</span></span><strong>Not applicable</strong><span class="value">60%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:0.0%" title="Reported online: 0%"></span>
+                
+                
+                <span class="notstarted" style="width:40.0%" title="Exploring data sources: 40%"></span>
+                
+                
+                <span class="notapplicable" style="width:60.0%" title="Not applicable: 60%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/15">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/15.png" alt="Life on land - Goal 15" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/15">Life on land</a>
+        </h3>
+        <span class="total">14 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">29%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">7</span></span><strong>Exploring data sources</strong><span class="value">50%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">3</span></span><strong>Not applicable</strong><span class="value">21%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:28.57142857142857%" title="Reported online: 29%"></span>
+                
+                
+                <span class="notstarted" style="width:50.0%" title="Exploring data sources: 50%"></span>
+                
+                
+                <span class="notapplicable" style="width:21.428571428571427%" title="Not applicable: 21%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/16">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/16.png" alt="Peace and justice - strong institutions - Goal 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/16">Peace and justice - strong institutions</a>
+        </h3>
+        <span class="total">23 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">13</span></span><strong>Reported online</strong><span class="value">57%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">10</span></span><strong>Exploring data sources</strong><span class="value">43%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:56.52173913043478%" title="Reported online: 57%"></span>
+                
+                
+                <span class="notstarted" style="width:43.47826086956522%" title="Exploring data sources: 43%"></span>
+                
+                
+                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div><div class="goal reporting-status-item">
+    <div class="frame goal-tiles">
+        <a href="/17">
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/17.png" alt="Partnerships for the goals - Goal 17" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-"/>
+        </a>
+    </div>
+    <div class="details">
+        <h3 class="status-goal">
+            <a href="/17">Partnerships for the goals</a>
+        </h3>
+        <span class="total">25 indicators</span>
+        <div class="summary">
+            <div class="statuses"><div>
+                    <span class="status complete"><span class="status-inner">9</span></span><strong>Reported online</strong><span class="value">36%</span>
+                </div><div>
+                    <span class="status notstarted"><span class="status-inner">9</span></span><strong>Exploring data sources</strong><span class="value">36%</span>
+                </div><div>
+                    <span class="status notapplicable"><span class="status-inner">7</span></span><strong>Not applicable</strong><span class="value">28%</span>
+                </div><br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                <span class="complete" style="width:36.0%" title="Reported online: 36%"></span>
+                
+                
+                <span class="notstarted" style="width:36.0%" title="Exploring data sources: 36%"></span>
+                
+                
+                <span class="notapplicable" style="width:28.0%" title="Not applicable: 28%"></span></div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;">
+</div>
+  
 
-  <h2>Status by goal</h2><div class="goal">
-        <div class="frame">
-          <a href="/1/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/1.png" alt="No poverty - Goal 1" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/1/">No poverty</a>
-            <span class="total">14<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">9</span><strong>Reported online</strong><span class="value">64.3%</span>
-              </div><div>
-                <span class="status notstarted">5</span><strong>Exploring data sources</strong><span class="value">35.7%</span>
-              </div><div>
-                <span class="status notapplicable">0</span><strong>Not applicable</strong><span class="value">0.0%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:64.3%" title="Reported online: 64.3%"></span><span class="notstarted" style="width:35.7%" title="Exploring data sources: 35.7%"></span><span class="notapplicable" style="width:0.0%" title="Not applicable: 0.0%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/2/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/2.png" alt="Zero hunger - Goal 2" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/2/">Zero hunger</a>
-            <span class="total">13<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Reported online</strong><span class="value">23.1%</span>
-              </div><div>
-                <span class="status notstarted">9</span><strong>Exploring data sources</strong><span class="value">69.2%</span>
-              </div><div>
-                <span class="status notapplicable">1</span><strong>Not applicable</strong><span class="value">7.7%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:23.1%" title="Reported online: 23.1%"></span><span class="notstarted" style="width:69.2%" title="Exploring data sources: 69.2%"></span><span class="notapplicable" style="width:7.7%" title="Not applicable: 7.7%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/3/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/3.png" alt="Good health and well-being - Goal 3" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/3/">Good health and well-being</a>
-            <span class="total">27<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">9</span><strong>Reported online</strong><span class="value">33.3%</span>
-              </div><div>
-                <span class="status notstarted">17</span><strong>Exploring data sources</strong><span class="value">63.0%</span>
-              </div><div>
-                <span class="status notapplicable">1</span><strong>Not applicable</strong><span class="value">3.7%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:33.3%" title="Reported online: 33.3%"></span><span class="notstarted" style="width:63.0%" title="Exploring data sources: 63.0%"></span><span class="notapplicable" style="width:3.7%" title="Not applicable: 3.7%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/4/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/4.png" alt="Quality education - Goal 4" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/4/">Quality education</a>
-            <span class="total">11<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">9</span><strong>Reported online</strong><span class="value">81.8%</span>
-              </div><div>
-                <span class="status notstarted">1</span><strong>Exploring data sources</strong><span class="value">9.1%</span>
-              </div><div>
-                <span class="status notapplicable">1</span><strong>Not applicable</strong><span class="value">9.1%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:81.8%" title="Reported online: 81.8%"></span><span class="notstarted" style="width:9.1%" title="Exploring data sources: 9.1%"></span><span class="notapplicable" style="width:9.1%" title="Not applicable: 9.1%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/5/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/5.png" alt="Gender equality - Goal 5" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/5/">Gender equality</a>
-            <span class="total">14<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">10</span><strong>Reported online</strong><span class="value">71.4%</span>
-              </div><div>
-                <span class="status notstarted">3</span><strong>Exploring data sources</strong><span class="value">21.4%</span>
-              </div><div>
-                <span class="status notapplicable">1</span><strong>Not applicable</strong><span class="value">7.1%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:71.4%" title="Reported online: 71.4%"></span><span class="notstarted" style="width:21.4%" title="Exploring data sources: 21.4%"></span><span class="notapplicable" style="width:7.1%" title="Not applicable: 7.1%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/6/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/6.png" alt="Clean water and sanitation - Goal 6" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/6/">Clean water and sanitation</a>
-            <span class="total">11<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">4</span><strong>Reported online</strong><span class="value">36.4%</span>
-              </div><div>
-                <span class="status notstarted">6</span><strong>Exploring data sources</strong><span class="value">54.5%</span>
-              </div><div>
-                <span class="status notapplicable">1</span><strong>Not applicable</strong><span class="value">9.1%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:36.4%" title="Reported online: 36.4%"></span><span class="notstarted" style="width:54.5%" title="Exploring data sources: 54.5%"></span><span class="notapplicable" style="width:9.1%" title="Not applicable: 9.1%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/7/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/7.png" alt="Affordable and clean energy - Goal 7" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/7/">Affordable and clean energy</a>
-            <span class="total">6<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Reported online</strong><span class="value">50.0%</span>
-              </div><div>
-                <span class="status notstarted">2</span><strong>Exploring data sources</strong><span class="value">33.3%</span>
-              </div><div>
-                <span class="status notapplicable">1</span><strong>Not applicable</strong><span class="value">16.7%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:50.0%" title="Reported online: 50.0%"></span><span class="notstarted" style="width:33.3%" title="Exploring data sources: 33.3%"></span><span class="notapplicable" style="width:16.7%" title="Not applicable: 16.7%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/8/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/8.png" alt="Decent jobs and economic growth - Goal 8" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/8/">Decent jobs and economic growth</a>
-            <span class="total">17<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">7</span><strong>Reported online</strong><span class="value">41.2%</span>
-              </div><div>
-                <span class="status notstarted">8</span><strong>Exploring data sources</strong><span class="value">47.1%</span>
-              </div><div>
-                <span class="status notapplicable">2</span><strong>Not applicable</strong><span class="value">11.8%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:41.2%" title="Reported online: 41.2%"></span><span class="notstarted" style="width:47.1%" title="Exploring data sources: 47.1%"></span><span class="notapplicable" style="width:11.8%" title="Not applicable: 11.8%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/9/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/9.png" alt="Industry, innovation and infrastructure - Goal 9" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/9/">Industry, innovation and infrastructure</a>
-            <span class="total">12<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">3</span><strong>Reported online</strong><span class="value">25.0%</span>
-              </div><div>
-                <span class="status notstarted">8</span><strong>Exploring data sources</strong><span class="value">66.7%</span>
-              </div><div>
-                <span class="status notapplicable">1</span><strong>Not applicable</strong><span class="value">8.3%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:25.0%" title="Reported online: 25.0%"></span><span class="notstarted" style="width:66.7%" title="Exploring data sources: 66.7%"></span><span class="notapplicable" style="width:8.3%" title="Not applicable: 8.3%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/10/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/10.png" alt="Reduced inequalities - Goal 10" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/10/">Reduced inequalities</a>
-            <span class="total">11<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">0</span><strong>Reported online</strong><span class="value">0.0%</span>
-              </div><div>
-                <span class="status notstarted">9</span><strong>Exploring data sources</strong><span class="value">81.8%</span>
-              </div><div>
-                <span class="status notapplicable">2</span><strong>Not applicable</strong><span class="value">18.2%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:0.0%" title="Reported online: 0.0%"></span><span class="notstarted" style="width:81.8%" title="Exploring data sources: 81.8%"></span><span class="notapplicable" style="width:18.2%" title="Not applicable: 18.2%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/11/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/11.png" alt="Sustainable cities & communities - Goal 11" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/11/">Sustainable cities & communities</a>
-            <span class="total">15<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">2</span><strong>Reported online</strong><span class="value">13.3%</span>
-              </div><div>
-                <span class="status notstarted">12</span><strong>Exploring data sources</strong><span class="value">80.0%</span>
-              </div><div>
-                <span class="status notapplicable">1</span><strong>Not applicable</strong><span class="value">6.7%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:13.3%" title="Reported online: 13.3%"></span><span class="notstarted" style="width:80.0%" title="Exploring data sources: 80.0%"></span><span class="notapplicable" style="width:6.7%" title="Not applicable: 6.7%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/12/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/12.png" alt="Responsible consumption and production - Goal 12" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/12/">Responsible consumption and production</a>
-            <span class="total">13<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">0</span><strong>Reported online</strong><span class="value">0.0%</span>
-              </div><div>
-                <span class="status notstarted">10</span><strong>Exploring data sources</strong><span class="value">76.9%</span>
-              </div><div>
-                <span class="status notapplicable">3</span><strong>Not applicable</strong><span class="value">23.1%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:0.0%" title="Reported online: 0.0%"></span><span class="notstarted" style="width:76.9%" title="Exploring data sources: 76.9%"></span><span class="notapplicable" style="width:23.1%" title="Not applicable: 23.1%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/13/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/13.png" alt="Climate action - Goal 13" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/13/">Climate action</a>
-            <span class="total">8<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">1</span><strong>Reported online</strong><span class="value">12.5%</span>
-              </div><div>
-                <span class="status notstarted">5</span><strong>Exploring data sources</strong><span class="value">62.5%</span>
-              </div><div>
-                <span class="status notapplicable">2</span><strong>Not applicable</strong><span class="value">25.0%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:12.5%" title="Reported online: 12.5%"></span><span class="notstarted" style="width:62.5%" title="Exploring data sources: 62.5%"></span><span class="notapplicable" style="width:25.0%" title="Not applicable: 25.0%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/14/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/14.png" alt="Life below water - Goal 14" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/14/">Life below water</a>
-            <span class="total">10<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">0</span><strong>Reported online</strong><span class="value">0.0%</span>
-              </div><div>
-                <span class="status notstarted">4</span><strong>Exploring data sources</strong><span class="value">40.0%</span>
-              </div><div>
-                <span class="status notapplicable">6</span><strong>Not applicable</strong><span class="value">60.0%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:0.0%" title="Reported online: 0.0%"></span><span class="notstarted" style="width:40.0%" title="Exploring data sources: 40.0%"></span><span class="notapplicable" style="width:60.0%" title="Not applicable: 60.0%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/15/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/15.png" alt="Life on land - Goal 15" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/15/">Life on land</a>
-            <span class="total">14<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">0</span><strong>Reported online</strong><span class="value">0.0%</span>
-              </div><div>
-                <span class="status notstarted">11</span><strong>Exploring data sources</strong><span class="value">78.6%</span>
-              </div><div>
-                <span class="status notapplicable">3</span><strong>Not applicable</strong><span class="value">21.4%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:0.0%" title="Reported online: 0.0%"></span><span class="notstarted" style="width:78.6%" title="Exploring data sources: 78.6%"></span><span class="notapplicable" style="width:21.4%" title="Not applicable: 21.4%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/16/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/16.png" alt="Peace and justice - strong institutions - Goal 16" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/16/">Peace and justice - strong institutions</a>
-            <span class="total">23<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">8</span><strong>Reported online</strong><span class="value">34.8%</span>
-              </div><div>
-                <span class="status notstarted">15</span><strong>Exploring data sources</strong><span class="value">65.2%</span>
-              </div><div>
-                <span class="status notapplicable">0</span><strong>Not applicable</strong><span class="value">0.0%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:34.8%" title="Reported online: 34.8%"></span><span class="notstarted" style="width:65.2%" title="Exploring data sources: 65.2%"></span><span class="notapplicable" style="width:0.0%" title="Not applicable: 0.0%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><div class="goal">
-        <div class="frame">
-          <a href="/17/">
-            <img src="https://open-sdg.github.io/sdg-translations/assets/img/goals/en/17.png" alt="Partnerships for the goals - Goal 17" width="100" height="100" />
-          </a>
-        </div>
-        <div class="details">
-          <h3 class="status-goal">
-            <a href="/17/">Partnerships for the goals</a>
-            <span class="total">25<span></span> indicators</span>
-          </h3>
-          <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete">7</span><strong>Reported online</strong><span class="value">28.0%</span>
-              </div><div>
-                <span class="status notstarted">11</span><strong>Exploring data sources</strong><span class="value">44.0%</span>
-              </div><div>
-                <span class="status notapplicable">7</span><strong>Not applicable</strong><span class="value">28.0%</span>
-              </div><br style="clear:both;">
-            </div>
-          </div>
-          <div class="goal-stats"><span class="complete" style="width:28.0%" title="Reported online: 28.0%"></span><span class="notstarted" style="width:44.0%" title="Exploring data sources: 44.0%"></span><span class="notapplicable" style="width:28.0%" title="Not applicable: 28.0%"></span></div>
-          <div class="divider">
-          </div>
-        </div>
-      <!--</li>-->
-      <br style="clear:both;">
-    </div><!--
--->
+  
+
+  
+
+  
+
+  <!---->
 
 </div>
 <footer role="contentinfo">
@@ -695,14 +892,25 @@ var translations = {
       <div class="col-xs-12">
         <div id="footerLinks">
           <ul>
-            <li><a href="mailto:info@statistics.gov.rw">Contact us</a></li>
+            <li><a href="https://open-sdg.org">Built using Open SDG</a></li>
             
-            <li><a class="twitter-follow-button" href="https://twitter.com/statisticsRW" data-show-count="false">Twitter: @statisticsRW</a></li>
+              <li>
+                
+                  <a href="mailto:info@statistics.gov.rw" target="_blank">Contact us</a>
+                
+                </li>
+              <li>
+                
+                  <a href="https://twitter.com/statisticsRW" target="_blank">Twitter</a>
+                
+                </li>
+              <li>
+                <a href="/about/cookies-and-privacy/">Cookies</a>
+                
+                </li>
+              
             
-            
-            <li><a href="/faq/">FAQ</a></li>
-            <li><a href="/about/cookies-and-privacy/">Cookies</a></li>
-          </ul>
+            </ul>
         </div>
       </div>
     </div>
@@ -714,72 +922,87 @@ var translations = {
 <!-- Google Analytics -->
 
 <!-- /.container </div> -->
-<script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
-<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js"></script>
-<script src="https://cdn.rawgit.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
-<script src="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-<script src="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-<script src='/assets/js/sdg.js?v=20210615015716'></script><script>
+<script>translations['general'] = translations['general'] || {};
+    translations['general']['hide'] = 'hide';</script>
+
+<script>translations['search'] = translations['search'] || {};
+    translations['search']['search'] = 'Search';</script>
+
+<script src='/assets/js/sdg.js?v=20210628180415'></script>
+
+<script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
 
-      $('.async-loading').each(function(i, obj) {
-          $(obj).append($('<img />').attr('src', $(obj).data('img')));
-      });
+      if (domData.showdata) {
 
-      $.ajax({
-        url: opensdg.remoteDataBaseUrl + '/comb/' + domData.id + '.json',
-        success: function(res) {
+        $('.async-loading').each(function(i, obj) {
+            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
+        });
 
-          $('.async-loading').remove();
-          $('.async-loaded').show();
-
-          var model = new indicatorModel({
-            data: res.data,
-            edgesData: res.edges,
-            geoCodeRegEx: domData.geocoderegex,
-            showMap: domData.showmap,
-            country: domData.country,
-            indicatorId: domData.indicatorid,
-            shortIndicatorId: domData.id,
-            chartTitle: domData.charttitle,
-            measurementUnit: domData.measurementunit,
-            dataSource: domData.datasource,
-            geographicalArea: domData.geographicalarea,
-            showData: domData.showdata,
-            footnote: domData.footnote,
-            graphType: domData.graphtype,
-            startValues: domData.startvalues
-          }),
-          view  = new indicatorView(model, {
-            rootElement: '#indicatorData',
-            legendElement: '#plotLegend',
-            maxChartHeight: 420,
-            tableColumnDefs: [
-              { maxCharCount: 25 }, // nowrap
-              { maxCharCount: 35, width: 200 },
-              { maxCharCount: Infinity, width: 250 }
-            ]
-          }),
-          controller = new indicatorController(model, view);
-          controller.initialise();
+        var remoteUrl = '/comb/' + domData.id + '.json';
+        if (opensdg.remoteDataBaseUrl !== '/') {
+          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
         }
-      });
+
+        $.ajax({
+          url: remoteUrl,
+          success: function(res) {
+
+            $('.async-loading').remove();
+            $('.async-loaded').show();
+
+            var model = new indicatorModel({
+              data: res.data,
+              edgesData: res.edges,
+              showMap: domData.showmap,
+              country: domData.country,
+              indicatorId: domData.indicatorid,
+              shortIndicatorId: domData.id,
+              chartTitle: domData.charttitle,
+              chartTitles: domData.charttitles,
+              measurementUnit: domData.measurementunit,
+              showData: domData.showdata,
+              graphType: domData.graphtype,
+              startValues: domData.startvalues,
+              graphLimits: domData.graphlimits,
+              stackedDisaggregation: domData.stackeddisaggregation,
+              graphAnnotations: domData.graphannotations,
+              indicatorDownloads: domData.indicatordownloads,
+              compositeBreakdownLabel: domData.compositebreakdownlabel,
+              precision: domData.precision,
+            }),
+            view  = new indicatorView(model, {
+              rootElement: '#indicatorData',
+              legendElement: '#plotLegend',
+              decimalSeparator: '',
+              maxChartHeight: 420,
+              tableColumnDefs: [
+                { maxCharCount: 25 }, // nowrap
+                { maxCharCount: 35, width: 200 },
+                { maxCharCount: Infinity, width: 250 }
+              ]
+            }),
+            controller = new indicatorController(model, view);
+            controller.initialise();
+          }
+        });
+      }
     }
 
     var switcher = new accessibilitySwitcher();
