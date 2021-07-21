@@ -112,8 +112,6 @@ var translations = {
         
         <link rel="canonical" href="/">
 
-        
-
         <!--[if IE 9]>
         <script src="/assets/js/lib/classList.js"></script>
         <![endif]-->
@@ -126,12 +124,10 @@ var translations = {
         -->
 
         
-
-        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20210628180415">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20210721150647">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -141,8 +137,12 @@ var translations = {
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
+        
+
     </head>
-<body class="language-en layout-goal-by-target">
+<body class="language-en
+layout-goal-by-target
+">
 <!-- <div class="container"> -->
 
 
@@ -168,12 +168,41 @@ var translations = {
     <img src="/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
 </a>
       <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'></ul></div>
+    <ul id='accessibility-nav' class='contrast-switcher'>
+        
+
+    <li class="nav-link contrast contrast-default contrast-type-default">
+        <a title="Disable high contrast"
+           aria-label="Disable high contrast"
+           data-contrast-switch-to="default"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="default"
+
+        >A</a>
+    </li>
+    <li class="nav-link contrast contrast-high contrast-type-default">
+        <a title="Enable high contrast"
+           aria-label="Enable high contrast"
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+    </ul></div>
     </div>
 
     <div class="search-and-desktop-widgets">
       <div id="search" class="menu-target">
-  <form action="/search">
+  <form action="/search/">
     <label class="sr-only" for="indicator_search">Search</label>
     <input type="text" name="q" id="indicator_search" title="Search" /><!--
     --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
@@ -181,7 +210,35 @@ var translations = {
 </div>
 
       <div class="navbar navbar-default widgets-without-menu">
-        <ul class="nav navbar-nav contrast-switcher"></ul>
+        <ul class="nav navbar-nav contrast-switcher">
+
+    <li class="nav-link contrast contrast-default contrast-type-default">
+        <a title="Disable high contrast"
+           aria-label="Disable high contrast"
+           data-contrast-switch-to="default"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="default"
+
+        >A</a>
+    </li>
+    <li class="nav-link contrast contrast-high contrast-type-default">
+        <a title="Enable high contrast"
+           aria-label="Enable high contrast"
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+        </ul>
       </div>
     </div>
 
@@ -204,6 +261,36 @@ var translations = {
 </li><li class="nav-link ">
     <a href="/faq/">FAQ</a>
 </li>
+
+
+
+    <li class="nav-link contrast contrast-default contrast-type-default">
+        <a title="Disable high contrast"
+           aria-label="Disable high contrast"
+           data-contrast-switch-to="default"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="default"
+
+        >A</a>
+    </li>
+    <li class="nav-link contrast contrast-high contrast-type-default">
+        <a title="Enable high contrast"
+           aria-label="Enable high contrast"
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
 </ul>
 
     </li>
@@ -212,7 +299,7 @@ var translations = {
         aria-haspopup="true">
         <button data-target="search-mobile" aria-expanded="false">Search</button>
         <div id="search-mobile" class="menu-target">
-  <form action="/search">
+  <form action="/search/">
     <label class="sr-only" for="indicator_search-mobile">Search</label>
     <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
     --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
@@ -234,6 +321,7 @@ var translations = {
 </li><li class="nav-link ">
     <a href="/faq/">FAQ</a>
 </li>
+
 </ul>
 
     </div>
@@ -272,6 +360,7 @@ var translations = {
   </div>
 </div>
 
+
 <div id="main-content" class="container goal-indicators goal-8 goal-by-target" role="main">
 
   
@@ -303,18 +392,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.1.1
-          <span class="status complete">
-            Reported online
-          </span>
+          
+
+
+<span class="status complete">
+    Reported online
+</span>
+
         </span>
         <a href="/8-1-1">
           Annual growth rate of real GDP per capita
@@ -339,18 +427,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.2.1
-          <span class="status complete">
-            Reported online
-          </span>
+          
+
+
+<span class="status complete">
+    Reported online
+</span>
+
         </span>
         <a href="/8-2-1">
           Annual growth rate of real GDP per employed person
@@ -375,18 +462,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.3.1
-          <span class="status notstarted">
-            Exploring data sources
-          </span>
+          
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
         </span>
         <a href="/8-3-1">
           Proportion of informal employment in non‐agriculture employment, by sex
@@ -411,18 +497,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.4.1
-          <span class="status notapplicable">
-            Not applicable
-          </span>
+          
+
+
+<span class="status notapplicable">
+    Not applicable
+</span>
+
         </span>
         <a href="/8-4-1">
           Material footprint, material footprint per capita, and material footprint per GDP
@@ -435,18 +520,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.4.2
-          <span class="status notstarted">
-            Exploring data sources
-          </span>
+          
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
         </span>
         <a href="/8-4-2">
           Domestic material consumption, domestic material consumption per capita, and domestic material consumption per GDP
@@ -471,18 +555,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.5.1
-          <span class="status complete">
-            Reported online
-          </span>
+          
+
+
+<span class="status complete">
+    Reported online
+</span>
+
         </span>
         <a href="/8-5-1">
           Average hourly earnings of female and male employees, by occupation, age and persons with disabilities
@@ -495,18 +578,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.5.2
-          <span class="status complete">
-            Reported online
-          </span>
+          
+
+
+<span class="status complete">
+    Reported online
+</span>
+
         </span>
         <a href="/8-5-2">
           Unemployment rate, by sex, age and persons with disabilities
@@ -531,18 +613,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12 indicator-proxy goal-indicator">
         <span class="indicator-card-number">
           8.6.1
-          <span class="status complete">
-            Reported online
-          </span>
+          
+
+
+<span class="status complete">
+    Reported online
+</span>
+
         </span>
         <a href="/8-6-1">
           Proportion of youth (aged 15–24 years) not in education, employment or training
@@ -575,18 +656,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.7.1
-          <span class="status complete">
-            Reported online
-          </span>
+          
+
+
+<span class="status complete">
+    Reported online
+</span>
+
         </span>
         <a href="/8-7-1">
           Proportion and number of children aged 5–17 years engaged in child labour, by sex and age
@@ -611,18 +691,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.8.1
-          <span class="status complete">
-            Reported online
-          </span>
+          
+
+
+<span class="status complete">
+    Reported online
+</span>
+
         </span>
         <a href="/8-8-1">
           Frequency rates of fatal and non-fatal occupational injuries, by sex and migrant status
@@ -635,18 +714,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.8.2
-          <span class="status notstarted">
-            Exploring data sources
-          </span>
+          
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
         </span>
         <a href="/8-8-2">
           Level of national compliance with labour rights (freedom of association and collective bargaining) based on International Labour Organization (ILO) textual sources and national legislation, by sex and migrant status
@@ -671,18 +749,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.9.1
-          <span class="status complete">
-            Reported online
-          </span>
+          
+
+
+<span class="status complete">
+    Reported online
+</span>
+
         </span>
         <a href="/8-9-1">
           Tourism direct GDP as a proportion of total GDP and in growth rate
@@ -695,18 +772,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.9.2
-          <span class="status notstarted">
-            Exploring data sources
-          </span>
+          
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
         </span>
         <a href="/8-9-2">
           Proportion of jobs in sustainable tourism industries out of total tourism jobs
@@ -731,18 +807,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.10.1
-          <span class="status complete">
-            Reported online
-          </span>
+          
+
+
+<span class="status complete">
+    Reported online
+</span>
+
         </span>
         <a href="/8-10-1">
           (a) Number of commercial bank branches per 100,000 adults and (b) number of automated teller machines (ATMs) per 100,000 adults
@@ -755,18 +830,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.10.2
-          <span class="status complete">
-            Reported online
-          </span>
+          
+
+
+<span class="status complete">
+    Reported online
+</span>
+
         </span>
         <a href="/8-10-2">
           Proportion of adults (15 years and older) with an account at a bank or other financial institution or with a mobile-money-service provider
@@ -791,18 +865,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.a.1
-          <span class="status notapplicable">
-            Not applicable
-          </span>
+          
+
+
+<span class="status notapplicable">
+    Not applicable
+</span>
+
         </span>
         <a href="/8-a-1">
           Aid for Trade commitments and disbursements
@@ -827,18 +900,17 @@ var translations = {
       
       
       
-      
-      
-      
-      
-      
 
       <div class="col-md-12  goal-indicator">
         <span class="indicator-card-number">
           8.b.1
-          <span class="status complete">
-            Reported online
-          </span>
+          
+
+
+<span class="status complete">
+    Reported online
+</span>
+
         </span>
         <a href="/8-b-1">
           Existence of a developed and operationalized national strategy for youth employment, as a distinct strategy or as part of a national employment strategy
@@ -882,13 +954,7 @@ var translations = {
   </div>
 </footer>
 
-<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
-<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
-<!-- Google Analytics -->
-
-<!-- /.container </div> -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
@@ -907,7 +973,7 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20210628180415'></script>
+<script src='/assets/js/sdg.js?v=20210721150647'></script>
 
 <script>
 $(function() {
@@ -949,6 +1015,7 @@ $(function() {
               stackedDisaggregation: domData.stackeddisaggregation,
               graphAnnotations: domData.graphannotations,
               indicatorDownloads: domData.indicatordownloads,
+              dataSchema: domData.dataschema,
               compositeBreakdownLabel: domData.compositebreakdownlabel,
               precision: domData.precision,
             }),
