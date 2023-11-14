@@ -59,7 +59,7 @@
           "description": "Death is explained as the number of people who died during the disaster, or directly after, as a direct result of the hazardous event. Missing is explained as the number of people whose whereabouts is unknown since the hazardous event. It includes people who are presumed dead, for whom there is no physical evidence such as a body, and for which an official/legal report has been filed with competent authorities. Directly affected is explained as the number of people who have suffered injury, illness or other health effects; who were evacuated, displaced, relocated or have suffered direct damage to their livelihoods, economic, physical, social, cultural and environmental assets. Indirectly affected are people who have suffered consequences, other than or in addition to direct effects, over time, due to disruption or changes in economy, critical infrastructure, basic services, commerce or work, or social, health and psychological consequences.",
           "keywords": "",
           "href": "/1-5-1",
-          "status": "complete"
+          "status": "notstarted"
         },
         {
           "id": "1-5-2",
@@ -83,7 +83,7 @@
           "description": "An open-ended intergovernmental expert working group on indicators and terminology relating to disaster risk reduction established by the General Assembly (resolution 69/284) is developing a set of indicators to measure global progress in the implementation of the Sendai Framework. These indicators will eventually reflect the agreements on the Sendai Framework indicators.",
           "keywords": "",
           "href": "/1-5-4",
-          "status": "complete"
+          "status": "notstarted"
         },
         {
           "id": "1-a-1",
@@ -723,7 +723,7 @@
           "description": "",
           "keywords": "",
           "href": "/6-4-2",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "6-5-1",
@@ -731,7 +731,7 @@
           "description": "",
           "keywords": "",
           "href": "/6-5-1",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "6-5-2",
@@ -747,7 +747,7 @@
           "description": "",
           "keywords": "",
           "href": "/6-6-1",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "6-a-1",
@@ -1219,7 +1219,7 @@
           "description": "Death is explained as the number of people who died during the disaster, or directly after, as a direct result of the hazardous event. Missing is explained as the number of people whose whereabouts is unknown since the hazardous event. It includes people who are presumed dead, for whom there is no physical evidence such as a body, and for which an official/legal report has been filed with competent authorities. Directly affected is explained as the number of people who have suffered injury, illness or other health effects; who were evacuated, displaced, relocated or have suffered direct damage to their livelihoods, economic, physical, social, cultural and environmental assets. Indirectly affected are people who have suffered consequences, other than or in addition to direct effects, over time, due to disruption or changes in economy, critical infrastructure, basic services, commerce or work, or social, health and psychological consequences.",
           "keywords": "",
           "href": "/11-5-1",
-          "status": "complete"
+          "status": "notstarted"
         },
         {
           "id": "11-5-2",
@@ -1283,7 +1283,7 @@
           "description": "The Sendai Framework for Disaster Risk Reduction 2015-2030 was adopted by UN Member States in March 2015 as a global policy of disaster risk reduction. One of the targets is; “Substantially increase the number of countries with national and local disaster risk reduction strategies by 2020”. In line with the Sendai Framework for Disaster Risk Reduction 2015-2030, disaster risk reduction strategies and policies should mainstream and integrate disaster risk reduction within and across all sectors, across different timescales and with targets, indicators and time frames. These strategies should be aimed at preventing the creation of disaster risk, the reduction of existing risk and the strengthening of economic, social, health and environmental resilience.",
           "keywords": "",
           "href": "/11-b-2",
-          "status": "complete"
+          "status": "notstarted"
         },
         {
           "id": "11-c-1",

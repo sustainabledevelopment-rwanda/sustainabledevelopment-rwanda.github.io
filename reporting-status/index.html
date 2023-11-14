@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -116,26 +116,31 @@ var translations = {
         <script src="/assets/js/lib/classList.js"></script>
         <![endif]-->
 
-        <!-- Favicons ================================================== -->
-        <!-- 128x128 -->
-        <link rel="shortcut icon" type="image/ico" href="/assets/img/favicons/favicon.ico">
-        <link rel="icon" type="image/png" href="/assets/img/favicons/favicon.png"><!-- 192x192, as recommended for Android
-        http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
-        -->
+        
+
+
+
+
+<link rel="shortcut icon" type="image/ico" href="/assets/img/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="/assets/img/favicons/favicon.png">
+
 
         
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20221004085343">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20231114121629">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
+        
 
         
 
@@ -146,15 +151,18 @@ layout-reportingstatus
 <!-- <div class="container"> -->
 
 
+
 <script>translations['header'] = {"alpha":"Alpha","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","enable_high_contrast":"Enable high contrast","high_contrast":"High contrast","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-  <div class="container">
+  
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha</strong>
     
     This is a development website. We welcome your <a href="mailto:info@statistics.gov.rw">feedback</a>.
+    
   </div>
 </div>
 
@@ -345,6 +353,7 @@ data-event-label="high"
 
 
 
+
 <div id="main-content" class="container reportingstatus" role="main">
 
   <h1>
@@ -366,25 +375,43 @@ data-event-label="high"
         </h2>
         <span class="total"><span>244</span> indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
-                <span class="status complete"><span class="status-inner">113</span></span><strong>Reported online</strong><span class="value">46%</span>
-            </div><div>
-                <span class="status notstarted"><span class="status-inner">98</span></span><strong>Exploring data sources</strong><span class="value">40%</span>
-            </div><div>
+            <div class="statuses">
+            
+            <div>
+                <span class="status complete"><span class="status-inner">112</span></span><strong>Reported online</strong><span class="value">46%</span>
+            </div>
+            
+            
+            <div>
+                <span class="status notstarted"><span class="status-inner">99</span></span><strong>Exploring data sources</strong><span class="value">41%</span>
+            </div>
+            
+            
+            <div>
                 <span class="status notapplicable"><span class="status-inner">33</span></span><strong>Not applicable</strong><span class="value">14%</span>
-            </div><br style="clear:both;">
+            </div>
+            <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
             
             
-            <span class="complete" style="width:46.31147540983606%" title="Reported online: 46%"></span>
             
             
-            <span class="notstarted" style="width:40.16393442622951%" title="Exploring data sources: 40%"></span>
+            <span class="complete" style="width:45.90163934426229%" title="Reported online: 46%"></span>
             
             
-            <span class="notapplicable" style="width:13.524590163934427%" title="Not applicable: 14%"></span></div>
+            
+            
+            
+            <span class="notstarted" style="width:40.57377049180328%" title="Exploring data sources: 41%"></span>
+            
+            
+            
+            
+            
+            <span class="notapplicable" style="width:13.524590163934427%" title="Not applicable: 14%"></span>
+            </div>
     </div>
     <br style="clear:both;">
 </div>
@@ -400,25 +427,43 @@ data-event-label="high"
         </h3>
         <span class="total">14 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">10</span></span><strong>Reported online</strong><span class="value">71%</span>
-                </div><div>
-                    <span class="status notstarted"><span class="status-inner">4</span></span><strong>Exploring data sources</strong><span class="value">29%</span>
-                </div><div>
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">8</span></span><strong>Reported online</strong><span class="value">57%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">43%</span>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:71.42857142857143%" title="Reported online: 71%"></span>
                 
                 
-                <span class="notstarted" style="width:28.57142857142857%" title="Exploring data sources: 29%"></span>
+                <span class="complete" style="width:57.14285714285714%" title="Reported online: 57%"></span>
                 
                 
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span></div>
+                
+                
+                
+                <span class="notstarted" style="width:42.857142857142854%" title="Exploring data sources: 43%"></span>
+                
+                
+                
+                
+                
+                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -434,25 +479,43 @@ data-event-label="high"
         </h3>
         <span class="total">13 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">31%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">8</span></span><strong>Exploring data sources</strong><span class="value">62%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">8%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:30.76923076923077%" title="Reported online: 31%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:61.53846153846154%" title="Exploring data sources: 62%"></span>
                 
                 
-                <span class="notapplicable" style="width:7.692307692307693%" title="Not applicable: 8%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:7.692307692307693%" title="Not applicable: 8%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -468,25 +531,43 @@ data-event-label="high"
         </h3>
         <span class="total">27 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">15</span></span><strong>Reported online</strong><span class="value">56%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">11</span></span><strong>Exploring data sources</strong><span class="value">41%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">4%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:55.55555555555556%" title="Reported online: 56%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:40.74074074074074%" title="Exploring data sources: 41%"></span>
                 
                 
-                <span class="notapplicable" style="width:3.7037037037037037%" title="Not applicable: 4%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:3.7037037037037037%" title="Not applicable: 4%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -502,25 +583,43 @@ data-event-label="high"
         </h3>
         <span class="total">11 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">9</span></span><strong>Reported online</strong><span class="value">82%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">1</span></span><strong>Exploring data sources</strong><span class="value">9%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">9%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:81.81818181818181%" title="Reported online: 82%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:9.090909090909092%" title="Exploring data sources: 9%"></span>
                 
                 
-                <span class="notapplicable" style="width:9.090909090909092%" title="Not applicable: 9%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:9.090909090909092%" title="Not applicable: 9%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -536,25 +635,43 @@ data-event-label="high"
         </h3>
         <span class="total">14 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">12</span></span><strong>Reported online</strong><span class="value">86%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">1</span></span><strong>Exploring data sources</strong><span class="value">7%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">7%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:85.71428571428571%" title="Reported online: 86%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:7.142857142857142%" title="Exploring data sources: 7%"></span>
                 
                 
-                <span class="notapplicable" style="width:7.142857142857142%" title="Not applicable: 7%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:7.142857142857142%" title="Not applicable: 7%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -570,25 +687,43 @@ data-event-label="high"
         </h3>
         <span class="total">11 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">36%</span>
-                </div><div>
-                    <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">55%</span>
-                </div><div>
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">7</span></span><strong>Reported online</strong><span class="value">64%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Exploring data sources</strong><span class="value">27%</span>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">9%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:36.36363636363637%" title="Reported online: 36%"></span>
                 
                 
-                <span class="notstarted" style="width:54.54545454545454%" title="Exploring data sources: 55%"></span>
+                <span class="complete" style="width:63.63636363636364%" title="Reported online: 64%"></span>
                 
                 
-                <span class="notapplicable" style="width:9.090909090909092%" title="Not applicable: 9%"></span></div>
+                
+                
+                
+                <span class="notstarted" style="width:27.27272727272727%" title="Exploring data sources: 27%"></span>
+                
+                
+                
+                
+                
+                <span class="notapplicable" style="width:9.090909090909092%" title="Not applicable: 9%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -604,25 +739,43 @@ data-event-label="high"
         </h3>
         <span class="total">6 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">3</span></span><strong>Reported online</strong><span class="value">50%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">2</span></span><strong>Exploring data sources</strong><span class="value">33%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">17%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:50.0%" title="Reported online: 50%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:33.33333333333333%" title="Exploring data sources: 33%"></span>
                 
                 
-                <span class="notapplicable" style="width:16.666666666666664%" title="Not applicable: 17%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:16.666666666666664%" title="Not applicable: 17%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -638,25 +791,43 @@ data-event-label="high"
         </h3>
         <span class="total">17 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">11</span></span><strong>Reported online</strong><span class="value">65%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">4</span></span><strong>Exploring data sources</strong><span class="value">24%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">2</span></span><strong>Not applicable</strong><span class="value">12%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:64.70588235294117%" title="Reported online: 65%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:23.52941176470588%" title="Exploring data sources: 24%"></span>
                 
                 
-                <span class="notapplicable" style="width:11.76470588235294%" title="Not applicable: 12%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:11.76470588235294%" title="Not applicable: 12%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -672,25 +843,43 @@ data-event-label="high"
         </h3>
         <span class="total">12 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">5</span></span><strong>Reported online</strong><span class="value">42%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">50%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">8%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:41.66666666666667%" title="Reported online: 42%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:50.0%" title="Exploring data sources: 50%"></span>
                 
                 
-                <span class="notapplicable" style="width:8.333333333333332%" title="Not applicable: 8%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:8.333333333333332%" title="Not applicable: 8%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -706,25 +895,43 @@ data-event-label="high"
         </h3>
         <span class="total">11 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">3</span></span><strong>Reported online</strong><span class="value">27%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">6</span></span><strong>Exploring data sources</strong><span class="value">55%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">2</span></span><strong>Not applicable</strong><span class="value">18%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:27.27272727272727%" title="Reported online: 27%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:54.54545454545454%" title="Exploring data sources: 55%"></span>
                 
                 
-                <span class="notapplicable" style="width:18.181818181818183%" title="Not applicable: 18%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:18.181818181818183%" title="Not applicable: 18%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -740,25 +947,43 @@ data-event-label="high"
         </h3>
         <span class="total">15 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">5</span></span><strong>Reported online</strong><span class="value">33%</span>
-                </div><div>
-                    <span class="status notstarted"><span class="status-inner">9</span></span><strong>Exploring data sources</strong><span class="value">60%</span>
-                </div><div>
+            <div class="statuses">
+                
+                <div>
+                    <span class="status complete"><span class="status-inner">3</span></span><strong>Reported online</strong><span class="value">20%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">11</span></span><strong>Exploring data sources</strong><span class="value">73%</span>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">7%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:33.33333333333333%" title="Reported online: 33%"></span>
                 
                 
-                <span class="notstarted" style="width:60.0%" title="Exploring data sources: 60%"></span>
+                <span class="complete" style="width:20.0%" title="Reported online: 20%"></span>
                 
                 
-                <span class="notapplicable" style="width:6.666666666666667%" title="Not applicable: 7%"></span></div>
+                
+                
+                
+                <span class="notstarted" style="width:73.33333333333333%" title="Exploring data sources: 73%"></span>
+                
+                
+                
+                
+                
+                <span class="notapplicable" style="width:6.666666666666667%" title="Not applicable: 7%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -774,25 +999,43 @@ data-event-label="high"
         </h3>
         <span class="total">13 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">2</span></span><strong>Reported online</strong><span class="value">15%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">8</span></span><strong>Exploring data sources</strong><span class="value">62%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">3</span></span><strong>Not applicable</strong><span class="value">23%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:15.384615384615385%" title="Reported online: 15%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:61.53846153846154%" title="Exploring data sources: 62%"></span>
                 
                 
-                <span class="notapplicable" style="width:23.076923076923077%" title="Not applicable: 23%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:23.076923076923077%" title="Not applicable: 23%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -808,25 +1051,43 @@ data-event-label="high"
         </h3>
         <span class="total">8 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">50%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">2</span></span><strong>Exploring data sources</strong><span class="value">25%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">2</span></span><strong>Not applicable</strong><span class="value">25%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:50.0%" title="Reported online: 50%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:25.0%" title="Exploring data sources: 25%"></span>
                 
                 
-                <span class="notapplicable" style="width:25.0%" title="Not applicable: 25%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:25.0%" title="Not applicable: 25%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -842,25 +1103,43 @@ data-event-label="high"
         </h3>
         <span class="total">10 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">0</span></span><strong>Reported online</strong><span class="value">0%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">4</span></span><strong>Exploring data sources</strong><span class="value">40%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">6</span></span><strong>Not applicable</strong><span class="value">60%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:0.0%" title="Reported online: 0%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:40.0%" title="Exploring data sources: 40%"></span>
                 
                 
-                <span class="notapplicable" style="width:60.0%" title="Not applicable: 60%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:60.0%" title="Not applicable: 60%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -876,25 +1155,43 @@ data-event-label="high"
         </h3>
         <span class="total">14 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">4</span></span><strong>Reported online</strong><span class="value">29%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">7</span></span><strong>Exploring data sources</strong><span class="value">50%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">3</span></span><strong>Not applicable</strong><span class="value">21%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:28.57142857142857%" title="Reported online: 29%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:50.0%" title="Exploring data sources: 50%"></span>
                 
                 
-                <span class="notapplicable" style="width:21.428571428571427%" title="Not applicable: 21%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:21.428571428571427%" title="Not applicable: 21%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -910,25 +1207,43 @@ data-event-label="high"
         </h3>
         <span class="total">23 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">13</span></span><strong>Reported online</strong><span class="value">57%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">10</span></span><strong>Exploring data sources</strong><span class="value">43%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:56.52173913043478%" title="Reported online: 57%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:43.47826086956522%" title="Exploring data sources: 43%"></span>
                 
                 
-                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -944,25 +1259,43 @@ data-event-label="high"
         </h3>
         <span class="total">25 indicators</span>
         <div class="summary">
-            <div class="statuses"><div>
+            <div class="statuses">
+                
+                <div>
                     <span class="status complete"><span class="status-inner">9</span></span><strong>Reported online</strong><span class="value">36%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notstarted"><span class="status-inner">9</span></span><strong>Exploring data sources</strong><span class="value">36%</span>
-                </div><div>
+                </div>
+                
+                
+                <div>
                     <span class="status notapplicable"><span class="status-inner">7</span></span><strong>Not applicable</strong><span class="value">28%</span>
-                </div><br style="clear:both;">
+                </div>
+                <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
                 
                 
+                
+                
                 <span class="complete" style="width:36.0%" title="Reported online: 36%"></span>
+                
+                
+                
                 
                 
                 <span class="notstarted" style="width:36.0%" title="Exploring data sources: 36%"></span>
                 
                 
-                <span class="notapplicable" style="width:28.0%" title="Not applicable: 28%"></span></div>
+                
+                
+                
+                <span class="notapplicable" style="width:28.0%" title="Not applicable: 28%"></span>
+                </div>
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -978,6 +1311,7 @@ data-event-label="high"
   <!---->
 
 </div>
+
 <footer role="contentinfo">
   <div class="container">
     <div class="row">
@@ -1006,102 +1340,62 @@ data-event-label="high"
         </div>
       </div>
     </div>
+    
   </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+
+
+
+
+
+  <script >
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-148902754-1', 'auto');
+ga('require', 'eventTracker', {
+    attributePrefix: 'data-'
+});
+// anonymize user IPs (chops off the last IP triplet)
+ga('set', 'anonymizeIp', true);
+// forces SSL even if the page were somehow loaded over http://
+ga('set', 'forceSSL', true);
+ga('send', 'pageview');
+</script>
+
+
+
 <script>translations['general'] = translations['general'] || {};
     translations['general']['hide'] = 'hide';</script>
 
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20221004085343'></script>
+<script src='/assets/js/sdg.js?v=20231114121629'></script>
 
 <script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              graphAnnotations: domData.graphannotations,
-              indicatorDownloads: domData.indicatordownloads,
-              dataSchema: domData.dataschema,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: '',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
-</script>
-
-
-
-<script>
-  initialiseGoogleAnalytics();
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
 
 

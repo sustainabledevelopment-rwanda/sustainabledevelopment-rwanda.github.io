@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -116,26 +116,31 @@ var translations = {
         <script src="/assets/js/lib/classList.js"></script>
         <![endif]-->
 
-        <!-- Favicons ================================================== -->
-        <!-- 128x128 -->
-        <link rel="shortcut icon" type="image/ico" href="/assets/img/favicons/favicon.ico">
-        <link rel="icon" type="image/png" href="/assets/img/favicons/favicon.png"><!-- 192x192, as recommended for Android
-        http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
-        -->
+        
+
+
+
+
+<link rel="shortcut icon" type="image/ico" href="/assets/img/favicons/favicon.ico">
+<link rel="icon" type="image/png" href="/assets/img/favicons/favicon.png">
+
 
         
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20221004085343">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20231114121629">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><!-- ShareThis BEGIN --><!-- ShareThis END -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
+        
 
         
 
@@ -146,15 +151,18 @@ layout-goal-by-target
 <!-- <div class="container"> -->
 
 
+
 <script>translations['header'] = {"alpha":"Alpha","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","enable_high_contrast":"Enable high contrast","high_contrast":"High contrast","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-  <div class="container">
+  
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha</strong>
     
     This is a development website. We welcome your <a href="mailto:info@statistics.gov.rw">feedback</a>.
+    
   </div>
 </div>
 
@@ -338,6 +346,7 @@ data-event-label="high"
 
 
 
+
 <div class="container">
   <ol class="breadcrumb">
   
@@ -398,14 +407,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.1.1
           
 
 
+
 <span class="status notstarted">
-    Exploring data sources
+    <span class="status-inner">Exploring data sources</span>
 </span>
+
 
         </span>
         <a href="/2-1-1">
@@ -413,6 +425,11 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
 
@@ -421,29 +438,39 @@ data-event-label="high"
       
 
       <div class="col-md-12 indicator-local-indicator goal-indicator">
+        
         <span class="indicator-card-number">
           2.1.2
           
 
 
+
 <span class="status complete">
-    Reported
+    <span class="status-inner">Reported</span>
 </span>
+
 
         </span>
         <a href="/2-1-2">
           Prevalence of moderate or severe food insecurity in the population, based on the Food Insecurity Experience Scale (FIES)
         </a>
         
-    <span class="sr-only">Tags</span>
-    <span class="tags">
+
+
+
+
+    <ul class="tags" aria-label="Tags">
     
+    
+        <li>
         
         <span class="tag tag-local-indicator">Local Indicator</span>
+        </li>
     
-    </span>
+    </ul>
 
 
+        
       </div>
     
     </div>
@@ -464,14 +491,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.2.1
           
 
 
+
 <span class="status complete">
-    Reported
+    <span class="status-inner">Reported</span>
 </span>
+
 
         </span>
         <a href="/2-2-1">
@@ -479,6 +509,11 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
 
@@ -487,14 +522,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.2.2
           
 
 
+
 <span class="status complete">
-    Reported
+    <span class="status-inner">Reported</span>
 </span>
+
 
         </span>
         <a href="/2-2-2">
@@ -502,6 +540,11 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
     </div>
@@ -522,14 +565,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.3.1
           
 
 
+
 <span class="status notstarted">
-    Exploring data sources
+    <span class="status-inner">Exploring data sources</span>
 </span>
+
 
         </span>
         <a href="/2-3-1">
@@ -537,6 +583,11 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
 
@@ -545,14 +596,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.3.2
           
 
 
+
 <span class="status notstarted">
-    Exploring data sources
+    <span class="status-inner">Exploring data sources</span>
 </span>
+
 
         </span>
         <a href="/2-3-2">
@@ -560,6 +614,11 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
     </div>
@@ -580,14 +639,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.4.1
           
 
 
+
 <span class="status notstarted">
-    Exploring data sources
+    <span class="status-inner">Exploring data sources</span>
 </span>
+
 
         </span>
         <a href="/2-4-1">
@@ -595,6 +657,11 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
     </div>
@@ -615,14 +682,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.5.1
           
 
 
+
 <span class="status complete">
-    Reported
+    <span class="status-inner">Reported</span>
 </span>
+
 
         </span>
         <a href="/2-5-1">
@@ -630,6 +700,11 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
 
@@ -638,14 +713,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.5.2
           
 
 
+
 <span class="status notstarted">
-    Exploring data sources
+    <span class="status-inner">Exploring data sources</span>
 </span>
+
 
         </span>
         <a href="/2-5-2">
@@ -653,6 +731,11 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
     </div>
@@ -673,14 +756,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.a.1
           
 
 
+
 <span class="status notstarted">
-    Exploring data sources
+    <span class="status-inner">Exploring data sources</span>
 </span>
+
 
         </span>
         <a href="/2-a-1">
@@ -688,6 +774,11 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
 
@@ -696,14 +787,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.a.2
           
 
 
+
 <span class="status notapplicable">
-    Not applicable
+    <span class="status-inner">Not applicable</span>
 </span>
+
 
         </span>
         <a href="/2-a-2">
@@ -711,6 +805,11 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
     </div>
@@ -731,14 +830,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.b.1
           
 
 
+
 <span class="status notstarted">
-    Exploring data sources
+    <span class="status-inner">Exploring data sources</span>
 </span>
+
 
         </span>
         <a href="/2-b-1">
@@ -746,6 +848,11 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
     </div>
@@ -766,14 +873,17 @@ data-event-label="high"
       
 
       <div class="col-md-12  goal-indicator">
+        
         <span class="indicator-card-number">
           2.c.1
           
 
 
+
 <span class="status notstarted">
-    Exploring data sources
+    <span class="status-inner">Exploring data sources</span>
 </span>
+
 
         </span>
         <a href="/2-c-1">
@@ -781,11 +891,17 @@ data-event-label="high"
         </a>
         
 
+
+
+
+
+        
       </div>
     
     </div>
   
 </div>
+
 
 <footer role="contentinfo">
   <div class="container">
@@ -815,102 +931,62 @@ data-event-label="high"
         </div>
       </div>
     </div>
+    
   </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+
+
+
+
+
+  <script >
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-148902754-1', 'auto');
+ga('require', 'eventTracker', {
+    attributePrefix: 'data-'
+});
+// anonymize user IPs (chops off the last IP triplet)
+ga('set', 'anonymizeIp', true);
+// forces SSL even if the page were somehow loaded over http://
+ga('set', 'forceSSL', true);
+ga('send', 'pageview');
+</script>
+
+
+
 <script>translations['general'] = translations['general'] || {};
     translations['general']['hide'] = 'hide';</script>
 
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20221004085343'></script>
+<script src='/assets/js/sdg.js?v=20231114121629'></script>
 
 <script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              graphAnnotations: domData.graphannotations,
-              indicatorDownloads: domData.indicatordownloads,
-              dataSchema: domData.dataschema,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: '',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
-</script>
-
-
-
-<script>
-  initialiseGoogleAnalytics();
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
 
 
