@@ -144,7 +144,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20231221133758">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20240311094109">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -410,7 +410,7 @@ data-event-label="high"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;COMMENT_OBS&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Proportion (%) of population with basic handwashing facilities on premises&quot;,&quot;Proportion (%) of population using limited sanitation services&quot;,&quot;Proportion (%) of population using unimproved sanitation services&quot;,&quot;Proportion (%) of population practicing open defecation&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Observation-level footnotes&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Proportion of population with basic handwashing facilities on premises [6.2.1]&quot;,&quot;Proportion (%) of population using limited sanitation services&quot;,&quot;Proportion (%) of population using unimproved sanitation services&quot;,&quot;Proportion of population practicing open defecation [6.2.1]&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-proxy=""
@@ -443,15 +443,95 @@ data-event-label="high"
   <div id="datatables">
 
     
+    <a href="https://sustainabledevelopment-rwanda.github.io/sdg-data-prod/en/headline/6-2-1.csv" class="btn btn-primary btn-download" download="indicator_6-2-1.csv" tabindex="0" role="button">Download headline data (.csv)</a>
+    
     <a href="https://sustainabledevelopment-rwanda.github.io/sdg-data-prod/en/data/6-2-1.csv" class="btn btn-primary btn-download" download='indicator_6-2-1.csv' tabindex='0' role='button'>Download source data (.csv)</a>
 
     <p class="no-js-disaggregation-hint">Download source data for disaggregations (.csv)</p>
 
     
-    <h3>No headline data available</h3>
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Proportion of population using safely managed sanitation services</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td class="table-value">55.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td class="table-value">54.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td class="table-value">72.0</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td class="table-value">72.0</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
     
   </div>
 
+  
+  <div id="datatableFooter">
+    
+    <p>Source: National Institute of Statistics of Rwanda (NISR)</p>
+    
+    
+    <p>Geographical Area: Rwanda</p>
+    
+    
+    <p>Unit of Measurement: Percentage (%)</p>
+    
+    
+  </div>
   
 
 </div>
@@ -1701,7 +1781,7 @@ ga('send', 'pageview');
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20231221133758'></script>
+<script src='/assets/js/sdg.js?v=20240311094109'></script>
 
 <script>
     new indicatorInit();
