@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
+        <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -11,7 +11,7 @@
 var opensdg = {
 
   // A base URL for asynchronous calls to SDG data.
-  remoteDataBaseUrl: 'https://sustainabledevelopment-rwanda.github.io/sdg-data-prod/en',
+  remoteDataBaseUrl: 'https://sustainabledevelopment-rwanda.github.io/sdg-data-rwanda/en',
 
   chartConfigAlterations: [],
   // A hook which can be used to modify the configuration for Chart.js.
@@ -122,6 +122,8 @@ var translations = {
 
 
         
+        <meta name="robots" content="noindex, nofollow">
+        
 
         <!--[if IE 9]>
         <script src="/assets/js/lib/classList.js"></script>
@@ -137,9 +139,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20240724095710">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20240724095825">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -228,7 +229,7 @@ layout-reportingstatus
 
                 </div>
                 <div class="header-toggles d-flex"><a title="Enable high contrast" aria-label="Enable high contrast"
-    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
+    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
@@ -262,10 +263,15 @@ data-event-label="high"
 
   <h1>
   
-    Reporting status
+    
   
 </h1>
 
+
+<div class="reporting-status-description">
+  
+
+</div>
 
 
 
@@ -284,6 +290,7 @@ data-event-label="high"
             Overall reporting status
         </h2>
         <span class="total"><span>244</span> indicators</span>
+        
         <div class="summary">
             <div class="statuses">
             
@@ -322,6 +329,7 @@ data-event-label="high"
             
             <span class="notapplicable" style="width:13.524590163934427%" title="Not applicable: 14%"></span>
             </div>
+        
     </div>
     <br style="clear:both;">
 </div>
@@ -336,6 +344,7 @@ data-event-label="high"
             <a href="/1/">No poverty</a>
         </h3>
         <span class="total">14 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -374,6 +383,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -388,6 +398,7 @@ data-event-label="high"
             <a href="/2/">Zero hunger</a>
         </h3>
         <span class="total">13 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -426,6 +437,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:7.692307692307693%" title="Not applicable: 8%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -440,6 +452,7 @@ data-event-label="high"
             <a href="/3/">Good health and well-being</a>
         </h3>
         <span class="total">27 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -478,6 +491,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:3.7037037037037037%" title="Not applicable: 4%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -492,6 +506,7 @@ data-event-label="high"
             <a href="/4/">Quality education</a>
         </h3>
         <span class="total">11 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -530,6 +545,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:9.090909090909092%" title="Not applicable: 9%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -544,6 +560,7 @@ data-event-label="high"
             <a href="/5/">Gender equality</a>
         </h3>
         <span class="total">14 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -582,6 +599,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:7.142857142857142%" title="Not applicable: 7%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -596,6 +614,7 @@ data-event-label="high"
             <a href="/6/">Clean water and sanitation</a>
         </h3>
         <span class="total">11 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -634,6 +653,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:9.090909090909092%" title="Not applicable: 9%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -648,6 +668,7 @@ data-event-label="high"
             <a href="/7/">Affordable and clean energy</a>
         </h3>
         <span class="total">6 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -686,6 +707,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:16.666666666666664%" title="Not applicable: 17%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -700,6 +722,7 @@ data-event-label="high"
             <a href="/8/">Decent work and economic growth</a>
         </h3>
         <span class="total">17 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -738,6 +761,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:11.76470588235294%" title="Not applicable: 12%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -752,6 +776,7 @@ data-event-label="high"
             <a href="/9/">Industry, innovation and infrastructure</a>
         </h3>
         <span class="total">12 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -790,6 +815,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:8.333333333333332%" title="Not applicable: 8%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -804,6 +830,7 @@ data-event-label="high"
             <a href="/10/">Reduced inequalities</a>
         </h3>
         <span class="total">11 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -842,6 +869,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:18.181818181818183%" title="Not applicable: 18%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -856,6 +884,7 @@ data-event-label="high"
             <a href="/11/">Sustainable cities and communities</a>
         </h3>
         <span class="total">15 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -894,6 +923,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:6.666666666666667%" title="Not applicable: 7%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -908,6 +938,7 @@ data-event-label="high"
             <a href="/12/">Responsible consumption and production</a>
         </h3>
         <span class="total">13 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -946,6 +977,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:23.076923076923077%" title="Not applicable: 23%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -960,6 +992,7 @@ data-event-label="high"
             <a href="/13/">Climate action</a>
         </h3>
         <span class="total">8 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -998,6 +1031,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:25.0%" title="Not applicable: 25%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -1012,6 +1046,7 @@ data-event-label="high"
             <a href="/14/">Life below water</a>
         </h3>
         <span class="total">10 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -1050,6 +1085,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:60.0%" title="Not applicable: 60%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -1064,6 +1100,7 @@ data-event-label="high"
             <a href="/15/">Life on land</a>
         </h3>
         <span class="total">14 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -1102,6 +1139,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:21.428571428571427%" title="Not applicable: 21%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -1116,6 +1154,7 @@ data-event-label="high"
             <a href="/16/">Peace, justice and strong institutions</a>
         </h3>
         <span class="total">23 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -1154,6 +1193,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -1168,6 +1208,7 @@ data-event-label="high"
             <a href="/17/">Partnerships for the goals</a>
         </h3>
         <span class="total">25 indicators</span>
+        
         <div class="summary">
             <div class="statuses">
                 
@@ -1206,6 +1247,7 @@ data-event-label="high"
                 
                 <span class="notapplicable" style="width:28.0%" title="Not applicable: 28%"></span>
                 </div>
+        
         <div class="divider"></div>
     </div>
     <br style="clear:both;">
@@ -1247,6 +1289,10 @@ data-event-label="high"
                         </li>
                         
                         
+                        
+                        <li>
+                            <a href="/config">Configuration</a>
+                        </li>
                         </ul>
                 </div>
             </div>
@@ -1259,7 +1305,6 @@ data-event-label="high"
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-<script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
@@ -1273,23 +1318,6 @@ data-event-label="high"
 
 
 
-  <script >
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-148902754-1', 'auto');
-ga('require', 'eventTracker', {
-    attributePrefix: 'data-'
-});
-// anonymize user IPs (chops off the last IP triplet)
-ga('set', 'anonymizeIp', true);
-// forces SSL even if the page were somehow loaded over http://
-ga('set', 'forceSSL', true);
-ga('send', 'pageview');
-</script>
-
 
 
 <script>translations['general'] = translations['general'] || {};
@@ -1298,7 +1326,7 @@ ga('send', 'pageview');
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20240724095710'></script>
+<script src='/assets/js/sdg.js?v=20240724095825'></script>
 
 <script>
     new indicatorInit();
