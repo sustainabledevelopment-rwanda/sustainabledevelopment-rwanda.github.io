@@ -1,0 +1,21 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "Rwanda SDG Data App",
+    "background_color": "#fff",
+    "short_name": "Rwanda SDG",
+    "start_url": ".",
+    "display": "standalone",
+    "description": "",
+    "icons": [
+        {
+            "src": "/assets/img/favicons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/img/favicons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
