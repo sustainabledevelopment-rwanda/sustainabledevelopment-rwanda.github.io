@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20251127153419">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260205105653">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -395,7 +395,7 @@ data-event-label="high"
   data-indicatorid='indicator_1-5-1'
   data-id="1-5-1"
   data-country="Rwanda"
-  data-charttitle="Number of people effected by Disaster per 100,000 population"
+  data-charttitle="Number of deaths, missing persons and injured persons attributed to disasters per 100,000 population"
   data-charttitles="null"
   data-measurementunit="Number"
   data-xaxislabel=""
@@ -411,7 +411,7 @@ data-event-label="high"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;COMMENT_OBS&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Number of deaths due to disaster per 100,000 population&quot;,&quot;Number of persons injured or missing due to disaster per 100,000 population&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Observation-level footnotes&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;VC_DSR_MORT&quot;,&quot;VC_DSR_AFFCT&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-proxy=""
@@ -538,7 +538,7 @@ data-event-label="Change to Table tab"
       <figure role="group">
         <div id="chart-canvas">
           <h4 id="chart-heading" class="chart-title">
-            Number of people effected by Disaster per 100,000 population
+            Number of deaths, missing persons and injured persons attributed to disasters per 100,000 population
           </h4>
           <div id="chart" class="plot-container">
             <canvas
@@ -760,7 +760,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indicator available </th>
         <td>
           
-            <p>Number of deaths, missing persons attributed to disasters</p>
+            <p>Number of deaths, missing persons and injured persons attributed to disasters per 100,000 population</p>
 
           
         </td>
@@ -840,7 +840,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Calculations </th>
         <td>
           
-            <p>This indicator, X, is calculated as a simple (summation of related indicators (death, missing people, and affected people) from national disaster loss databases divided by the global population)* 100,000</p>
+            <p>This indicator is calculated using the relevant total figures (deaths; injured and missing persons) from national disaster loss databases, divided by the national population (or population projection) for the corresponding year, and multiplied by 100,000.</p>
 
           
         </td>
@@ -897,19 +897,12 @@ data-event-label="Change to Sources tab"
       
       
       
-        
-          
-          
-          
-          
-        
-      
       
       <tr>
         <th scope="row">Data last updated </th>
         <td>
           
-            <p><span class="empty-metadata-placeholder">Not available for this indicator</span></p>
+            <p>03/02/2026</p>
 
           
         </td>
@@ -920,19 +913,12 @@ data-event-label="Change to Sources tab"
       
       
       
-        
-          
-          
-          
-          
-        
-      
       
       <tr>
         <th scope="row">Metadata last updated </th>
         <td>
           
-            <p><span class="empty-metadata-placeholder">Not available for this indicator</span></p>
+            <p>03/02/2026</p>
 
           
         </td>
@@ -1379,7 +1365,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Earliest available data </th>
         <td>
           
-            <p>2018</p>
+            <p>2016</p>
 
           
         </td>
@@ -1441,7 +1427,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Release date </th>
         <td>
           
-            TBD
+            Jan 15, 2025
           
         </td>
         </tr>
@@ -1456,7 +1442,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Next release </th>
         <td>
           
-            <p>TBD</p>
+            <p>2026</p>
 
           
         </td>
@@ -1499,19 +1485,12 @@ data-event-label="Change to Sources tab"
       
       
       
-        
-          
-          
-          
-          
-        
-      
       
       <tr>
         <th scope="row">Other information </th>
         <td>
           
-            <p><span class="empty-metadata-placeholder">Not available for this source</span></p>
+            <p>https://www.minema.gov.rw/</p>
 
           
         </td>
@@ -1684,7 +1663,7 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20251127153419'></script>
+<script src='/assets/js/sdg.js?v=20260205105653'></script>
 
 <script>
     new indicatorInit();

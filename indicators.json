@@ -1219,7 +1219,7 @@
           "description": "Death is explained as the number of people who died during the disaster, or directly after, as a direct result of the hazardous event. Missing is explained as the number of people whose whereabouts is unknown since the hazardous event. It includes people who are presumed dead, for whom there is no physical evidence such as a body, and for which an official/legal report has been filed with competent authorities. Directly affected is explained as the number of people who have suffered injury, illness or other health effects; who were evacuated, displaced, relocated or have suffered direct damage to their livelihoods, economic, physical, social, cultural and environmental assets. Indirectly affected are people who have suffered consequences, other than or in addition to direct effects, over time, due to disruption or changes in economy, critical infrastructure, basic services, commerce or work, or social, health and psychological consequences.",
           "keywords": "",
           "href": "/11-5-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "11-5-2",
@@ -2000,10 +2000,10 @@
         {
           "id": "17-13-1",
           "title": "Macroeconomic Dashboard",
-          "description": "",
+          "description": "This indicator includes multiple measures. Further information is available at the data source.",
           "keywords": "",
           "href": "/17-13-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "17-14-1",
