@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260205105653">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260325132605">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -294,18 +294,26 @@ layout-indicator-iframe
   <div class="col-xs-12">
     <p><strong>Non-statistical indicator</strong></p>
 
-<p>Since the 1970s, four modern population and housing censuses have been conducted in Rwanda, in 1978, 1991, 2002 and 2012.</p>
+<p>Since the 1970s, five modern population and housing censuses have been conducted in Rwanda, in 1978, 1991, 2002, 2012, and 2022.</p>
 
-<p>Following the UN recommends to carry out a census at least every 10 years in it’s <a href="https://unstats.un.org/unsd/demographic/meetings/egm/NewYork/2014/P&amp;R_Revision3.pdf">Principles and Recommendations for Population and Housing Censuses guidelines</a>. Rwanda has committed to conduct the Population and Housing Census every ten years and the next census is expected in August 2022. Based on this commitment, the National Institute of Statistics of Rwanda has started the preparations for the fifth population and housing census.</p>
+<p>Following the UN recommendation to carry out a census at least every 10 years in its <a href="https://unstats.un.org/unsd/demographic/meetings/egm/NewYork/2014/P&amp;R_Revision3.pdf">Principles and Recommendations for Population and Housing Censuses guidelines</a>, Rwanda has committed to conduct the Population and Housing Census every ten years and the next census is expected in 2032.</p>
 
-<p>The links below contain detailed reports of the 2002 and 2012 population and housing censuses:</p>
-
+<p>The links below contain detailed reports of all past population and housing censuses:</p>
 <ul>
   <li>
-    <p><a href="http://www.statistics.gov.rw/datasource/39">Third Population and Housing Census – 2002</a></p>
+    <p><a href="https://statistics.gov.rw/data-sources/censuses/Population-and-Housing-Census/first-population-and-housing-census-1978">First Population and Housing Census – 1978</a></p>
   </li>
   <li>
-    <p><a href="http://www.statistics.gov.rw/datasource/42">Fourth Population and Housing Census - 2012</a></p>
+    <p><a href="https://statistics.gov.rw/data-sources/censuses/Population-and-Housing-Census/second-population-and-housing-census-1991">Second Population and Housing Census – 1991</a></p>
+  </li>
+  <li>
+    <p><a href="https://statistics.gov.rw/data-sources/censuses/Population-and-Housing-Census/third-population-and-housing-census-2002">Third Population and Housing Census – 2002</a></p>
+  </li>
+  <li>
+    <p><a href="https://statistics.gov.rw/data-sources/censuses/Population-and-Housing-Census/fourth-population-and-housing-census-2012">Fourth Population and Housing Census - 2012</a></p>
+  </li>
+  <li>
+    <p><a href="https://statistics.gov.rw/data-sources/censuses/Population-and-Housing-Census/fifth-population-and-housing-census-2022">Fifth Population and Housing Census - 2022</a></p>
   </li>
 </ul>
 
@@ -338,7 +346,7 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;COMMENT_OBS&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Countries that have conducted at least one population and housing census in the last 10 years (1 = YES; 0 = NO)&quot;,&quot;Countries with birth registration data that are at least 90 percent complete (1 = YES; 0 = NO)&quot;,&quot;Countries with death registration data that are at least 75 percent complete (1 = YES; 0 = NO)&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Observation-level footnotes&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;SG_REG_CENSUSN&quot;,&quot;SG_REG_BRTH90N&quot;,&quot;SG_REG_DETH75N&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-proxy=""
@@ -1345,7 +1353,7 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260205105653'></script>
+<script src='/assets/js/sdg.js?v=20260325132605'></script>
 
 <script>
     new indicatorInit();
