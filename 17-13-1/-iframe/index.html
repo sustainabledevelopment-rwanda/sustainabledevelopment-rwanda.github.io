@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260325132605">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260429134257">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -316,7 +316,7 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;COMMENT_OBS&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Annual growth rate of real GDP per capita&quot;,&quot;Unemployment rate&quot;,&quot;Consumer Price Index (CPI), annual at February&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Observation-level footnotes&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;MD_NY_GDP_PCAP&quot;,&quot;MD_SL_TLF_UEM&quot;,&quot;MD_CPI&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;PT&quot;,&quot;NUMBER&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;SERIES&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;SDG Series&quot;},{&quot;name&quot;:&quot;REF_AREA&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;Reference area&quot;},{&quot;name&quot;:&quot;UNIT_MEASURE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Unit of measure&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-proxy=""
@@ -351,15 +351,8051 @@ layout-indicator-iframe
   <div id="datatables">
 
     
+    <a role="button" href="https://sustainabledevelopment-rwanda.github.io/sdg-data-rwanda/en/headline/17-13-1.csv" class="btn btn-primary btn-download" download="indicator_17-13-1.csv" tabindex="0" role="button">Download headline data (.csv)</a>
+    
     <a role="button" href="https://sustainabledevelopment-rwanda.github.io/sdg-data-rwanda/en/data/17-13-1.csv" class="btn btn-primary btn-download" download='indicator_17-13-1.csv' tabindex='0' role='button'>Download source data (.csv)</a>
 
     <p class="no-js-disaggregation-hint">Download source data for disaggregations (.csv)</p>
 
     
-    <h3>No headline data available</h3>
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Macroeconomic Dashboard</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col">GeoCode</th>
+        
+        
+        
+        <th scope="col">UNIT_MEASURE</th>
+        
+        
+        
+        <th scope="col" class="table-value">SERIES</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>-6.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>-9.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>-7.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>-11.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>-12.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>-15.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>-9.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>-10.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>-11.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>-12.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>-11.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>-9.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>-11.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>-11.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Current account balance as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>-1.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>USD</td>
+          
+          
+          
+          <td class="table-value">Portfolio investment, net (Balance of Payments, million USD) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>-7.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>USD</td>
+          
+          
+          
+          <td class="table-value">Portfolio investment, net (Balance of Payments, million USD) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>-4.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>USD</td>
+          
+          
+          
+          <td class="table-value">Portfolio investment, net (Balance of Payments, million USD) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>74.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>USD</td>
+          
+          
+          
+          <td class="table-value">Portfolio investment, net (Balance of Payments, million USD) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>14.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>USD</td>
+          
+          
+          
+          <td class="table-value">Portfolio investment, net (Balance of Payments, million USD) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>30.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>USD</td>
+          
+          
+          
+          <td class="table-value">Portfolio investment, net (Balance of Payments, million USD) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>-36.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>USD</td>
+          
+          
+          
+          <td class="table-value">Portfolio investment, net (Balance of Payments, million USD) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>-277.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>USD</td>
+          
+          
+          
+          <td class="table-value">Portfolio investment, net (Balance of Payments, million USD) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>56.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>USD</td>
+          
+          
+          
+          <td class="table-value">Portfolio investment, net (Balance of Payments, million USD) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>66.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>USD</td>
+          
+          
+          
+          <td class="table-value">Portfolio investment, net (Balance of Payments, million USD) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>20.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>USD</td>
+          
+          
+          
+          <td class="table-value">Portfolio investment, net (Balance of Payments, million USD) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>1.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>3.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>3.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>3.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>1.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>3.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>3.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>3.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>2.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>1.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>2.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>2.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>3.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>4.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Foreign direct investment as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>18.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>19.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>26.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>28.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>33.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>37.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>41.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>45.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>50.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>67.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>69.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>64.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>70.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>75.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Gross public sector debt, Central Government, as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>17.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>18.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>24.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>25.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>28.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>48.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>50.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>55.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>59.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>75.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>76.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>68.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>79.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>86.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">External debt stocks as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>21.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Bank capital adequacy ratio [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>25.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Bank capital adequacy ratio [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>24.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Bank capital adequacy ratio [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>21.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Bank capital adequacy ratio [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>21.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Bank capital adequacy ratio [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>21.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Bank capital adequacy ratio [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>21.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Bank capital adequacy ratio [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>20.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Bank capital adequacy ratio [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>5.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>4.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>4.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>3.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>3.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>3.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>4.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>4.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>5.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>5.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>5.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>4.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>4.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>5.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Number</td>
+          
+          
+          
+          <td class="table-value">Gross official reserves in months of next year's imports (ratio) [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>14.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>15.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>19.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>21.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>7.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>12.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>15.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>15.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>18.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>15.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>22.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>22.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>20.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual broad money growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>5.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>6.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>4.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>1.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>2.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>5.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>4.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>1.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>2.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>7.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>0.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>13.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>14.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>4.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual inflation, CPI period average percentage change [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>-8.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>-7.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>-8.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>-3.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>-3.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>-3.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>-4.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>-3.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>-5.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>-7.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>-7.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>-8.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>-6.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>-6.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Fiscal deficit (including grants) as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>4.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>5.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>5.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>13.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>14.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>15.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>14.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>15.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>16.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>15.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>15.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>15.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>15.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>14.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Tax revenue as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2000</td>
+          
+          
+          
+          <td>4.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2001</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2002</td>
+          
+          
+          
+          <td>14.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2003</td>
+          
+          
+          
+          <td>12.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2004</td>
+          
+          
+          
+          <td>10.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2005</td>
+          
+          
+          
+          <td>10.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2006</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2007</td>
+          
+          
+          
+          <td>1.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2008</td>
+          
+          
+          
+          <td>2.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2009</td>
+          
+          
+          
+          <td>12.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>10.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>4.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>16.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>0.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>21.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>5.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>7.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>5.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>18.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>2.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>14.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>10.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>1.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>14.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the general government final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2000</td>
+          
+          
+          
+          <td>15.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2001</td>
+          
+          
+          
+          <td>0.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2002</td>
+          
+          
+          
+          <td>13.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2003</td>
+          
+          
+          
+          <td>-8.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2004</td>
+          
+          
+          
+          <td>7.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2005</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2006</td>
+          
+          
+          
+          <td>14.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2007</td>
+          
+          
+          
+          <td>0.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2008</td>
+          
+          
+          
+          <td>7.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2009</td>
+          
+          
+          
+          <td>13.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>4.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>8.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>16.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>4.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>-5.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>8.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>2.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>4.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>-6.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>-2.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>11.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>3.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of households and NGOs final consumption expenditure [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2000</td>
+          
+          
+          
+          <td>17.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2001</td>
+          
+          
+          
+          <td>0.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2002</td>
+          
+          
+          
+          <td>8.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2003</td>
+          
+          
+          
+          <td>10.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2004</td>
+          
+          
+          
+          <td>12.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2005</td>
+          
+          
+          
+          <td>16.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2006</td>
+          
+          
+          
+          <td>24.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2007</td>
+          
+          
+          
+          <td>28.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2008</td>
+          
+          
+          
+          <td>33.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2009</td>
+          
+          
+          
+          <td>3.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>7.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>22.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>7.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>5.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>19.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>-10.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>6.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>32.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>-5.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>16.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>23.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>15.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>7.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of the gross capital formation [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2000</td>
+          
+          
+          
+          <td>0.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2001</td>
+          
+          
+          
+          <td>40.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2002</td>
+          
+          
+          
+          <td>5.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2003</td>
+          
+          
+          
+          <td>20.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2004</td>
+          
+          
+          
+          <td>32.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2005</td>
+          
+          
+          
+          <td>11.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2006</td>
+          
+          
+          
+          <td>2.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2007</td>
+          
+          
+          
+          <td>44.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2008</td>
+          
+          
+          
+          <td>-12.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2009</td>
+          
+          
+          
+          <td>-3.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>8.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>24.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>19.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>7.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>6.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>13.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>42.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>11.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>20.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>-10.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>2.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>58.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>20.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>23.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of exports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2000</td>
+          
+          
+          
+          <td>24.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2001</td>
+          
+          
+          
+          <td>-5.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2002</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2003</td>
+          
+          
+          
+          <td>-13.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2004</td>
+          
+          
+          
+          <td>21.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2005</td>
+          
+          
+          
+          <td>12.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2006</td>
+          
+          
+          
+          <td>23.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2007</td>
+          
+          
+          
+          <td>13.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2008</td>
+          
+          
+          
+          <td>-3.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2009</td>
+          
+          
+          
+          <td>17.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>2.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>18.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>19.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>9.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>15.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>23.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>8.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>6.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>8.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>18.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>-4.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>-12.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>12.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>26.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>5.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual growth of imports of goods and services [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2000</td>
+          
+          
+          
+          <td>8.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2001</td>
+          
+          
+          
+          <td>8.5</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2002</td>
+          
+          
+          
+          <td>13.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2003</td>
+          
+          
+          
+          <td>2.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2004</td>
+          
+          
+          
+          <td>7.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2005</td>
+          
+          
+          
+          <td>9.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2006</td>
+          
+          
+          
+          <td>9.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2007</td>
+          
+          
+          
+          <td>7.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2008</td>
+          
+          
+          
+          <td>11.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2009</td>
+          
+          
+          
+          <td>6.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>7.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>8.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>8.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>4.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>5.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>8.9</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>5.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>4.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>8.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>9.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>-2.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>8.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>9.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>8.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>7.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual GDP growth [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>600.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>614.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>647.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>682.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>720.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>787.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>831.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>861.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>901.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>945.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>990.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>1033.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>1168.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>1323.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Annual average national currency per United States dollar [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2000</td>
+          
+          
+          
+          <td>31.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2001</td>
+          
+          
+          
+          <td>33.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2002</td>
+          
+          
+          
+          <td>31.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2003</td>
+          
+          
+          
+          <td>32.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2004</td>
+          
+          
+          
+          <td>37.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2005</td>
+          
+          
+          
+          <td>38.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2006</td>
+          
+          
+          
+          <td>34.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2007</td>
+          
+          
+          
+          <td>37.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2008</td>
+          
+          
+          
+          <td>38.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2009</td>
+          
+          
+          
+          <td>37.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>38.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>40.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>41.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>44.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>44.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>45.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>50.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>54.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>48.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>49.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>45.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>60.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>61.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>67.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>71.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Total trade in goods and services as a percentage of GDP [17.13.1]</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
     
   </div>
 
+  
+  <div id="datatableFooter">
+    
+    <p>Source: Ministry of Finance and Economic Planning (MINECOFIN)</p>
+    
+    
+    <p>Geographical Area: Rwanda</p>
+    
+    
+    <p>Unit of Measurement: Number</p>
+    
+    
+  </div>
   
 
 </div>
@@ -464,7 +8500,7 @@ data-event-label="Change to Table tab"
     <dl>
         
         <dt>Source:</dt>
-        <dd>National Institute of Statistics (NISR)</dd>
+        <dd>Ministry of Finance and Economic Planning (MINECOFIN), National Institute of Statistics of Rwanda (NISR)</dd>
         
 
         
@@ -540,7 +8576,7 @@ data-event-label="Change to Table tab"
     <dl>
         
         <dt>Source:</dt>
-        <dd>National Institute of Statistics (NISR)</dd>
+        <dd>Ministry of Finance and Economic Planning (MINECOFIN), National Institute of Statistics of Rwanda (NISR)</dd>
         
 
         
@@ -803,7 +8839,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Data last updated </th>
         <td>
           
-            <p>03/02/2026</p>
+            <p>04/29/2026</p>
 
           
         </td>
@@ -819,7 +8855,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Metadata last updated </th>
         <td>
           
-            <p>03/02/2026</p>
+            <p>04/29/2026</p>
 
           
         </td>
@@ -1006,7 +9042,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Global indicator description </th>
         <td>
           
-            <p>This indicator provides information on the macroeconomic situation. It includes measures of the annual growth rate of real GDP per capita; the unemployment rate; and the Consumer Price Index (CPI), annual at February.</p>
+            <p>This indicator provides information on the macroeconomic situation. It includes measures of: (1) Current account balance as a percentage of GDP; (2) Portfolio investment, net (Balance of Payments); (3) Foreign direct investment as a percentage of GDP; (4) Gross public sector debt, Central Government, as a percentage of GDP; (5) External debt stocks as a percentage of GDP; (6) Bank capital adequacy ratio; (7) Gross official reserves in months of next years imports (ratio); (8) Annual broad money growth; (9) Annual inflation, CPI period average percentage change; (10) Fiscal deficit (including grants) as a percentage of GDP; (11) Tax revenue as a percentage of GDP; (12) Annual growth of the general government final consumption expenditure; (13) Annual growth of households and NGOs final consumption expenditure; (14) Annual growth of the gross capital formation; (15) Annual growth of exports of goods and services; (16) Annual growth of imports of goods and services; (17) Annual GDP growth; (18) Annual average national currency per United States dollar; (19) Total trade in goods and services as a percentage of GDP</p>
 
           
         </td>
@@ -1186,8 +9222,8 @@ data-event-label="Change to Sources tab"
     
     <div class="col-md-6">
       
-        <h4 class="sr-only">Source 1</h4>
       
+        <h4>Source 1</h4>
       
       <table class="table metadata-content">
   <tbody>
@@ -1234,7 +9270,301 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p>National Institute of Statistics (NISR)</p>
+            <p>Ministry of Finance and Economic Planning (MINECOFIN)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            <p>Annual</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            <p>2011</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            <p>Rwanda</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.minecofin.gov.rw/index.php?eID=dumpFile&t=f&f=128388&token=def2b50f9389f09d4a7b260fb49a7420b858add7" target="_blank">
+                Budget Framework Paper 2025/2026-2027/2028, Annex II: Basic Macro Indicators 2011-2028 <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            2025
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            <p>2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            <p>Indicators</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            <p>info@minecofin.gov.rw</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
+          
+            <p>Source for: Current account balance as a percentage of GDP; Foreign direct investment as a percentage of GDP; Gross public sector debt, Central Government, as a percentage of GDP; External debt stocks as a percentage of GDP; Gross official reserves in months of next years imports (ratio); Annual broad money growth; Annual inflation, CPI period average percentage change; Fiscal deficit (including grants) as a percentage of GDP; Tax revenue as a percentage of GDP; Annual average national currency per United States dollar</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+    </div>
+    
+    
+    
+    <div class="col-md-6">
+      
+      
+        <h4>Source 2</h4>
+      
+      <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Ministry of Finance and Economic Planning (MINECOFIN)</p>
 
           
         </td>
@@ -1303,8 +9633,8 @@ data-event-label="Change to Sources tab"
             
             
             
-              <a href="https://statistics.gov.rw/" target="_blank">
-                National Institute of Statistics <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://www.minecofin.gov.rw/index.php?eID=dumpFile&t=f&f=128393&token=e58451a7adba887c6ef909b9b176c43cc8d2ba73" target="_blank">
+                Budget Framework Paper, 2022/2023-2024/2025 to 2025/2026-2027/2028 <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1328,7 +9658,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Release date </th>
         <td>
           
-            2025
+            2022-2025
           
         </td>
         </tr>
@@ -1359,7 +9689,301 @@ data-event-label="Change to Sources tab"
         <th scope="row">Statistical classification </th>
         <td>
           
-            <p>Survey</p>
+            <p>Indicators</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            <p>info@minecofin.gov.rw</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
+          
+            <p>Source for: Portfolio investment, net (Balance of Payments); Bank capital adequacy ratio; Annual broad money growth</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+    </div>
+    
+    
+    
+    <div class="col-md-6">
+      
+      
+        <h4>Source 3</h4>
+      
+      <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>National Institute of Statistics of Rwanda (NISR)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            <p>Annual</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            <p>1999</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            <p>Rwanda</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://statistics.gov.rw/statistical-publications/gross-domestic-product/gdp-national-accounts-2025" target="_blank">
+                GDP National Accounts, 2025 <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            2026
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            <p>2027</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            <p>Indicators</p>
 
           
         </td>
@@ -1391,37 +10015,13 @@ data-event-label="Change to Sources tab"
         <th scope="row">Other information </th>
         <td>
           
-            <p>https://statistics.gov.rw/</p>
+            <p>Source for: Annual growth of the general government final consumption expenditure; Annual growth of households and NGOs final consumption expenditure; Annual growth of the gross capital formation; Annual growth of exports of goods and services; Annual growth of imports of goods and services; Annual GDP growth; Total trade in goods and services as a percentage of GDP</p>
 
           
         </td>
         </tr>
         
       
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   
   
@@ -1503,7 +10103,7 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260325132605'></script>
+<script src='/assets/js/sdg.js?v=20260429134257'></script>
 
 <script>
     new indicatorInit();
