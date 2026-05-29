@@ -1290,8 +1290,8 @@ var indicatorModel = function (options) {
   /**
  * Constants to be used in indicatorModel.js and helper functions.
  */
-var UNIT_COLUMN = 'Units';
-var SERIES_COLUMN = 'Series';
+var UNIT_COLUMN = 'UNIT_MEASURE';
+var SERIES_COLUMN = 'SERIES';
 var GEOCODE_COLUMN = 'GeoCode';
 var YEAR_COLUMN = 'Year';
 var VALUE_COLUMN = 'Value';
@@ -3324,8 +3324,8 @@ var indicatorView = function (model, options) {
     var helpers = 
 (function() {
 
-  var HIDE_SINGLE_SERIES = false;
-var HIDE_SINGLE_UNIT = false;
+  var HIDE_SINGLE_SERIES = true;
+var HIDE_SINGLE_UNIT = true;
 var PROXY_PILL = '<span aria-describedby="proxy-description" class="proxy-pill">' + translations.t("indicator.proxy") + '</span>';
 
   /**
@@ -6132,8 +6132,8 @@ $(function() {
             this.currentDisaggregation = 0;
             this.displayedDisaggregation = 0;
             this.needsMapUpdate = false;
-            this.seriesColumn = 'Series';
-            this.unitsColumn = 'Units';
+            this.seriesColumn = 'SERIES';
+            this.unitsColumn = 'UNIT_MEASURE';
             this.displayForm = false;
             this.updateDisaggregations(plugin.startValues);
         },
