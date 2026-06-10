@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260529131404">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260610144536">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -403,7 +403,7 @@ data-event-label="high"
   data-indicatorid='indicator_3-a-1'
   data-id="3-a-1"
   data-country="Rwanda"
-  data-charttitle="Current tobacco use among persons aged 15 years and older"
+  data-charttitle="Percentage of persons aged 15-49 who use tobacco"
   data-charttitles="null"
   data-measurementunit="Percentage (%)"
   data-xaxislabel=""
@@ -419,7 +419,7 @@ data-event-label="high"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;SERIES&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;SDG Series&quot;},{&quot;name&quot;:&quot;REF_AREA&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;Reference area&quot;},{&quot;name&quot;:&quot;SEX&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Male&quot;,&quot;Female&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;AGE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;15 years old and over&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age&quot;},{&quot;name&quot;:&quot;UNIT_MEASURE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Unit of measure&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;SERIES&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;SDG Series&quot;},{&quot;name&quot;:&quot;REF_AREA&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;Reference area&quot;},{&quot;name&quot;:&quot;SEX&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Male&quot;,&quot;Female&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;AGE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;15 to 49 years old&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age&quot;},{&quot;name&quot;:&quot;UNIT_MEASURE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Unit of measure&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-proxy=""
@@ -546,7 +546,7 @@ data-event-label="Change to Table tab"
       <figure role="group">
         <div id="chart-canvas">
           <h4 id="chart-heading" class="chart-title">
-            Current tobacco use among persons aged 15 years and older
+            Percentage of persons aged 15-49 who use tobacco
           </h4>
           <div id="chart" class="plot-container">
             <canvas
@@ -768,7 +768,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indicator available </th>
         <td>
           
-            <p>Percentage of men/women age 15-49 who smoke cigarettes or a pipe or use other tobacco products</p>
+            <p>Percentage of persons aged 15-49 who use tobacco</p>
 
           
         </td>
@@ -779,8 +779,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Indicator description </th>
+        <td>
           
+            <p>This indicator measures the percentage of persons aged 15-49 who use any tobacco product, including smoked (cigarettes, kreteks, pipes, cigars, cheroots, cigarillos, and water pipes) and smokeless (snuff by mouth, snuff by nose, chewing tobacco, and betel quid with tobacco) tobacco products.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -821,7 +832,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Definitions </th>
         <td>
           
-            <p>The indicator is defined as the percentage of the population aged 15 years and over who currently use any tobacco product (smoked and/or smokeless tobacco) on a daily or non-daily basis.</p>
+            <p>The indicator is defined as the percentage of the population aged 15-49 who currently use any tobacco product (smoked and/or smokeless tobacco) on a daily or non-daily basis.</p>
 
           
         </td>
@@ -837,7 +848,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Calculations </th>
         <td>
           
-            <p>(Number of Current tabacco users age 15-49 years / Total population)</p>
+            <p>Number of current tabacco users aged 15-49 years / Total population aged 15-49 years * 100</p>
 
           
         </td>
@@ -848,23 +859,67 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Figures on tobacco use in the Demographic and Health Survey are given separately for men and women; for the purposes of this dashboard, overall figures are calculated as a simple arithmetic mean of the figures for men and women.</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comments and limitations </th>
+        <td>
           
-      
-      
-      
+            <p>For comparability, this dashboard uses data for men and women aged 15-49. Data for men aged 15-59 are also available for certain years from the same source, but are not used here. It is worth noting that tobacco usage is generally higher in older age groups, so these figures may slightly underestimate usage in the overall population aged 15 years and older.</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Data last updated </th>
+        <td>
           
+            <p>02/06/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
+          
+            <p>02/06/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
   
   
   
@@ -1281,7 +1336,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Periodicity </th>
         <td>
           
-            <p>5 Years</p>
+            <p>Every 5 years</p>
 
           
         </td>
@@ -1297,7 +1352,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Earliest available data </th>
         <td>
           
-            <p>2015</p>
+            <p>1992</p>
 
           
         </td>
@@ -1334,8 +1389,8 @@ data-event-label="Change to Sources tab"
             
             
             
-              <a href="http://www.statistics.gov.rw/datasource/demographic-and-health-survey-dhs" target="_blank">
-                Rwanda Demographic Health Survey (RDHS) <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://statistics.gov.rw/data-sources/surveys/Demographic-and-Health-Survey" target="_blank">
+                Demographic and Health Survey (DHS) <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1359,7 +1414,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Release date </th>
         <td>
           
-            TBD
+            2020
           
         </td>
         </tr>
@@ -1374,7 +1429,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Next release </th>
         <td>
           
-            <p>TBD</p>
+            <p>2025</p>
 
           
         </td>
@@ -1390,7 +1445,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Statistical classification </th>
         <td>
           
-            <p>Official</p>
+            <p>Official statistics</p>
 
           
         </td>
@@ -1406,7 +1461,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Contact details </th>
         <td>
           
-            <p>https://www.statistics.gov.rw/</p>
+            <p>info@statistics.gov.rw</p>
 
           
         </td>
@@ -1422,7 +1477,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Other information </th>
         <td>
           
-            <p>info@statistics.gov.rw</p>
+            <p>Figures on tobacco use are available beginning in 2010.</p>
 
           
         </td>
@@ -1595,7 +1650,7 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260529131404'></script>
+<script src='/assets/js/sdg.js?v=20260610144536'></script>
 
 <script>
     new indicatorInit();

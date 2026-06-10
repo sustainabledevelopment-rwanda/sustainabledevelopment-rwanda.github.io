@@ -32,7 +32,7 @@
         {
           "id": "1-3-1",
           "title": "Proportion of population covered by social protection floors/systems, by sex, distinguishing children, unemployed persons, older persons, persons with disabilities, pregnant women, newborns, work-injury victims and the poor and the vulnerable",
-          "description": "This indicator measures the percentage of the target population covered by four major social protection schemes, including three schemes led by the Rwanda Social Security Board (RSSB). The series included are (1) Percentage of the population accessing social security and income support programmes; (2) Percentage of beneficiaries of the RSSB Maternity Leave Benefits Scheme out of total estimated live births; (3) Percentage of the population above statutory pensionable age receiving a pension through the RSSB Pension Scheme; and (4) Percentage contributing members to the RSSB Pension and Occupational Hazards Schemes out of total employed population.",
+          "description": "This indicator measures the percentage of the target population covered by four major social protection schemes, including three schemes led by the Rwanda Social Security Board (RSSB). The series included are (1) Percentage of the population accessing social security and income support programmes; (2) Percentage of beneficiaries of the RSSB Maternity Leave Benefits Scheme out of total estimated live births; (3) Percentage of the population above statutory pensionable age receiving a pension through the RSSB Pension Scheme; and (4) Percentage of contributing members to the RSSB Pension and Occupational Hazards Schemes out of total employed population.",
           "keywords": "",
           "href": "/1-3-1/",
           "status": "complete"
@@ -40,7 +40,7 @@
         {
           "id": "1-4-1",
           "title": "Proportion of population living in households with access to basic services",
-          "description": "",
+          "description": "<p>This indicator measures the proportion of individuals or households with access to a range of services up to a basic threshold. It is composed of multiple standalone SDG indicators. Please see the relevant indicator pages for more information on each data series.</p><p>6.1.1 - Proportion of population using safely managed drinking water services</p><p>6.2.1a - Proportion of population using safely managed sanitation services</p><p>6.2.1b - Proportion of population with handwashing facilities with soap and water available at home</p><p>7.1.2 - Percentage of population with primary reliance on clean fuels and technology</p><p>9.1.1 - Proportion of the rural population who live within 2 km of an all-season road</p><p>Proportion of the population that has convenient access to public transport by sex, age and persons with disabilities</p><p>11.6.1 - Proportion of municipal solid waste collected and managed in controlled facilities out of total municipal waste generated, by cities</p><p>3.8.1 – Coverage of essential health services</p><p>SDG 4.1.1 - Proportion of children and young people (a) in grades 2/3; (b) at the end of primary; and (c) at the end of lower secondary achieving at least a minimum proficiency level in (i) reading and (ii) mathematics, by sex</p>9.c.1 - Proportion of population covered by a mobile network, by technology",
           "keywords": "",
           "href": "/1-4-1/",
           "status": "complete"
@@ -352,7 +352,7 @@
         {
           "id": "3-7-1",
           "title": "Proportion of women of reproductive age (aged 15–49 years) who have their need for family planning satisfied with modern methods",
-          "description": "Modern methods include female sterilization, male sterilization, pill, IUD, injectables, implants, male condom, female condom, standard days method, and lactational amenorrhea method (LAM). Women using contraception are considered to have a met need. Women using contraception who say they want no (more) children are considered to have a met need for limiting, and women who are using contraception and say they want to delay having a child or are unsure if or when they want a (another) child, are considered to have a met need for spacing.",
+          "description": "Percentage of women of reproductive age 15-49 who express a met or unmet need for family planning, who are using any modern contraceptive method.",
           "keywords": "",
           "href": "/3-7-1/",
           "status": "complete"
@@ -408,7 +408,7 @@
         {
           "id": "3-a-1",
           "title": "Age-standardized prevalence of current tobacco use among persons aged 15 years and older",
-          "description": "",
+          "description": "This indicator measures the percentage of persons aged 15-49 who use any tobacco product, including smoked (cigarettes, kreteks, pipes, cigars, cheroots, cigarillos, and water pipes) and smokeless (snuff by mouth, snuff by nose, chewing tobacco, and betel quid with tobacco) tobacco products.",
           "keywords": "",
           "href": "/3-a-1/",
           "status": "complete"
@@ -440,7 +440,7 @@
         {
           "id": "3-c-1",
           "title": "Health worker density and distribution",
-          "description": "",
+          "description": "This indicator measures the number of skilled health workers per 1,000 population.",
           "keywords": "",
           "href": "/3-c-1/",
           "status": "complete"
@@ -448,7 +448,7 @@
         {
           "id": "3-d-1",
           "title": "International Health Regulations (IHR) capacity and health emergency preparedness",
-          "description": "",
+          "description": "States Parties and the Director-General report to the World Health Assembly on the implementation of the International Health Regulations (IHR). SPAR questionnaire is launched every year after the World Health Assembly for States Parties to initiate the process of self-assessment and reporting to the World Health Assembly, using a multisectoral approach to obtain information from all sectors involved in implementing IHR core capacities. This indicator includes scores for each of the 15 core capacities, as well as an average score over all capacities.",
           "keywords": "",
           "href": "/3-d-1/",
           "status": "complete"
@@ -464,7 +464,7 @@
         {
           "id": "4-1-1",
           "title": "Proportion of children and young people (a) in grades 2/3; (b) at the end of primary; and (c) at the end of lower secondary achieving at least a minimum proficiency level in (i) reading and (ii) mathematics, by sex",
-          "description": "The minimum proficiency level will be measured relative to new common reading and mathematics scales currently in development",
+          "description": "Proficiency in reading and mathematics was assessed at level P3 (grade 3), P6 (grade 6, the end of primary education), and S3 (grade 9, the end of lower secondary education) by the Learning Achievement in Rwandan Schools (LARS) survey.",
           "keywords": "",
           "href": "/4-1-1/",
           "status": "complete"
@@ -512,7 +512,7 @@
         {
           "id": "4-6-1",
           "title": "Proportion of population in a given age group achieving at least a fixed level of proficiency in functional (a) literacy and (b) numeracy skills, by sex",
-          "description": "<p>In EICV, Literacy is measured through a self-assessment question on whether the respondent can read and write a simple note. Numeracy is measured through a self-assessment question on the ability to perform a written calculation</p><p>Whereas for DHS, literacy rate refers to men and women who attended secondary school or higher and women who can read a whole sentence or part of a sentence</p>",
+          "description": "",
           "keywords": "",
           "href": "/4-6-1/",
           "status": "complete"
@@ -680,7 +680,7 @@
         {
           "id": "6-1-1",
           "title": "Proportion of population using safely managed drinking water services",
-          "description": "",
+          "description": "This indicator is defined as the proportion of households using an improved drinking water source. ‘Improved’ drinking water sources include piped water into dwelling, yard or plot; public taps or standpipes; boreholes or tubewells; protected dug wells; protected springs; packaged water; delivered water and rainwater.",
           "keywords": "",
           "href": "/6-1-1/",
           "status": "complete"
@@ -688,10 +688,10 @@
         {
           "id": "6-2-1",
           "title": "Proportion of population using (a) safely managed sanitation services and (b) a hand-washing facility with soap and water",
-          "description": "<p>Improved sanitation facilities include the following; flush or pour flush toilets to sewer systems, septic tanks or pit latrines, ventilated improved pit latrines, pit latrines with a slab, and composting toilets.</p> Population with a basic handwashing facility; a device to contain, transport or regulate the flow of water to facilitate handwashing with soap and water in the household.",
+          "description": "This indicator measures two key series related to sanitation and hygiene facilities - the presence of improved sanitation facilities and basic handwashing facilities with soap and water.",
           "keywords": "",
           "href": "/6-2-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "6-3-1",
@@ -784,7 +784,7 @@
         {
           "id": "7-1-2",
           "title": "Proportion of population with primary reliance on clean fuels and technology",
-          "description": "",
+          "description": "The use of clean cooking fuels reflects Rwanda’s commitment to achieving universal access to affordable, reliable, and modern energy services, while mitigating the health risks associated with indoor air pollution caused by solid fuels.",
           "keywords": "",
           "href": "/7-1-2/",
           "status": "complete"
@@ -976,7 +976,7 @@
         {
           "id": "9-1-1",
           "title": "Proportion of the rural population who live within 2 km of an all-season road",
-          "description": "According to the context of Rwanda, an all-season road is defined as a road that is open to traffic regardless of weather, season and construction materials 2 kilometres",
+          "description": "",
           "keywords": "",
           "href": "/9-1-1/",
           "status": "complete"
@@ -1064,7 +1064,7 @@
         {
           "id": "9-c-1",
           "title": "Proportion of population covered by a mobile network, by technology",
-          "description": "",
+          "description": "This indicator measures the proportion of the population living within range of a mobile network, broken down by the type of technology (2G, 3G, or 4G).",
           "keywords": "",
           "href": "/9-c-1/",
           "status": "complete"
@@ -1184,10 +1184,10 @@
         {
           "id": "11-2-1",
           "title": "Proportion of population that has convenient access to public transport, by sex, age and persons with disabilities",
-          "description": "",
+          "description": "This indicator uses walking distance to the nearest public transport stage as a measure of convenient access to public transport.",
           "keywords": "",
           "href": "/11-2-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "11-3-1",
@@ -1232,10 +1232,10 @@
         {
           "id": "11-6-1",
           "title": "Proportion of municipal solid waste collected and managed in controlled facilities out of total municipal waste generated, by cities",
-          "description": "",
+          "description": "This indicator measures the percentage of households whose waste is collected and managed in controlled facilities, that is, whose main method of rubbish disposal is either a rubbish collection service or a publicly managed refuse area.",
           "keywords": "",
           "href": "/11-6-1/",
-          "status": "notstarted"
+          "status": "complete"
         },
         {
           "id": "11-6-2",

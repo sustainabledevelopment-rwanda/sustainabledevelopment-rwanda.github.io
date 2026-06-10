@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260529131404">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260610144536">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -411,7 +411,7 @@ data-event-label="high"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap=""
+  data-showmap="false"
   data-startvalues="null"
   data-graphlimits="null"
   data-stackeddisaggregation=""
@@ -492,11 +492,11 @@ data-event-label="high"
         <tr>
           
           
-          <td>2010</td>
+          <td>2000</td>
           
           
           
-          <td>74.0</td>
+          <td>64.4</td>
           
           
           
@@ -508,7 +508,7 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Proportion (%) of population using basic drinking water services</td>
+          <td class="table-value">Percentage of households using improved drinking water source [6.1.1]</td>
           
           
         </tr>
@@ -516,11 +516,11 @@ data-event-label="high"
         <tr>
           
           
-          <td>2015</td>
+          <td>2005</td>
           
           
           
-          <td>73.0</td>
+          <td>64.2</td>
           
           
           
@@ -532,7 +532,7 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Proportion (%) of population using basic drinking water services</td>
+          <td class="table-value">Percentage of households using improved drinking water source [6.1.1]</td>
           
           
         </tr>
@@ -540,11 +540,11 @@ data-event-label="high"
         <tr>
           
           
-          <td>2020</td>
+          <td>2011</td>
           
           
           
-          <td>80.0</td>
+          <td>74.2</td>
           
           
           
@@ -556,7 +556,7 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Proportion (%) of population using basic drinking water services</td>
+          <td class="table-value">Percentage of households using improved drinking water source [6.1.1]</td>
           
           
         </tr>
@@ -564,11 +564,11 @@ data-event-label="high"
         <tr>
           
           
-          <td>2022</td>
+          <td>2014</td>
           
           
           
-          <td>82.0</td>
+          <td>84.8</td>
           
           
           
@@ -580,7 +580,79 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Proportion (%) of population using basic drinking water services</td>
+          <td class="table-value">Percentage of households using improved drinking water source [6.1.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>87.4</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Percentage of households using improved drinking water source [6.1.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>89.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Percentage of households using improved drinking water source [6.1.1]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>89.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Percentage of households using improved drinking water source [6.1.1]</td>
           
           
         </tr>
@@ -908,7 +980,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indicator available </th>
         <td>
           
-            <p>Percentage of HHs with access to improved drinking water source</p>
+            <p>Percentage of households using improved drinking water source</p>
 
           
         </td>
@@ -919,8 +991,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Indicator description </th>
+        <td>
           
+            <p>This indicator is defined as the proportion of households using an improved drinking water source. ‘Improved’ drinking water sources include piped water into dwelling, yard or plot; public taps or standpipes; boreholes or tubewells; protected dug wells; protected springs; packaged water; delivered water and rainwater.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -961,7 +1044,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Definitions </th>
         <td>
           
-            <p>It Is the proportion of households using an improved basic drinking water source. Improved drinking water sources include the following; piped water into dwelling, yard or plot; public taps or standpipes; boreholes or tubewells; protected dug wells; protected springs and rainwater.</p>
+            <p>Survey participants were asked what type of drinking water source their household used. This indicator is calculated by taking the sum of participant households who were using any improved drinking water source as a percentage of the total number of participating households.</p>
 
           
         </td>
@@ -977,7 +1060,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Calculations </th>
         <td>
           
-            <p>(Number of households with access to improved drinking water source / Total number of households) * 100</p>
+            <p>Number of households using improved drinking water source / Total number of households * 100</p>
 
           
         </td>
@@ -988,23 +1071,67 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
           
-      
-      
-      
-        
+            <p>This indicator includes disaggregation by  degree of urbanisation (Urban/Rural).</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comments and limitations </th>
+        <td>
           
-      
-      
-      
+            <p>This indicator is measured at the household level rather than at the individual level. Additionally, reflecting the evolving best practice in poverty measurement, a number of important methodological changes were made for EICV7 (2023-2024). Please see the linked data source for more information on methodology.</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Data last updated </th>
+        <td>
           
+            <p>26/05/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
+          
+            <p>26/05/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
   
   
   
@@ -1156,8 +1283,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
           
+            <p>6.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1166,7 +1304,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Global indicator description </th>
         <td>
           
-            <p>This indicator is defined as the proportion of population using an improved drinking water source which is accessible on premises, available when needed and free from faecal and priority chemical contamination.</p>
+            <p>This indicator is defined as the proportion of population using an improved drinking water source. ‘Improved’ drinking water sources include piped water into dwelling, yard or plot; public taps or standpipes; boreholes or tubewells; protected dug wells; protected springs; packaged water; delivered water and rainwater.</p>
 
           
         </td>
@@ -1410,7 +1548,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Periodicity </th>
         <td>
           
-            <p>3 years</p>
+            <p>Every 3 years</p>
 
           
         </td>
@@ -1426,7 +1564,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Earliest available data </th>
         <td>
           
-            <p>2020</p>
+            <p>2000</p>
 
           
         </td>
@@ -1463,8 +1601,8 @@ data-event-label="Change to Sources tab"
             
             
             
-              <a href="http://www.statistics.gov.rw/" target="_blank">
-                Households Survey (HHS) <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://statistics.gov.rw/integrated-household-living-conditions-survey-7-eicv-7/eicv7-thematic-report-utilities-and-amenities-202324" target="_blank">
+                Integrated Household Living Conditions Survey (EICV) - Thematic Report Utilities and Amenities <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1488,7 +1626,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Release date </th>
         <td>
           
-            TBD
+            2024
           
         </td>
         </tr>
@@ -1503,7 +1641,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Next release </th>
         <td>
           
-            <p>TBD</p>
+            <p>2027</p>
 
           
         </td>
@@ -1519,7 +1657,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Statistical classification </th>
         <td>
           
-            <p>Official</p>
+            <p>Official statistics</p>
 
           
         </td>
@@ -1551,7 +1689,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Other information </th>
         <td>
           
-            <p>http://www.statistics.gov.rw/</p>
+            <p>The protocols for collecting data, and the nature and scope of the questions, were relatively similar from EICV1 (1999/2001) through EICV6. Reflecting the evolving best practice in poverty measurement, a number of important methodological changes were made for EICV7 (2023-2024). Please see the linked data source for more information on methodology.</p>
 
           
         </td>
@@ -1724,7 +1862,7 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260529131404'></script>
+<script src='/assets/js/sdg.js?v=20260610144536'></script>
 
 <script>
     new indicatorInit();

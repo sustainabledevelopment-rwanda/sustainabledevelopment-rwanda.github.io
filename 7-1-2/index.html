@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260529131404">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260610144536">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -403,9 +403,9 @@ data-event-label="high"
   data-indicatorid='indicator_7-1-2'
   data-id="7-1-2"
   data-country="Rwanda"
-  data-charttitle="Proportion (%) of Households with primary reliance on clean cooking fuels"
+  data-charttitle="Percentage of households with primary reliance on clean cooking fuels"
   data-charttitles="null"
-  data-measurementunit="Percentage(%)"
+  data-measurementunit="Percentage (%)"
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="line"
@@ -463,7 +463,7 @@ data-event-label="high"
     
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Proportion (%) of Households with primary reliance on clean cooking fuels</caption>
+      <caption>Percentage of households with primary reliance on clean cooking fuels</caption>
       <thead>
         
         
@@ -492,11 +492,11 @@ data-event-label="high"
         <tr>
           
           
-          <td>2017</td>
+          <td>2014</td>
           
           
           
-          <td>1.2</td>
+          <td>0.2</td>
           
           
           
@@ -508,7 +508,7 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Proportion (%) of Households with primary reliance on clean cooking fuels</td>
+          <td class="table-value">Percentage of households with primary reliance on clean cooking fuels [7.1.2]</td>
           
           
         </tr>
@@ -516,7 +516,31 @@ data-event-label="high"
         <tr>
           
           
-          <td>2020</td>
+          <td>2017</td>
+          
+          
+          
+          <td>1.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Percentage of households with primary reliance on clean cooking fuels [7.1.2]</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
           
           
           
@@ -532,7 +556,7 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Proportion (%) of Households with primary reliance on clean cooking fuels</td>
+          <td class="table-value">Percentage of households with primary reliance on clean cooking fuels [7.1.2]</td>
           
           
         </tr>
@@ -556,7 +580,7 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Proportion (%) of Households with primary reliance on clean cooking fuels</td>
+          <td class="table-value">Percentage of households with primary reliance on clean cooking fuels [7.1.2]</td>
           
           
         </tr>
@@ -575,7 +599,7 @@ data-event-label="high"
     <p>Geographical Area: Rwanda</p>
     
     
-    <p>Unit of Measurement: Percentage(%)</p>
+    <p>Unit of Measurement: Percentage (%)</p>
     
     
   </div>
@@ -662,7 +686,7 @@ data-event-label="Change to Table tab"
       <figure role="group">
         <div id="chart-canvas">
           <h4 id="chart-heading" class="chart-title">
-            Proportion (%) of Households with primary reliance on clean cooking fuels
+            Percentage of households with primary reliance on clean cooking fuels
           </h4>
           <div id="chart" class="plot-container">
             <canvas
@@ -879,13 +903,35 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Indicator available </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Percentage of households with primary reliance on clean cooking fuels</p>
+
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Indicator description </th>
+        <td>
+          
+            <p>The use of clean cooking fuels reflects Rwanda’s commitment to achieving universal access to affordable, reliable, and modern energy services, while mitigating the health risks associated with indoor air pollution caused by solid fuels.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -910,7 +956,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Unit of measurement </th>
         <td>
           
-            <p>Percentage(%)</p>
+            <p>Percentage (%)</p>
 
           
         </td>
@@ -921,33 +967,99 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Definitions </th>
+        <td>
           
-      
-      
-      
-        
+            <p>The clean fuels considered in EICV include electricity, solar energy, biogas, and Liquified Petroleum Gas (LPG).</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Calculations </th>
+        <td>
           
-      
-      
-      
+            <p>Population (adult equivalent) living below the poverty line / Total population * 100</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
           
-      
-      
-      
+            <p>The latest EICV publication also includes data on the type of cooking stove used and the primary fuel used for lighting, but due to the lack of a timeseries, this information has not been included in this dashboard.</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comments and limitations </th>
+        <td>
           
-      
-      
-      
+            <p>The protocols for collecting data, and the nature and scope of the questions, were relatively similar from EICV1 (1999/2001) through EICV6. Reflecting the evolving best practice in poverty measurement, a number of important methodological changes were made for EICV7 (2023-2024). Please see the linked data source for more information on methodology.</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Data last updated </th>
+        <td>
           
+            <p>09/06/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
+          
+            <p>09/06/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
   
   
   
@@ -1099,8 +1211,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
           
+            <p>7.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1141,7 +1264,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN custodian agency </th>
         <td>
           
-            <p>International Trade Centre (ITC) United Nations Conference on Trade and Development (UNCTAD) The World Trade Organization (WTO)</p>
+            <p>International Trade Centre (ITC), United Nations Conference on Trade and Development (UNCTAD), World Trade Organization (WTO)</p>
 
           
         </td>
@@ -1353,7 +1476,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Periodicity </th>
         <td>
           
-            <p>3 years</p>
+            <p>Every 3 years</p>
 
           
         </td>
@@ -1369,7 +1492,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Earliest available data </th>
         <td>
           
-            <p>2017</p>
+            <p>2000</p>
 
           
         </td>
@@ -1406,8 +1529,8 @@ data-event-label="Change to Sources tab"
             
             
             
-              <a href="http://www.statistics.gov.rw/datasource/integrated-household-living-conditions-survey-eicv" target="_blank">
-                Integrated household living conditions survey (EICV) <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://statistics.gov.rw/integrated-household-living-conditions-survey-7-eicv-7/eicv7-thematic-report-utilities-and-amenities-202324" target="_blank">
+                Integrated Household Living Conditions Survey (EICV) - Thematic Report Utilities and Amenities <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1431,7 +1554,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Release date </th>
         <td>
           
-            Dec 06, 2018
+            2024
           
         </td>
         </tr>
@@ -1446,7 +1569,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Next release </th>
         <td>
           
-            <p>TBD</p>
+            <p>2027</p>
 
           
         </td>
@@ -1462,7 +1585,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Statistical classification </th>
         <td>
           
-            <p>Official</p>
+            <p>Official statistics</p>
 
           
         </td>
@@ -1494,7 +1617,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Other information </th>
         <td>
           
-            <p>http://www.statistics.gov.rw/</p>
+            <p>The protocols for collecting data, and the nature and scope of the questions, were relatively similar from EICV1 (1999/2001) through EICV6. Reflecting the evolving best practice in poverty measurement, a number of important methodological changes were made for EICV7 (2023-2024). Please see the linked data source for more information on methodology.</p>
 
           
         </td>
@@ -1667,7 +1790,7 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260529131404'></script>
+<script src='/assets/js/sdg.js?v=20260610144536'></script>
 
 <script>
     new indicatorInit();
