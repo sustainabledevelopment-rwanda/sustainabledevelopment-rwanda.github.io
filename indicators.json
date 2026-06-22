@@ -56,7 +56,7 @@
         {
           "id": "1-5-1",
           "title": "Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population",
-          "description": "Death is explained as the number of people who died during the disaster, or directly after, as a direct result of the hazardous event. Missing is explained as the number of people whose whereabouts is unknown since the hazardous event. It includes people who are presumed dead, for whom there is no physical evidence such as a body, and for which an official/legal report has been filed with competent authorities. Directly affected is explained as the number of people who have suffered injury, illness or other health effects; who were evacuated, displaced, relocated or have suffered direct damage to their livelihoods, economic, physical, social, cultural and environmental assets. Indirectly affected are people who have suffered consequences, other than or in addition to direct effects, over time, due to disruption or changes in economy, critical infrastructure, basic services, commerce or work, or social, health and psychological consequences.",
+          "description": "Death is explained as the number of people who died during the disaster, or directly after, as a direct result of the hazardous event. Missing is explained as the number of people whose whereabouts is unknown since the hazardous event. It includes people who are presumed dead, for whom there is no physical evidence such as a body, and for which an official/legal report has been filed with competent authorities.",
           "keywords": "",
           "href": "/1-5-1/",
           "status": "complete"
@@ -64,7 +64,7 @@
         {
           "id": "1-5-2",
           "title": "Direct economic loss attributed to disasters in relation to global gross domestic product (GDP)",
-          "description": "",
+          "description": "This indicator measures the number of structures damaged by disaster, including administrative offices, bridges, cattle and livestock, classrooms, hectares of crops, hectares of forests, health centers, houses, markets, transmission lines, water supply structures, churches, and road sections.",
           "keywords": "",
           "href": "/1-5-2/",
           "status": "complete"
@@ -80,7 +80,7 @@
         {
           "id": "1-5-4",
           "title": "Proportion of local governments that adopt and implement local disaster risk reduction strategies in line with national disaster risk reduction strategies",
-          "description": "The Sendai Framework for Disaster Risk Reduction 2015-2030 was adopted by UN Member States in March 2015 as a global policy of disaster risk reduction. One of the targets is; “Substantially increase the number of countries with national and local disaster risk reduction strategies by 2020”. In line with the Sendai Framework for Disaster Risk Reduction 2015-2030, disaster risk reduction strategies and policies should mainstream and integrate disaster risk reduction within and across all sectors, across different timescales and with targets, indicators and time frames. These strategies should be aimed at preventing the creation of disaster risk, the reduction of existing risk and the strengthening of economic, social, health and environmental resilience.",
+          "description": "By 2017, Rwanda was implementing national disaster risk reduction strategies in line with Sendai Framework for DRR, such as DRR mainstreaming strategies, National Risk Atlas for Rwanda and DDMPs, among others. A 2017 report by the Ministry in Charge of Emergency Management (MINEMA) noted that the the number of local government entities that adopted and implemented local disaster risk reduction strategies in line with national disaster risk reduction strategies passed from 22 to 29 (against a total of 30 districts) between 2014 and 2017. By 2019, all 30 districts had implemented local disaster risk reduction strategies in line with national disaster risk reduction strategies.",
           "keywords": "",
           "href": "/1-5-4/",
           "status": "complete"
