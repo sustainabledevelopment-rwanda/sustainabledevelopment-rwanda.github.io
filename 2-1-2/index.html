@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260714083542">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260916091043">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -393,13 +393,6 @@ data-event-label="high"
 
   
 
-<div class="row" id="page-content">
-  <div class="col-xs-12">
-    <p>This datasource collects indicators on human and social capital, natural capital, physical capital, economic capital and livelihood strategies, food consumption , and health and nutrition.</p>
-
-  </div>
-</div>
-
 
   
 
@@ -410,7 +403,7 @@ data-event-label="high"
   data-indicatorid='indicator_2-1-2'
   data-id="2-1-2"
   data-country="Rwanda"
-  data-charttitle="Prevalence of moderate or severe food insecurity in the population, based on CARI"
+  data-charttitle="Prevalence of moderate or severe food insecurity in the population, based on the Consolidated Approach for Reporting Indicators of Food Security (CARI)"
   data-charttitles="null"
   data-measurementunit="Percentage (%)"
   data-xaxislabel=""
@@ -470,7 +463,7 @@ data-event-label="high"
     
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Prevalence of moderate or severe food insecurity in the population, based on CARI</caption>
+      <caption>Prevalence of moderate or severe food insecurity in the population, based on the Consolidated Approach for Reporting Indicators of Food Security (CARI)</caption>
       <thead>
         
         
@@ -885,7 +878,7 @@ data-event-label="Change to Table tab"
       <figure role="group">
         <div id="chart-canvas">
           <h4 id="chart-heading" class="chart-title">
-            Prevalence of moderate or severe food insecurity in the population, based on CARI
+            Prevalence of moderate or severe food insecurity in the population, based on the Consolidated Approach for Reporting Indicators of Food Security (CARI)
           </h4>
           <div id="chart" class="plot-container">
             <canvas
@@ -1107,7 +1100,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indicator available </th>
         <td>
           
-            <p>Percentage and number of food insecure households by province and district</p>
+            <p>Prevalence of moderate or severe food insecurity in the population, based on the Consolidated Approach for Reporting Indicators of Food Security (CARI)</p>
 
           
         </td>
@@ -1123,7 +1116,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indicator description </th>
         <td>
           
-            <p>Moderately food insecure; Significant food consumption gaps. These households use a high share of their budget to cover food needs and the majority of households have to use negative coping strategies in order to make a living, although only a few use the more serious coping strategies. Severely food insecure; Poor food consumption and the majority of households are using a very high share of their budget to acquire food. Almost half of these households have used one of the most serious irreversible coping strategies with the resulting risk of further deteriorating their food security situation.</p>
+            <p>This indicator uses the World Food Programme’s Consolidated Approach for Reporting Indicators of Food Security (CARI) to assess Rwanda’s overall food security.</p>
 
           
         </td>
@@ -1171,7 +1164,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Definitions </th>
         <td>
           
-            <p>The indicator measures the percentage of individuals in the population who have experienced food insecurity at moderate or severe levels during the reference period. The severity of food insecurity, defined as a latent trait, is measured on the Food Insecurity Experience Scale global reference scale, a measurement standard established by FAO through the application of the Food Insecurity Experience Scale in more than 140 countries worldwide, starting in 2014.</p>
+            <p>Moderately Food Insecure households have significant food consumption gaps. These households use a high share of their budget to cover food needs and the majority of households have to use negative coping strategies in order to make a living, although only a few use the more serious coping strategies. Severely Food Insecure households have poor food consumption and the majority of households are using a very high share of their budget to acquire food. Almost half of these households have used one of the most serious irreversible coping strategies with the resulting risk of further deteriorating their food security situation.</p>
 
           
         </td>
@@ -1187,7 +1180,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Calculations </th>
         <td>
           
-            <p>To calculate the overall prevalence of ‘food insecurity’ in the population, It is the sum of the rates of the two most severe categories (‘moderately food insecure’ and ‘severely food insecure’)</p>
+            <p>The Consolidated Approach for Reporting Indicators of Food Security (CARI) combines food security indicators into a single index, evaluating food consumption, economic vulnerability, and coping strategies. It classifies households on a 4-point scale: Food Secure, Marginally Food Secure, Moderately Food Insecure, and Severely Food Insecure. For more information about the methodology, please see the linked source.</p>
 
           
         </td>
@@ -1198,23 +1191,67 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Some information on food security prior to 2015 is available in the linked data source, however, the first use of the Consolidated Approach for Reporting Indicators of Food Security (CARI) was in 2015.</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comments and limitations </th>
+        <td>
           
-      
-      
-      
+            <p>The 2024 CFSVA adopts WFP’s revised CARI guidelines, introduced in 2021, which impact the estimates for the CARI’s Current Status. There was also a change in enumeration areas since the 2021 survey, and the 2024 CFSVA data collection occurred later than previous rounds in the seasonal cycle. Please see the linked data source for further details.</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Data last updated </th>
+        <td>
           
+            <p>16/09/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
+          
+            <p>16/09/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
   
   
   
@@ -1366,8 +1403,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
           
+            <p>2.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1408,7 +1456,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN custodian agency </th>
         <td>
           
-            <p>Food and Agriculture Organisation of the United Nations (FAO)</p>
+            <p>Food and Agriculture Organization (FAO)</p>
 
           
         </td>
@@ -1620,7 +1668,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Periodicity </th>
         <td>
           
-            <p>3 Year</p>
+            <p>Every 3 years</p>
 
           
         </td>
@@ -1673,7 +1721,7 @@ data-event-label="Change to Sources tab"
             
             
             
-              <a href="http://www.statistics.gov.rw/datasource/comprehensive-food-security-and-vulnerability-and-nutrition-analysis-survey-cfsva" target="_blank">
+              <a href="https://statistics.gov.rw/data-sources/surveys/CFSVA" target="_blank">
                 Comprehensive Food Security and Vulnerability and Nutrition Analysis Survey (CFSVA) <span class="visuallyhidden">opens in a new window</span>
               </a>
             
@@ -1698,7 +1746,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Release date </th>
         <td>
           
-            TBD
+            2025
           
         </td>
         </tr>
@@ -1713,7 +1761,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Next release </th>
         <td>
           
-            <p>TBD</p>
+            <p>2028</p>
 
           
         </td>
@@ -1729,7 +1777,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Statistical classification </th>
         <td>
           
-            <p>Official</p>
+            <p>Official statistics</p>
 
           
         </td>
@@ -1745,7 +1793,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Contact details </th>
         <td>
           
-            <p>http://www.statistics.gov.rw/</p>
+            <p>info@statistics.gov.rw</p>
 
           
         </td>
@@ -1761,7 +1809,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Other information </th>
         <td>
           
-            <p>info@statistics.gov.rw</p>
+            <p>The earliest CFSVA Survey was conducted in 2006, however, the first use of the Consolidated Approach for Reporting Indicators of Food Security (CARI) was in 2015.</p>
 
           
         </td>
@@ -1934,7 +1982,7 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260714083542'></script>
+<script src='/assets/js/sdg.js?v=20260916091043'></script>
 
 <script>
     new indicatorInit();

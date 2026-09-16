@@ -120,7 +120,7 @@
         {
           "id": "2-1-1",
           "title": "Prevalence of undernourishment",
-          "description": "These are households that are extremely food insecure; they consume starches (cereals, roots and tubers) five days a week, vegetables twice and pulses one day a week. Oil is consumed once a week on average and the rest of the food groups (especially animal protein) are barely consumed.",
+          "description": "The Prevalence of Undernourishment (PoU) measures the proportion of the population whose habitual food consumption is insufficient to meet the Minimum Dietary Energy Requirement (MDER) necessary for maintaining a normal, active, and healthy life. Individuals are classified as undernourished when their daily dietary intake consistently falls below this threshold.",
           "keywords": "",
           "href": "/2-1-1/",
           "status": "complete"
@@ -128,7 +128,7 @@
         {
           "id": "2-1-2",
           "title": "Prevalence of moderate or severe food insecurity in the population, based on the Food Insecurity Experience Scale (FIES)",
-          "description": "Moderately food insecure; Significant food consumption gaps. These households use a high share of their budget to cover food needs and the majority of households have to use negative coping strategies in order to make a living, although only a few use the more serious coping strategies. Severely food insecure; Poor food consumption and the majority of households are using a very high share of their budget to acquire food. Almost half of these households have used one of the most serious irreversible coping strategies with the resulting risk of further deteriorating their food security situation.",
+          "description": "This indicator uses the World Food Programme's Consolidated Approach for Reporting Indicators of Food Security (CARI) to assess Rwanda's overall food security.",
           "keywords": "",
           "href": "/2-1-2/",
           "status": "complete"
