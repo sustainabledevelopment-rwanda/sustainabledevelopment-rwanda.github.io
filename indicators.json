@@ -136,7 +136,7 @@
         {
           "id": "2-2-1",
           "title": "Prevalence of stunting (height for age <-2 standard deviation from the median of the World Health Organization (WHO) Child Growth Standards) among children under 5 years of age",
-          "description": "",
+          "description": "Stunting, or low height-for-age, is a measure of growth faltering. It serves as a marker of the deficient growth environment to which children have been exposed and reflects the overall well-being of a population.",
           "keywords": "",
           "href": "/2-2-1/",
           "status": "complete"
@@ -144,9 +144,25 @@
         {
           "id": "2-2-2",
           "title": "Prevalence of malnutrition (weight for height >+2 or <-2 standard deviation from the median of the WHO Child Growth Standards) among children under 5 years of age, by type (wasting and overweight)",
-          "description": "",
+          "description": "Wasting, or low weight-for-height, is a measure of acute undernutrition. It represents a failure to receive ade- quate nutrition in the period immediately preceding the survey. Wasting may result from inadequate food intake or from a recent episode of illness or infection leading to weight loss. Overweight, or high weight-for-height, results from an imbalance between energy consumed (too much) and energy expended (too little).",
           "keywords": "",
           "href": "/2-2-2/",
+          "status": "complete"
+        },
+        {
+          "id": "2-2-3",
+          "title": "Prevalence of anaemia in women aged 15 to 49 years, by pregnancy status (percentage)",
+          "description": "This indicator measures the percentage of women aged 15−49 years with a haemoglobin concentration less than 120 g/L for non- pregnant women and lactating women, and less than 110 g/L for pregnant women, adjusted for altitude and smoking.",
+          "keywords": "",
+          "href": "/2-2-3/",
+          "status": "complete"
+        },
+        {
+          "id": "2-2-4",
+          "title": "global_indicators.2-2-4-title",
+          "description": "Diverse diets, which are essential for providing the micronutrients needed for healthy growth and development, reducing the risk of deficiencies.",
+          "keywords": "",
+          "href": "/2-2-4/",
           "status": "complete"
         },
         {

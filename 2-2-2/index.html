@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20260916091043">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20260916125254">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -763,13 +763,35 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Indicator available </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Prevalence of malnutrition among children under 5 years of age, by type</p>
+
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Indicator description </th>
+        <td>
+          
+            <p>Wasting, or low weight-for-height, is a measure of acute undernutrition. It represents a failure to receive ade- quate nutrition in the period immediately preceding the survey. Wasting may result from inadequate food intake or from a recent episode of illness or infection leading to weight loss. Overweight, or high weight-for-height, results from an imbalance between energy consumed (too much) and energy expended (too little).</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -810,7 +832,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Definitions </th>
         <td>
           
-            <p>Is the percentage of children under five years old whose weight for height are less than minus two standards deviations (wasting) and above than plus two standards deviations (overweight) from the median weight for height of the reference population ages 0–59 months. The nutritional status of children in the survey population was compared with the 2006 WHO Child Growth Standards (WHO, 2006)</p>
+            <p>This indicator is calculated as the percentage of children under five years old whose weight for height are less than minus two standard deviations (wasting) and greater than plus two standard deviations (overweight) from the median weight for height of the reference population ages 0–59 months. The nutritional status of children in the survey population was compared with the 2006 WHO Child Growth Standards (WHO, 2006)</p>
 
           
         </td>
@@ -826,7 +848,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Calculations </th>
         <td>
           
-            <p>(Number of children under age five that fall below minus two standard deviations from the median weight for height of the 2006 WHO Child Growth Standards / total number of children under age five that were measured) * 100</p>
+            <p>(Number of children under age five that fall below minus two standard deviations or above plus two standard deviations from the median weight for height of the 2006 WHO Child Growth Standards) / (Total number of children under age five in sample) * 100</p>
 
           
         </td>
@@ -837,23 +859,67 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Please see linked source for further detail.</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comments and limitations </th>
+        <td>
           
-      
-      
-      
+            <p>Please see linked source for methodological limitations.</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Data last updated </th>
+        <td>
           
+            <p>16/09/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
+          
+            <p>16/09/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
   
   
   
@@ -1005,8 +1071,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
           
+            <p>2.2</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1259,7 +1336,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Periodicity </th>
         <td>
           
-            <p>3-5 years</p>
+            <p>Every 5 years</p>
 
           
         </td>
@@ -1275,7 +1352,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Earliest available data </th>
         <td>
           
-            <p>1992</p>
+            <p>2005</p>
 
           
         </td>
@@ -1312,8 +1389,8 @@ data-event-label="Change to Sources tab"
             
             
             
-              <a href="http://www.statistics.gov.rw/datasource/demographic-and-health-survey-dhs" target="_blank">
-                Rwanda Demographic Health Survey (RDHS) <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://statistics.gov.rw/data-sources/surveys/Demographic-and-Health-Survey" target="_blank">
+                Rwanda Demographic and Health Survey (DHS) <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1337,7 +1414,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Release date </th>
         <td>
           
-            2014/15
+            2026
           
         </td>
         </tr>
@@ -1352,7 +1429,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Next release </th>
         <td>
           
-            <p>TBD</p>
+            <p>2031</p>
 
           
         </td>
@@ -1368,7 +1445,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Statistical classification </th>
         <td>
           
-            <p>Official</p>
+            <p>Official statistics</p>
 
           
         </td>
@@ -1384,7 +1461,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Contact details </th>
         <td>
           
-            <p>http://www.statistics.gov.rw/</p>
+            <p>info@statistics.gov.rw</p>
 
           
         </td>
@@ -1400,7 +1477,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Other information </th>
         <td>
           
-            <p>info@statistics.gov.rw</p>
+            <p>The earliest Demographic and Health Survey was conducted in 1992, however, this indicator is reported beginning in 2005.</p>
 
           
         </td>
@@ -1573,7 +1650,7 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20260916091043'></script>
+<script src='/assets/js/sdg.js?v=20260916125254'></script>
 
 <script>
     new indicatorInit();
