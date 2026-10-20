@@ -248,7 +248,7 @@
         {
           "id": "3-1-1",
           "title": "Maternal mortality ratio",
-          "description": "A maternal death refers to a female death from any cause related to or aggravated by pregnancy or its management (excluding accidental or incidental causes) during pregnancy and childbirth or within 42 days of termination of pregnancy, irrespective of the duration and site of the pregnancy. The time reference for MMR is five years period preceding the survey dates.",
+          "description": "A maternal death refers to a female death from any cause related to or aggravated by pregnancy or its management (excluding accidental or incidental causes) during pregnancy and childbirth or within 42 days of termination of pregnancy, irrespective of the duration and site of the pregnancy. The time reference for the maternal mortality ratio is the five-year period preceding the survey date.",
           "keywords": "",
           "href": "/3-1-1/",
           "status": "complete"
@@ -256,7 +256,7 @@
         {
           "id": "3-1-2",
           "title": "Proportion of births attended by skilled health personnel",
-          "description": "",
+          "description": "Births delivered with the assistance of doctors, nurses, midwives, and auxiliary midwives, out of all live births and/or stillbirths in the 2 years before the survey.",
           "keywords": "",
           "href": "/3-1-2/",
           "status": "complete"
@@ -264,7 +264,7 @@
         {
           "id": "3-2-1",
           "title": "Under‐5 mortality rate",
-          "description": "It is important to point out that the reference period is the five year period preceding the survey date. So, the time point that the rate is referred to is the midpoint of the five year interval.",
+          "description": "The under-five mortality rate describes the probability of dying between birth and the fifth birthday, based on the number of deaths before the age of 5 per 1000 live births in the reference period.",
           "keywords": "",
           "href": "/3-2-1/",
           "status": "complete"
@@ -272,7 +272,7 @@
         {
           "id": "3-2-2",
           "title": "Neonatal mortality rate",
-          "description": "The time reference of NMR is not the year in which the survey is undertaken; rather it is the five years’ period preceding the survey date. Hence, if an exact time point is needed as a time reference, it must be taken as the mid of the five-year interval preceding the survey date.",
+          "description": "The probability of dying within the first month of life, based on the number of deaths during the first 28 completed days of life per 1000 live births in the reference period.",
           "keywords": "",
           "href": "/3-2-2/",
           "status": "complete"
@@ -280,7 +280,7 @@
         {
           "id": "3-3-1",
           "title": "Number of new HIV infections per 1,000 uninfected population, by sex, age and key populations",
-          "description": "",
+          "description": "This indicator measures the incidence of HIV as the number of new HIV infections per 1,000 uninfected population.",
           "keywords": "",
           "href": "/3-3-1/",
           "status": "complete"
@@ -288,7 +288,7 @@
         {
           "id": "3-3-2",
           "title": "Tuberculosis incidence per 100,000 population",
-          "description": "",
+          "description": "This indicator measures the number of new tuberculosis (TB) cases arising in a given year per 100,000 population.",
           "keywords": "",
           "href": "/3-3-2/",
           "status": "complete"
@@ -296,7 +296,7 @@
         {
           "id": "3-3-3",
           "title": "Malaria incidence per 1,000 population",
-          "description": "",
+          "description": "This indicator measures the number of new malaria cases arising in a given year per 1,000 population.",
           "keywords": "",
           "href": "/3-3-3/",
           "status": "complete"
@@ -304,7 +304,7 @@
         {
           "id": "3-3-4",
           "title": "Hepatitis B incidence per 100,000 population",
-          "description": "",
+          "description": "Timeseries data is currently unavailable for this indicator. However, some information on Hepatitis B in Rwanda may be found in the [National Hepatitis Elimination Profile for Rwanda](https://www.globalhep.org/sites/default/files/content/national_profiles/files/2025-08/2025-08-06_National%20Hepatitis%20Elimination%20Profile_Rwanda.pdf) prepared by the Coalition for Global Hepatitis Elimination.",
           "keywords": "",
           "href": "/3-3-4/",
           "status": "notstarted"
@@ -312,7 +312,7 @@
         {
           "id": "3-3-5",
           "title": "Number of people requiring interventions against neglected tropical diseases",
-          "description": "",
+          "description": "The World Health Organization (WHO) tracks the population requiring and receiving preventive chemotherapy for lymphatic filariasis, onchoceriasis, schistosomiasis, soil-transmitted helminthiases and trachoma. In Rwanda, preventive chemotherapy is required for schistosomiasis and soil-transmitted helminthiases; the figures reported here correspond to the number of people in need of preventive chemotherapy for at least one of these two diseases.",
           "keywords": "",
           "href": "/3-3-5/",
           "status": "complete"
