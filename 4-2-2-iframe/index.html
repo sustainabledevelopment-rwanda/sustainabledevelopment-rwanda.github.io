@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20261027150711">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20261030081032">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -310,7 +310,7 @@ layout-indicator-iframe
   data-country="Rwanda"
   data-charttitle="Participation rate in organized learning (one year before the official primary entry age), by sex"
   data-charttitles="null"
-  data-measurementunit="percentage (%)"
+  data-measurementunit="Percentage (%)"
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="line"
@@ -324,7 +324,7 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;SERIES&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;SDG Series&quot;},{&quot;name&quot;:&quot;REF_AREA&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;Reference area&quot;},{&quot;name&quot;:&quot;SEX&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Male&quot;,&quot;Female&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;EDUCATION_LEV&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Pre-primary education&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Education level&quot;},{&quot;name&quot;:&quot;UNIT_MEASURE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Unit of measure&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;SERIES&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;SDG Series&quot;},{&quot;name&quot;:&quot;REF_AREA&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;Reference area&quot;},{&quot;name&quot;:&quot;SEX&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Male&quot;,&quot;Female&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;UNIT_MEASURE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Unit of measure&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-proxy=""
@@ -359,15 +359,251 @@ layout-indicator-iframe
   <div id="datatables">
 
     
+    <a role="button" href="https://sustainabledevelopment-rwanda.github.io/sdg-data-rwanda/en/headline/4-2-2.csv" class="btn btn-primary btn-download" download="indicator_4-2-2.csv" tabindex="0" role="button">Download headline data (.csv)</a>
+    
     <a role="button" href="https://sustainabledevelopment-rwanda.github.io/sdg-data-rwanda/en/data/4-2-2.csv" class="btn btn-primary btn-download" download='indicator_4-2-2.csv' tabindex='0' role='button'>Download source data (.csv)</a>
 
     <p class="no-js-disaggregation-hint">Download source data for disaggregations (.csv)</p>
 
     
-    <h3>No headline data available</h3>
+    <h3>Headline data</h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>Participation rate in organized learning (one year before the official primary entry age), by sex</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col">GeoCode</th>
+        
+        
+        
+        <th scope="col">UNIT_MEASURE</th>
+        
+        
+        
+        <th scope="col" class="table-value">SERIES</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>47.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Participation rate in organized learning (one year before the official primary entry age), by sex</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>52.6</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Participation rate in organized learning (one year before the official primary entry age), by sex</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>57.1</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Participation rate in organized learning (one year before the official primary entry age), by sex</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>72.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Participation rate in organized learning (one year before the official primary entry age), by sex</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>46.8</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Participation rate in organized learning (one year before the official primary entry age), by sex</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>67.2</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Participation rate in organized learning (one year before the official primary entry age), by sex</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>80.3</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Participation rate in organized learning (one year before the official primary entry age), by sex</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2025</td>
+          
+          
+          
+          <td>83.7</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Percent</td>
+          
+          
+          
+          <td class="table-value">Participation rate in organized learning (one year before the official primary entry age), by sex</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
     
   </div>
 
+  
+  <div id="datatableFooter">
+    
+    <p>Source: Ministry of Education (MINEDUC)</p>
+    
+    
+    <p>Geographical Area: Rwanda</p>
+    
+    
+    <p>Unit of Measurement: Percentage (%)</p>
+    
+    
+  </div>
   
 
 </div>
@@ -664,19 +900,8 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Indicator available </th>
-        <td>
-          
-            <p>Total Pre-nursery learners (percentage)</p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -685,7 +910,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indicator description </th>
         <td>
           
-            <p>Participation in early childhood and in primary education are both included. The age range will vary by country depending on the official age for entry to primary education. The indicator measures children’s exposure to organized learning activities in the year prior to the start of primary school. A high value of the indicator shows a high degree of participation in organized learning immediately before the official entrance age to primary education.</p>
+            <p>The participation rate in organized learning (one year before the official primary entry age), by sex as defined as the percentage of children in the given age range who participate in one or more organized learning programme, including programmes which offer a combination of education and care. The indicator measures children’s exposure to organized learning activities in the year prior to the start of primary school. A high value of the indicator shows a high degree of participation in organized learning immediately before the official entrance age to primary education.</p>
 
           
         </td>
@@ -717,7 +942,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Unit of measurement </th>
         <td>
           
-            <p>percentage (%)</p>
+            <p>Percentage (%)</p>
 
           
         </td>
@@ -728,8 +953,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Definitions </th>
+        <td>
           
+            <p>Participation in early childhood education, nursery or pre-primary education, and primary education are all included. Until 2021, the reference age for one year before the official primary entrance age was age 6 (with official primary entrance at age 7). From 2022 onwards, the reference age is age 5 (with official primary entrance at age 6).</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -738,7 +974,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Calculations </th>
         <td>
           
-            <p>The number of children in the relevant age group who participate in an organized learning programme is expressed as a percentage of the total population in the same age range. The indicator can be calculated both from administrative data and from household surveys. If the former, the number of enrolments in organized learning programmes are reported by schools and the population in the age group one year below the official primary entry age is derived from population estimates.</p>
+            <p>The indicator can be calculated as the number of enrolments in organized learning programmes reported by schools divided by the population in the age group one year below the official primary entry age. The number of children in the relevant age group who participate in an organized learning programme is expressed as a percentage of the total population in the same age range. The indicator is calculated from administrative data. The number of enrolments in organized learning programmes are reported by schools and the population in the age group one year below the official primary entry age is derived from population estimates.</p>
 
           
         </td>
@@ -749,23 +985,67 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Alternative measures of the participation rate in organized learning one year before the official primary entry age are available from the <a href="https://download.uis.unesco.org/SDG4/SDG4-Profile-Rwanda.pdf">SDG 4 Country Profile for Rwanda</a> compiled by UNESCO.</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comments and limitations </th>
+        <td>
           
-      
-      
-      
+            <p>In the academic year 2021/2022, the official school-age for the first year of primary education changed from age 7 to age 6, meaning that the reference age for one year before the official primary entry age also changed from age 6 to age 5. This change explains the sharp drop in participation in 2022 as the system adjusted to the new age ranges.</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Data last updated </th>
+        <td>
           
+            <p>29/10/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
+          
+            <p>29/10/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
   
   
   
@@ -917,8 +1197,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
           
+            <p>4.2</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -959,7 +1250,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN custodian agency </th>
         <td>
           
-            <p>United Nations Education and Scientific Cultural Organisation - Institute of Statistics (UNESCO-UIS)</p>
+            <p>United Nations Education and Scientific Cultural Organisation - Institute for Statistics (UNESCO-UIS)</p>
 
           
         </td>
@@ -980,7 +1271,7 @@ data-event-label="Change to Sources tab"
             
             
             
-              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-04-02-02.pdf " target="_blank">
+              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-04-02-02.pdf" target="_blank">
                 United Nations Sustainable Development Goals Metadata (PDF 223 KB) <span class="visuallyhidden">opens in a new window</span>
               </a>
             
@@ -1187,7 +1478,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Earliest available data </th>
         <td>
           
-            <p>2017</p>
+            <p>2011</p>
 
           
         </td>
@@ -1214,13 +1505,33 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
           
-      
-      
-      
-        
+            
+            
+            
+            
+            
+              <a href="https://www.mineduc.gov.rw/publications/reports?tx_filelist_filelist%5Baction%5D=list&tx_filelist_filelist%5Bcontroller%5D=File&tx_filelist_filelist%5Bpath%5D=%2Fuser_upload%2FMineduc%2FPublications%2FREPORTS%2FEducation_Statistics%2FEducation_statistical_yearbook%2F&cHash=3f15926477e2af3e469f9513ee28130e" target="_blank">
+                Education Statistical Yearbook <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
       
       
       
@@ -1229,7 +1540,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Release date </th>
         <td>
           
-            TBD
+            2026
           
         </td>
         </tr>
@@ -1244,7 +1555,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Next release </th>
         <td>
           
-            <p>TBD</p>
+            <p>2027</p>
 
           
         </td>
@@ -1260,7 +1571,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Statistical classification </th>
         <td>
           
-            <p>Not-Official</p>
+            <p>Official statistics</p>
 
           
         </td>
@@ -1276,7 +1587,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Contact details </th>
         <td>
           
-            <p>https://www.mineduc.gov.rw/</p>
+            <p>info@mineduc.gov.rw</p>
 
           
         </td>
@@ -1292,7 +1603,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Other information </th>
         <td>
           
-            <p>info@mineduc.gov.rw</p>
+            <p>Participation rates one year before the official primary entry age are reported from 2017 onwards.</p>
 
           
         </td>
@@ -1404,7 +1715,7 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20261027150711'></script>
+<script src='/assets/js/sdg.js?v=20261030081032'></script>
 
 <script>
     new indicatorInit();

@@ -486,9 +486,17 @@
           "status": "complete"
         },
         {
+          "id": "4-1-2",
+          "title": "Completion rate (primary education, lower secondary education, upper secondary education)",
+          "description": "This indicator measures the total number of new entrants in the last grade of a given cycle, regardless of age, expressed as a percentage of the population at the official school-age of being at that level. Between 2000 and 2016, this was referred to as the completion rate.",
+          "keywords": "",
+          "href": "/4-1-2/",
+          "status": "complete"
+        },
+        {
           "id": "4-2-1",
           "title": "Proportion of children aged 24-59 months who are developmentally on track in health, learning and psychosocial well-being, by sex",
-          "description": "",
+          "description": "From 2015 to 2020, the proportion of children aged 24–59 months who are developmentally on track in health, learning and psychosocial well-being was measured by the percentage of children aged 36-59 months who were developmentally on-track in at least three of the following four domains: literacy-numeracy, physical, socio-emotional and learning. The components of each domain, as well as data on scores per domain, can be found in the linked data source. In 2025, the newly developed Early Childhood Development Index 2030 (ECDI2030) was used. The ECDI2030 comprises 20 items organized across three general domains: health, learning, and psychosocial well-being. Each domain is further composed of a set of core subdomains, which can be found in the linked data source. The ECDI2030 module is not designed to report on individual domains separately. Rather, it is meant to produce a single summary score that captures the interlinked developmental concepts embedded in the three domains mentioned in SDG 4.2.1.",
           "keywords": "",
           "href": "/4-2-1/",
           "status": "complete"
@@ -496,7 +504,7 @@
         {
           "id": "4-2-2",
           "title": "Participation rate in organized learning (one year before the official primary entry age), by sex",
-          "description": "Participation in early childhood and in primary education are both included. The age range will vary by country depending on the official age for entry to primary education. The indicator measures children’s exposure to organized learning activities in the year prior to the start of primary school. A high value of the indicator shows a high degree of participation in organized learning immediately before the official entrance age to primary education.",
+          "description": "The participation rate in organized learning (one year before the official primary entry age), by sex as defined as the percentage of children in the given age range who participate in one or more organized learning programme, including programmes which offer a combination of education and care. The indicator measures children’s exposure to organized learning activities in the year prior to the start of primary school. A high value of the indicator shows a high degree of participation in organized learning immediately before the official entrance age to primary education.",
           "keywords": "",
           "href": "/4-2-2/",
           "status": "complete"
@@ -504,7 +512,7 @@
         {
           "id": "4-3-1",
           "title": "Participation rate of youth and adults in formal and non-formal education and training in the previous 12 months, by sex",
-          "description": "To show the level of participation of youth and adults in education and training of all types. A high value indicates a large share of the population in the relevant age group is participating in formal and non-formal education and training.",
+          "description": "This indicator measures the percentage of youth aged 15-24 who are participating in formal and non-formal education and training. A high value indicates a large share of the population in the relevant age group is participating in formal and non-formal education and training.",
           "keywords": "",
           "href": "/4-3-1/",
           "status": "complete"
