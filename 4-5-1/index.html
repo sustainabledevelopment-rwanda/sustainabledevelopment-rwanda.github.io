@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/assets/css/style.css?v=20261030081032">
+        <link rel="stylesheet" href="/assets/css/style.css?v=20261119075452">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -403,9 +403,9 @@ data-event-label="high"
   data-indicatorid='indicator_4-5-1'
   data-id="4-5-1"
   data-country="Rwanda"
-  data-charttitle="Gender parity indices"
+  data-charttitle="Parity indices (female/male, rural/urban, bottom/top wealth quintile)"
   data-charttitles="null"
-  data-measurementunit="Indice"
+  data-measurementunit="Index"
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="line"
@@ -419,7 +419,7 @@ data-event-label="high"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;SERIES&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;SDG Series&quot;},{&quot;name&quot;:&quot;REF_AREA&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;Reference area&quot;},{&quot;name&quot;:&quot;AGE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;15 years old and over&quot;,&quot;15 to 24 years old&quot;,&quot;6 years old and over&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age&quot;},{&quot;name&quot;:&quot;URBANISATION&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Urban&quot;,&quot;Rural&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Degree of urbanisation&quot;},{&quot;name&quot;:&quot;EDUCATION_LEV&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Primary education&quot;,&quot;Secondary education (lower and upper secondary education)&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Education level&quot;},{&quot;name&quot;:&quot;UNIT_MEASURE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Unit of measure&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;SERIES&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;SDG Series&quot;},{&quot;name&quot;:&quot;REF_AREA&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;Reference area&quot;},{&quot;name&quot;:&quot;AGE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;15 to 24 years old&quot;,&quot;15 years old and over&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age&quot;},{&quot;name&quot;:&quot;EDUCATION_LEV&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Some primary education, grades 2 or 3&quot;,&quot;Primary education, sufficient for level completion&quot;,&quot;Lower secondary education, sufficient for level completion&quot;,&quot;Pre-primary education&quot;,&quot;Primary education&quot;,&quot;Secondary education (lower and upper secondary education)&quot;,&quot;Vocational secondary education&quot;,&quot;Upper secondary education, sufficient for level completion&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Education level&quot;},{&quot;name&quot;:&quot;UNIT_MEASURE&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Unit of measure&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-proxy=""
@@ -463,7 +463,7 @@ data-event-label="high"
     
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Gender parity indices</caption>
+      <caption>Parity indices (female/male, rural/urban, bottom/top wealth quintile)</caption>
       <thead>
         
         
@@ -496,7 +496,7 @@ data-event-label="high"
           
           
           
-          <td>2.2</td>
+          <td>1.01</td>
           
           
           
@@ -508,7 +508,175 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Gender parity index for participation rate in formal and non-formal education and training [4.5.1]</td>
+          <td class="table-value">Gender parity index: Participation rate in organized learning (one year before the official primary entry age)</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>1.02</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Index</td>
+          
+          
+          
+          <td class="table-value">Gender parity index: Participation rate in organized learning (one year before the official primary entry age)</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>1.03</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Index</td>
+          
+          
+          
+          <td class="table-value">Gender parity index: Participation rate in organized learning (one year before the official primary entry age)</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>1.03</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Index</td>
+          
+          
+          
+          <td class="table-value">Gender parity index: Participation rate in organized learning (one year before the official primary entry age)</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>1.03</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Index</td>
+          
+          
+          
+          <td class="table-value">Gender parity index: Participation rate in organized learning (one year before the official primary entry age)</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>1.0</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Index</td>
+          
+          
+          
+          <td class="table-value">Gender parity index: Participation rate in organized learning (one year before the official primary entry age)</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td>0.99</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Index</td>
+          
+          
+          
+          <td class="table-value">Gender parity index: Participation rate in organized learning (one year before the official primary entry age)</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2025</td>
+          
+          
+          
+          <td>0.98</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td>Index</td>
+          
+          
+          
+          <td class="table-value">Gender parity index: Participation rate in organized learning (one year before the official primary entry age)</td>
           
           
         </tr>
@@ -521,13 +689,13 @@ data-event-label="high"
   
   <div id="datatableFooter">
     
-    <p>Source: National Institute of Statistics of Rwanda (NISR)</p>
+    <p>Source: Ministry of Education (MINEDUC)</p>
     
     
     <p>Geographical Area: Rwanda</p>
     
     
-    <p>Unit of Measurement: Indice</p>
+    <p>Unit of Measurement: Index</p>
     
     
   </div>
@@ -614,7 +782,7 @@ data-event-label="Change to Table tab"
       <figure role="group">
         <div id="chart-canvas">
           <h4 id="chart-heading" class="chart-title">
-            Gender parity indices
+            Parity indices (female/male, rural/urban, bottom/top wealth quintile)
           </h4>
           <div id="chart" class="plot-container">
             <canvas
@@ -635,7 +803,7 @@ data-event-label="Change to Table tab"
     <dl>
         
         <dt>Source:</dt>
-        <dd>National Institute of Statistics of Rwanda (NISR)</dd>
+        <dd>Ministry of Education (MINEDUC), National Institute of Statistics of Rwanda (NISR), National Examination and School Inspection Authority (NESA)</dd>
         
 
         
@@ -711,7 +879,7 @@ data-event-label="Change to Table tab"
     <dl>
         
         <dt>Source:</dt>
-        <dd>National Institute of Statistics of Rwanda (NISR)</dd>
+        <dd>Ministry of Education (MINEDUC), National Institute of Statistics of Rwanda (NISR), National Examination and School Inspection Authority (NESA)</dd>
         
 
         
@@ -836,9 +1004,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indicator available </th>
         <td>
           
-            <p>- Gender Parity Index in primary level enrolment</p>
-<p>- Gender Parity Index in Secondary level enrolment
-</p>
+            <p>Parity indices (female/male, rural/urban, bottom/top wealth quintile)</p>
 
           
         </td>
@@ -854,7 +1020,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indicator description </th>
         <td>
           
-            <p>Parity indices require data for the specific groups of interest. They represent the ratio of the indicator value for one group to that of the other. Typically, the likely more disadvantaged group is placed in the numerator. A value of exactly 1 indicates parity between the two groups.</p>
+            <p>These indicators measure the gap between female and male, rural and urban, and bottom and top wealth quintiles with respect to a range of education indicators. A value of 1 indicates parity between the two groups.</p>
 
           
         </td>
@@ -886,7 +1052,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Unit of measurement </th>
         <td>
           
-            <p>Indice</p>
+            <p>Index</p>
 
           
         </td>
@@ -897,33 +1063,109 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Definitions </th>
+        <td>
           
-      
-      
-      
-        
+            <p>Several parity indices are included in this indicator.</p>
+<p>- Gender parity index, Participation rate of youth in formal and non-formal education and training</p>
+<p>- Gender parity index, Computer literacy rate</p>
+<p>- Gender parity index, Learners who meet benchmark in Kinyarwanda reading, English reading, and mathematics</p>
+<p>- Rural-to-urban parity index, Learners who meet benchmark in English reading and mathematics</p>
+<p>- Gender parity index, Teachers with the minimum required qualifications</p>
+<p>- Gender parity index, Participation rate in organized learning (one year before the official primary entry age)</p>
+<p>- Gender parity index, Gross intake rate in final year (primary, lower secondary, and upper secondary education)</p>
+<p>- Gender parity index, Literacy rate</p>
+<p>- Rural-to-urban parity index, Literacy rate</p>
+<p>- Wealth parity index, Literacy rate</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Calculations </th>
+        <td>
           
-      
-      
-      
+            <p>Gender parity index (GPI) = (Rate among females) / (Rate among males) &lt;p&gt;Rural-to-urban parity index = (Rate among rural residents) / (Rate among urban residents)&lt;/p&gt;&lt;p&gt;Wealth parity index = (Rate among bottom consumption quintile) / (Rate among top consumption quintile)&lt;/p&gt;</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
           
-      
-      
-      
+            <p>Some additional information on gender, urban/rural, wealth, location, and disability gaps is available in the linked data sources.</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Comments and limitations </th>
+        <td>
           
-      
-      
-      
+            <p>The list of parity indices provided here is a subset of the list recommended in the global metadata due to data availability. Please see the linked data source for additional information on methodology and limitations.</p>
+
+          
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Data last updated </th>
+        <td>
           
+            <p>18/11/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Metadata last updated </th>
+        <td>
+          
+            <p>18/11/2026</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
   
   
   
@@ -1075,8 +1317,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
           
+            <p>4.5</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1085,7 +1338,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Global indicator description </th>
         <td>
           
-            <p>Parity indices require data for the specific groups of interest. They represent the ratio of the indicator value for one group to that of the other. Typically, the likely more disadvantaged group is placed in the numerator. A value of exactly 1 indicates parity between the two groups</p>
+            <p>Parity indices require data for the specific groups of interest. They represent the ratio of the indicator value for one group to that of the other. Typically, the likely more disadvantaged group is placed in the numerator. A value of exactly 1 indicates parity between the two groups.</p>
 
           
         </td>
@@ -1101,7 +1354,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN designated tier </th>
         <td>
           
-            <p>1/2/3</p>
+            <p>Tier I/II/III</p>
 
           
         </td>
@@ -1117,7 +1370,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">UN custodian agency </th>
         <td>
           
-            <p>UNESCO-UIS</p>
+            <p>United Nations Education and Scientific Cultural Organisation - Institute for Statistics (UNESCO-UIS)</p>
 
           
         </td>
@@ -1139,7 +1392,7 @@ data-event-label="Change to Sources tab"
             
             
               <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-04-05-01.pdf" target="_blank">
-                United Nations Sustainable Development Goals Metadata (pdf 210kB) <span class="visuallyhidden">opens in a new window</span>
+                United Nations Sustainable Development Goals Metadata (PDF 210 KB) <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1265,11 +1518,305 @@ data-event-label="Change to Sources tab"
     
     <div class="col-md-6">
       
-        <h4 class="sr-only">Source 1</h4>
       
+        <h4>Source 1</h4>
       
       <table class="table metadata-content">
   <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>Ministry of Education (MINEDUC)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            <p>Annual</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            <p>2016</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            <p>Rwanda</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.mineduc.gov.rw/publications/reports?tx_filelist_filelist%5Baction%5D=list&tx_filelist_filelist%5Bcontroller%5D=File&tx_filelist_filelist%5Bpath%5D=%2Fuser_upload%2FMineduc%2FPublications%2FREPORTS%2FEducation_Statistics%2FEducation_statistical_yearbook%2F&cHash=3f15926477e2af3e469f9513ee28130e" target="_blank">
+                Education Statistical Yearbook <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            2026
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            <p>2027</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            <p>Official statistics</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            <p>info@mineduc.gov.rw</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
+          
+            <p>This is the data source used for indices relating to (a) Participation rate of youth in formal and non-formal education and training; (b) Teachers with the minimum required qualifications; (c) Participation rate in organized learning (one year before the official primary entry age); and (d) Gross intake rate in final year of education. Some additional information on gender and disability gaps is available in the reports.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+    </div>
+    
+    
+    
+    <div class="col-md-6">
+      
+      
+        <h4>Source 2</h4>
+      
+      <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
@@ -1329,7 +1876,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Periodicity </th>
         <td>
           
-            <p>3 years</p>
+            <p>Every 3 years</p>
 
           
         </td>
@@ -1345,7 +1892,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Earliest available data </th>
         <td>
           
-            <p>2017</p>
+            <p>2005</p>
 
           
         </td>
@@ -1382,8 +1929,8 @@ data-event-label="Change to Sources tab"
             
             
             
-              <a href="http://www.statistics.gov.rw/datasource/integrated-household-living-conditions-survey-eicv" target="_blank">
-                Integrated household living conditions survey (EICV) <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://statistics.gov.rw/data-sources/surveys/EICV" target="_blank">
+                Integrated Household Living Conditions Survey (EICV) <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -1407,7 +1954,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Release date </th>
         <td>
           
-            Dec 06, 2018
+            2024
           
         </td>
         </tr>
@@ -1422,7 +1969,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Next release </th>
         <td>
           
-            <p>TBD</p>
+            <p>2027</p>
 
           
         </td>
@@ -1433,8 +1980,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
           
+            <p>Official statistics</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
       
       
@@ -1459,7 +2017,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Other information </th>
         <td>
           
-            <p>http://www.statistics.gov.rw/</p>
+            <p>This is the data source used for indices relating to (a) Computer literacy rate and (b) Literacy rate. Some additional information on gender, urban/rural, location, and wealth gaps is available in the reports.</p>
 
           
         </td>
@@ -1490,6 +2048,276 @@ data-event-label="Change to Sources tab"
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+    </div>
+    
+    
+    
+    <div class="col-md-6">
+      
+      
+        <h4>Source 3</h4>
+      
+      <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p>National Examination and School Inspection Authority (NESA)</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Periodicity </th>
+        <td>
+          
+            <p>Every 2 years</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Earliest available data </th>
+        <td>
+          
+            <p>2011</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Geographical coverage </th>
+        <td>
+          
+            <p>Rwanda</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Link to data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.nesa.gov.rw/1/resources?tx_filelist_filelist%5Baction%5D=list&tx_filelist_filelist%5Bcontroller%5D=File&tx_filelist_filelist%5Bpath%5D=%2Fuser_upload%2FNESA%2FRessources%2F&cHash=19b87b65b68d7a70141596e86a2c5367" target="_blank">
+                Learning Achievement in Rwandan Schools (LARS) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Release date </th>
+        <td>
+          
+            2026
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Next release </th>
+        <td>
+          
+            <p>2028</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Statistical classification </th>
+        <td>
+          
+            <p>Official statistics</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Contact details </th>
+        <td>
+          
+            <p>info@nesa.gov.rw</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Other information </th>
+        <td>
+          
+            <p>This is the data source used for indices relating to learners who meet benchmark in Kinyarwanda reading, English reading, and mathematics. Gender and urban/rural parity information is not reported consistently across the different iterations of LARS. Some additional information on gender, urban/rural, and disability performance gaps is available in the reports. Figures from LARS I (2011), LARS II (2014), and LARS III (2017) can be found on page 89 of the April 2019 <a href="https://www.globalpartnership.org/node/document/download?file=document/file/2019-07-summative-gpe-country-program-evaluation-rwanda.pdf">Summative GPE country program evaluation</a> for Rwanda. Figures from the most recent LARS surveys can be found in the <a href="https://www.nesa.gov.rw/fileadmin/user_upload/NESA/Ressources/Reports/LARS_2021_EXECUTIVE_SUMMARY.pdf">LARS 2021 Executive Summary Report</a>, the <a href="https://www.nesa.gov.rw/1/resources?tx_filelist_filelist%5Baction%5D=list&amp;tx_filelist_filelist%5Bcontroller%5D=File&amp;tx_filelist_filelist%5Bpath%5D=%2Fuser_upload%2FNESA%2FRessources%2FLARS_2023%2F&amp;cHash=e27e5b3c9afa337d5c43eb59852fefeb">LARS 2023 Reports</a>, and the <a href="https://www.nesa.gov.rw/fileadmin/user_upload/NESA/Ressources/LARS_2025_REPORT/LARS_2025_REPORT.pdf">LARS 2025 Report</a>.</p>
+
+          
+        </td>
+        </tr>
+        
+      
   
   
   
@@ -1632,7 +2460,7 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/assets/js/sdg.js?v=20261030081032'></script>
+<script src='/assets/js/sdg.js?v=20261119075452'></script>
 
 <script>
     new indicatorInit();
